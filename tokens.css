@@ -1,0 +1,270 @@
+/* Hallmark · macrostructure: Photographic (ритм M2: тёмные и светлые полосы + полноэкранные фото-паузы) · tone: атмосферный, дерзко-статусный · anchor hue: 33 (красный) / 80 (золото) / 185 (бирюза)
+ * genre: atmospheric · H6 hero knobs: image=full-bleed, caption=lower-left, text=overlaid · nav: N5 glass bar (M2) · footer: Ft1 mast-headed (знак-окно)
+ * theme: custom · vibe: "монохром M2, сцена и свет, точечный красный" · paper: oklch(22.4% 0.006 260) / oklch(95.8% 0.005 260) · accent: oklch(63% 0.2 33), заливка кнопки oklch(57% 0.2 33)
+ * display: Unbounded · body: Onest · outlier: Cormorant Garamond italic (только манифест) · axes: dark / display-heavy (wide caps) / warm
+ * studied: yes · DNA-source: бриф (m2events.ru — основной, sweetpunk.com — вторичный) · context: user-provided
+ * pre-emit critique: P4 H4 E4 S4 R3 V4
+ * contrast: pass (46–50) · slop: pass (51–55) · honest: pass (56) · chrome: pass (57) · tokens: pass (58) · responsive: pass (59) · icons: pass (60) · mobile: pass (36, 59, 61–69)
+ * осознанные исключения: 5 — фото в буквах подвала (по брифу, не градиент) · 14 — плитка проекта светлеет и чуть увеличивается (по брифу) · 63 — знак и слова сцен nowrap, кегль от ширины контейнера, замерено 320–1440
+ */
+
+/* ── Палитра «Красный» — по умолчанию, как у M2: монохром #1c1c1c / #f2f2f2 + красный точечно ── */
+:root {
+  color-scheme: dark;
+
+  /* тёмная полоса (≈ #1c1c1c, холодно-нейтральная) */
+  --tone-dark:        oklch(22.4% 0.006 260);
+  --tone-dark-2:      oklch(26.8% 0.006 260);
+  --tone-dark-ink:    oklch(97.2% 0.005 260);
+  --tone-dark-muted:  oklch(73% 0.006 260);
+  --tone-dark-rule:   oklch(36% 0.006 260);
+
+  /* светлая полоса (≈ #f2f2f2, не кремовая) */
+  --tone-light:       oklch(95.8% 0.005 260);
+  --tone-light-2:     oklch(91.8% 0.005 260);
+  --tone-light-ink:   oklch(22.4% 0.006 260);
+  --tone-light-muted: oklch(45% 0.006 260);
+  --tone-light-rule:  oklch(81% 0.005 260);
+
+  /* акцент: мелкие ссылки, точки, hover, одна пилюля */
+  --accent:           oklch(63% 0.2 33);
+  --accent-ink:       oklch(98.5% 0.006 33);
+  --accent-fill:      oklch(57% 0.2 33);     /* кнопка с текстом: контраст 4.7:1 (63% даёт 3.7:1) */
+  --accent-on-dark:   oklch(68% 0.19 33);
+  --accent-on-light:  oklch(53% 0.19 33);
+  --accent-on-photo:  oklch(71% 0.18 33);
+  --focus:            oklch(70% 0.2 33);
+
+  /* фото: текст поверх затемнения — светлый во всех палитрах */
+  --photo-base:       oklch(15.5% 0.006 40);
+  --photo-ink:        oklch(97.5% 0.005 80);
+  --photo-muted:      oklch(87% 0.006 80);
+  --photo-rule:       color-mix(in oklch, var(--photo-ink) 38%, transparent);
+  --photo-fill:       color-mix(in oklch, var(--photo-ink) 10%, transparent);
+  --scrim-strong:     color-mix(in oklch, var(--photo-base) 88%, transparent);
+  --scrim-mid:        color-mix(in oklch, var(--photo-base) 60%, transparent);
+  --scrim-soft:       color-mix(in oklch, var(--photo-base) 30%, transparent);
+  --scrim-clear:      color-mix(in oklch, var(--photo-base) 0%, transparent);
+  --error-on-photo:   oklch(78% 0.14 28);
+  --error-on-dark:    oklch(74% 0.15 28);
+  --error-on-light:   oklch(50% 0.18 28);
+
+  /* видео в буквах подвала: буквы-окна для mix-blend-mode (белые на тёмной полосе, чёрные на светлой) */
+  --knock-light:      oklch(100% 0 0);
+  --knock-dark:       oklch(0% 0 0);
+
+  /* панель вариантов прототипа — всегда тёмная, от палитры не зависит */
+  --vp-bg:     color-mix(in oklch, oklch(17% 0.006 260) 93%, transparent);
+  --vp-ink:    oklch(97% 0.005 260);
+  --vp-muted:  oklch(76% 0.006 260);
+  --vp-rule:   color-mix(in oklch, oklch(97% 0.005 260) 20%, transparent);
+  --vp-on:     oklch(17% 0.006 260);
+  --vp-shadow: oklch(0% 0 0 / 0.45);
+
+  /* стекло шапки, панели, переключателя */
+  --glass-bg:         color-mix(in oklch, var(--tone-dark) 66%, transparent);
+  --glass-rule:       color-mix(in oklch, var(--tone-dark-ink) 16%, transparent);
+
+  /* образцы цвета в переключателе — постоянные, от палитры не зависят */
+  --swatch-red:       oklch(63% 0.2 33);
+  --swatch-gold:      oklch(76% 0.11 80);
+  --swatch-light:     oklch(50% 0.09 185);
+
+  /* ── шрифты: одна широкая гарнитура на заголовках + текстовая + курсив-акцент ── */
+  --font-display: "Unbounded", "Arial Black", sans-serif;
+  --font-body:    "Onest", "Helvetica Neue", Arial, sans-serif;
+  --font-accent:  "Cormorant Garamond", "Times New Roman", serif;
+  /* ширина, кегль и начертание гарнитур — меняются вместе с вариантом шрифта */
+  --font-display-stretch: normal;
+  --font-display-scale:   1;          /* множитель крупных заголовков: узкой гарнитуре нужен кегль больше */
+  --font-accent-style:    italic;
+  --font-accent-weight:   500;
+  --font-accent-size:     1.32em;
+  --font-accent-stretch:  normal;
+  /* кегль «от ширины контейнера»: ширина надписи в em с запасом — при смене гарнитуры мерить заново */
+  --k-sign-word: 3.48;                /* самое широкое слово знака LIVE / LOVE / JOY */
+  --k-sign-line: 9.36;                /* знак одной строкой */
+  --k-scene:     3.56;                /* слова сцен */
+  --k-scene-ru:  6.95;                /* слова сцен по-русски: самое широкое — РАДУЙСЯ */
+  --k-motto-word: 7.3;                /* девиз блоком: «РАДУЙСЯ.» */
+  --scene-cap:   18rem;
+  --k-mtile:     7.9cqi;              /* потолок подписи плитки «Что празднуем» */
+
+  --text-xs:    0.75rem;
+  --text-sm:    0.875rem;
+  --text-base:  1rem;
+  --text-md:    1.125rem;
+  --text-lg:    clamp(1.0625rem, 1rem + 0.35vw, 1.3125rem);
+  --text-h3:    clamp(1rem, 0.86rem + 0.55vw, 1.375rem);
+  --text-h2:    clamp(1.75rem, 1.15rem + 2.45vw, 3.25rem);
+  --text-shout: clamp(2.25rem, 1rem + 5.4vw, 6rem);
+
+  /* ── пространство: шкала 4pt ── */
+  --space-3xs: 0.125rem;
+  --space-2xs: 0.25rem;
+  --space-xs:  0.5rem;
+  --space-sm:  0.75rem;
+  --space-md:  1rem;
+  --space-lg:  1.5rem;
+  --space-xl:  2.5rem;
+  --space-2xl: 4rem;
+  --space-3xl: 6rem;
+  --space-4xl: 9rem;
+
+  --gutter:    clamp(1rem, 3.6vw, 3.5rem);
+  --section-y: clamp(4rem, 2.6rem + 5vw, 8rem);
+  --max-w:     90rem;
+  --hdr-h:     3.5rem;
+  --mbar-h:    4.25rem;
+  --screen-h:  min(100svh, 75rem);
+  --palette-h: 2.75rem;     /* высота свёрнутой панели вариантов (прототип) */
+
+  /* размер текста: базовые значения; варианты «m2» и «mid» — в конце файла */
+  --fs-seg:     clamp(0.9375rem, 0.85rem + 0.45vw, 1.1875rem);
+  --fs-pill:    var(--text-sm);
+  --fs-pill-sm: var(--text-sm);
+  --cta-h:      3.25rem;
+
+  --radius-pill: 30px;
+  --radius-sm:   2px;
+  --rule-w:      1px;
+
+  /* ── движение ── */
+  --ease-out:    cubic-bezier(0.16, 1, 0.3, 1);
+  --ease-in:     cubic-bezier(0.7, 0, 0.84, 0);
+  --ease-in-out: cubic-bezier(0.65, 0, 0.35, 1);
+  --dur-micro:   120ms;
+  --dur-short:   220ms;
+  --dur-long:    420ms;
+  --dur-marquee: 52s;
+
+  /* ── слои ── */
+  --z-base:     1;
+  --z-raised:   10;
+  --z-dropdown: 100;
+  --z-sticky:   200;
+  --z-modal:    400;
+  --z-toast:    500;
+}
+
+@media (min-width: 48rem) {
+  :root {
+    --hdr-h:  4.25rem;
+    --mbar-h: 0rem;
+  }
+}
+
+/* ── Палитра «Золото»: тот же тёмный монохром + золото ── */
+:root[data-palette="gold"] {
+  --accent:          oklch(76% 0.11 80);
+  --accent-ink:      oklch(21% 0.02 70);
+  --accent-fill:     var(--accent);
+  --accent-on-dark:  oklch(79% 0.11 80);
+  --accent-on-light: oklch(49% 0.09 75);
+  --accent-on-photo: oklch(81% 0.11 80);
+  --focus:           oklch(81% 0.12 80);
+}
+
+/* ── Палитра «Светлый»: кремовая база, тёмный текст, бирюзовый акцент ── */
+:root[data-palette="light"] {
+  color-scheme: light;
+
+  --tone-dark:        oklch(93.2% 0.017 84);
+  --tone-dark-2:      oklch(90% 0.019 84);
+  --tone-dark-ink:    oklch(21% 0.012 60);
+  --tone-dark-muted:  oklch(43% 0.013 60);
+  --tone-dark-rule:   oklch(79% 0.017 80);
+
+  --tone-light:       oklch(97.3% 0.009 86);
+  --tone-light-2:     oklch(94.2% 0.012 86);
+  --tone-light-ink:   oklch(21% 0.012 60);
+  --tone-light-muted: oklch(43% 0.013 60);
+  --tone-light-rule:  oklch(84% 0.012 80);
+
+  --accent:           oklch(50% 0.09 185);
+  --accent-ink:       oklch(98% 0.008 185);
+  --accent-fill:      var(--accent);
+  --accent-on-dark:   oklch(45% 0.09 185);
+  --accent-on-light:  oklch(45% 0.09 185);
+  --accent-on-photo:  oklch(80% 0.09 185);
+  --focus:            oklch(48% 0.11 185);
+
+  --glass-bg:         color-mix(in oklch, var(--tone-light) 88%, transparent);
+}
+
+/* ── Варианты шрифтов — прототип, на время выбора; после выбора остаётся один ──
+ * все бесплатные, с кириллицей (Google Fonts, OFL); коэффициенты k замерены 06.10 */
+
+/* 1 и 2: широкий гротеск TikTok Sans (ширина 150 %), текст — он же обычной ширины */
+:root[data-font="1"], :root[data-font="2"] {
+  --font-display: "TikTok Sans", "Arial Black", sans-serif;
+  --font-body:    "TikTok Sans", "Helvetica Neue", Arial, sans-serif;
+  --font-display-stretch: 150%;
+  --k-sign-word: 3.63;
+  --k-sign-line: 9.66;
+  --k-scene:     3.73;
+  --k-mtile:     7.55cqi;
+  --k-scene-ru:  6.95;     /* замер 08.10 с кириллицей: РАДУЙСЯ = 6.67em при 800 */
+  --k-motto-word: 7.3;     /* «РАДУЙСЯ.» = 7.03em при 700 */
+}
+/* 1 «Широкий»: второй голос манифеста — та же гарнитура, светлая строчная */
+:root[data-font="1"] {
+  --font-accent:         "TikTok Sans", "Helvetica Neue", Arial, sans-serif;
+  --font-accent-style:   normal;
+  --font-accent-weight:  300;
+  --font-accent-size:    1em;
+  --font-accent-stretch: 150%;
+}
+/* 2 «Широкий + курсив»: второй голос — курсив Brygada 1918 */
+:root[data-font="2"] {
+  --font-accent:        "Brygada 1918", Georgia, serif;
+  --font-accent-weight: 500;
+  --font-accent-size:   1.12em;
+}
+/* 3 «Афиша»: узкий плакатный Sofia Sans Extra Condensed, текст — Sofia Sans */
+:root[data-font="3"] {
+  --font-display: "Sofia Sans Extra Condensed", "Arial Narrow", sans-serif;
+  --font-body:    "Sofia Sans", "Helvetica Neue", Arial, sans-serif;
+  --font-accent:  "Sofia Sans Extra Condensed", "Arial Narrow", sans-serif;
+  --font-accent-style:  normal;
+  --font-accent-weight: 300;
+  --font-accent-size:   1em;
+  --font-display-scale: 1.32;
+  --text-h2:    clamp(2.31rem, 1.52rem + 3.23vw, 4.29rem);
+  --text-shout: clamp(2.97rem, 1.32rem + 7.13vw, 7.92rem);
+  --k-sign-word: 1.56;
+  --k-sign-line: 4.09;
+  --k-scene:     1.60;
+  --scene-cap:   28rem;
+  --k-mtile:     17.3cqi;
+}
+
+/* ── Размер текста — прототип, два варианта на выбор (созвон 08.10) ──
+ * «m2»  — крупный: кегли m2events.ru (кнопки 16px, сегменты 24px, описания 16px), мелкий текст не меньше 14px
+ * «mid» — на ступень мельче m2, но крупнее версии от 07.10 */
+:root[data-size="m2"] {
+  --text-xs:    0.875rem;
+  --text-sm:    1rem;
+  --text-base:  1.125rem;
+  --text-md:    1.25rem;
+  --text-lg:    clamp(1.125rem, 1.02rem + 0.45vw, 1.375rem);
+  --text-h3:    clamp(1.125rem, 0.9rem + 0.9vw, 1.75rem);
+  --text-h2:    clamp(2rem, 1.25rem + 3vw, 3.75rem);
+  --fs-seg:     clamp(1.0625rem, 0.86rem + 0.85vw, 1.5rem);
+  --fs-pill:    1rem;
+  --fs-pill-sm: 1rem;         /* 12.10: все кнопки одного кегля — жалоба Ольги на разный размер шрифтов */
+  --cta-h:      3.5rem;
+}
+:root[data-size="mid"] {
+  --text-xs:    0.8125rem;
+  --text-sm:    0.9375rem;
+  --text-base:  1.0625rem;
+  --text-md:    1.1875rem;
+  --text-lg:    clamp(1.0625rem, 1rem + 0.35vw, 1.3125rem);
+  --text-h3:    clamp(1.0625rem, 0.88rem + 0.75vw, 1.5rem);
+  --text-h2:    clamp(1.875rem, 1.2rem + 2.7vw, 3.5rem);
+  --fs-seg:     clamp(1rem, 0.86rem + 0.55vw, 1.25rem);
+  --fs-pill:    0.9375rem;
+  --fs-pill-sm: 0.9375rem;
+  --cta-h:      3.25rem;
+}
