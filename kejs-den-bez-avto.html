@@ -1,0 +1,2428 @@
+<!doctype html>
+<html lang="ru" data-palette="red" data-font="1" data-size="m2" data-deviz="scenes" data-foot="photo" data-hero="left">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>День без автомобиля — Live Love Joy</title>
+<meta name="description" content="Велосипеды, уличная музыка, мастер-классы и гости на открытом воздухе. Видео события, посвящённого Всемирному дню без автомобиля.">
+<meta property="og:type" content="article">
+<meta property="og:title" content="День без автомобиля — Live Love Joy">
+<meta property="og:description" content="Велосипеды, уличная музыка, мастер-классы и гости на открытом воздухе. Видео события, посвящённого Всемирному дню без автомобиля.">
+<meta property="og:image" content="https://elijah3737.github.io/livelovejoy-site/media/case-den-bez-avto-frame-1.jpg">
+<meta name="twitter:card" content="summary_large_image">
+<script>document.documentElement.classList.add('js')</script>
+<meta name="robots" content="noindex">
+<meta name="theme-color" content="#1c1c1c">
+<script>try{var d=document.documentElement,q=new URLSearchParams(location.search);[["data-hero","llj-hero","hero",["left","center","low"]],["data-foot","llj-foot","foot",["photo","video","white"]]].forEach(function(v){var x=q.get(v[2]);if(v[3].indexOf(x)<0){try{x=localStorage.getItem(v[1])}catch(e){x=null}}if(v[3].indexOf(x)>=0)d.setAttribute(v[0],x)})}catch(e){}</script>
+<link rel="stylesheet" href="fonts/fonts.css">
+<link rel="stylesheet" href="tokens.css">
+<style>
+/* Hallmark · page styles · штамп и токены — в tokens.css (первая строка) */
+
+/* ── База ─────────────────────────────────────────────── */
+[hidden] { display: none !important; }
+*, *::before, *::after { box-sizing: border-box; }
+html {
+  overflow-x: clip;
+  -webkit-text-size-adjust: 100%;
+  text-size-adjust: 100%;
+  scroll-behavior: smooth;
+}
+body {
+  margin: 0;
+  overflow-x: clip;
+  background: var(--tone-dark);
+  color: var(--tone-dark-ink);
+  font-family: var(--font-body);
+  font-size: var(--text-base);
+  font-weight: 400;
+  line-height: 1.55;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  padding-bottom: var(--mbar-h);
+}
+p, li { text-wrap: pretty; }
+.nowrap { white-space: nowrap; }
+h2, h3, .h2, .h3 { text-wrap: balance; }
+img, svg, picture { display: block; max-width: 100%; }
+img { height: auto; }
+a { color: inherit; }
+button, input, select, textarea { font: inherit; color: inherit; }
+button { cursor: pointer; }
+p, ul, ol, h1, h2, h3, figure { margin: 0; }
+ul, ol { padding: 0; list-style: none; }
+:focus-visible { outline: 2px solid var(--ring, var(--focus)); outline-offset: 3px; }
+.ic { width: 1.25rem; height: 1.25rem; flex: none; }
+.ic--fill { fill: currentColor; }
+.ic--line { fill: none; stroke: currentColor; stroke-width: 1.6; stroke-linecap: round; stroke-linejoin: round; }
+
+.sr-only {
+  position: absolute; width: 1px; height: 1px; padding: 0; margin: -1px;
+  overflow: hidden; clip: rect(0 0 0 0); clip-path: inset(50%); white-space: nowrap; border: 0;
+}
+.skip {
+  position: absolute; left: var(--gutter); top: var(--space-xs);
+  z-index: var(--z-toast);
+  padding: var(--space-sm) var(--space-md);
+  background: var(--tone-dark-ink); color: var(--tone-dark);
+  border-radius: var(--radius-pill);
+  transform: translateY(-200%);
+}
+.skip:focus { transform: none; }
+
+.wrap {
+  width: 100%;
+  max-width: var(--max-w);
+  margin-inline: auto;
+  padding-inline: var(--gutter);
+}
+
+/* ── Полосы: тёмная / светлая / фото ─────────────────── */
+.band, .band--photo { position: relative; background: var(--bg); color: var(--ink); }
+.band--dark {
+  --bg: var(--tone-dark); --bg-2: var(--tone-dark-2); --ink: var(--tone-dark-ink);
+  --muted: var(--tone-dark-muted); --rule: var(--tone-dark-rule);
+  --link: var(--accent-on-dark); --on-ink: var(--tone-dark);
+  --err: var(--error-on-dark);
+}
+:root[data-palette="light"] .band--dark { --err: var(--error-on-light); }
+.band--light {
+  --bg: var(--tone-light); --bg-2: var(--tone-light-2); --ink: var(--tone-light-ink);
+  --muted: var(--tone-light-muted); --rule: var(--tone-light-rule);
+  --link: var(--accent-on-light); --on-ink: var(--tone-light);
+  --ring: var(--accent-on-light);
+  --err: var(--error-on-light);
+}
+.band--photo {
+  --bg: var(--photo-base); --ink: var(--photo-ink);
+  --muted: var(--photo-muted); --rule: var(--photo-rule);
+  --link: var(--accent-on-photo); --on-ink: var(--photo-base);
+  --err: var(--error-on-photo);
+  color-scheme: dark;
+  isolation: isolate;
+  overflow: hidden;
+}
+.media, .media img {
+  position: absolute; inset: 0;
+  width: 100%; height: 100%;
+}
+.media { z-index: -2; }
+.media img { object-fit: cover; }
+.scrim { position: absolute; inset: 0; z-index: -1; pointer-events: none; }
+
+/* ── Типографика ─────────────────────────────────────── */
+.h2 {
+  font-family: var(--font-display); font-stretch: var(--font-display-stretch);
+  font-weight: 700;
+  font-size: var(--text-h2);
+  line-height: 1.04;
+  letter-spacing: -0.012em;
+  text-transform: uppercase;
+  overflow-wrap: anywhere;
+  min-width: 0;
+}
+.h3 {
+  font-family: var(--font-display); font-stretch: var(--font-display-stretch);
+  font-weight: 600;
+  font-size: var(--text-h3);
+  line-height: 1.15;
+  text-transform: uppercase;
+  overflow-wrap: anywhere;
+  min-width: 0;
+}
+.label {
+  font-size: var(--text-xs);
+  font-weight: 500;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  color: var(--muted);
+}
+.label__dot { color: var(--link); }
+.sec-head {
+  display: grid;
+  gap: var(--space-md);
+  margin-bottom: clamp(var(--space-xl), 4vw, var(--space-2xl));
+}
+.sec-head__note { color: var(--muted); max-width: 46ch; }
+@media (min-width: 48rem) {
+  .sec-head--row {
+    grid-template-columns: minmax(0, 1fr) minmax(0, 20rem);
+    align-items: end;
+    column-gap: var(--space-xl);
+  }
+}
+
+/* ── Кнопки-пилюли и ссылки ──────────────────────────── */
+.pill {
+  display: inline-flex; align-items: center; justify-content: center; gap: 0.6em;
+  min-height: 3rem;
+  padding: 0 var(--space-lg);
+  border-radius: var(--radius-pill);
+  border: var(--rule-w) solid transparent;
+  font-size: var(--fs-pill);
+  font-weight: 600;
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+  line-height: 1;
+  text-decoration: none;
+  white-space: nowrap;
+  background: transparent;
+  transition: transform var(--dur-micro) var(--ease-out);
+}
+.pill:active { transform: translateY(1px); }
+.icon-btn:active, .go:active, .segments a:active, .type:active { opacity: 0.8; }
+.pill:disabled, .pill[aria-disabled="true"], .input:disabled, .select select:disabled { opacity: 0.55; cursor: not-allowed; }
+.pill--solid { background: var(--ink); color: var(--on-ink); }
+.pill--solid:hover { background: var(--accent-fill); color: var(--accent-ink); }
+.pill--line { color: var(--ink); border-color: color-mix(in oklch, var(--ink) 50%, transparent); }
+.pill--line:hover { background: var(--ink); color: var(--on-ink); border-color: var(--ink); }
+.pill--accent { background: var(--accent-fill); color: var(--accent-ink); }
+.pill--accent:hover { background: var(--ink); color: var(--on-ink); }
+.pill--sm { min-height: 2.75rem; padding: 0 var(--space-md); font-size: var(--fs-pill-sm); }
+.pill .ic { width: 1.1rem; height: 1.1rem; }
+
+.chips { display: flex; flex-wrap: wrap; gap: var(--space-xs); }
+.chip {
+  display: inline-flex; align-items: center;
+  min-height: 2rem; padding: 0 var(--space-sm);
+  border-radius: var(--radius-pill);
+  border: var(--rule-w) solid var(--rule);
+  font-size: var(--text-sm);
+  white-space: nowrap;
+}
+.band--photo .chip { background: var(--photo-fill); }
+
+.go {
+  display: inline-flex; align-items: center; gap: 0.55em;
+  padding-block: var(--space-xs);
+  font-weight: 500;
+  text-decoration: none;
+  white-space: nowrap;
+  border-bottom: var(--rule-w) solid color-mix(in oklch, var(--ink) 40%, transparent);
+}
+.go__arr { color: var(--link); }
+.go:hover { color: var(--link); border-color: var(--link); }
+
+/* ── Шапка (стекло, фиксированная) ───────────────────── */
+.hdr {
+  --ink: var(--tone-dark-ink); --muted: var(--tone-dark-muted);
+  --rule: var(--glass-rule); --link: var(--accent-on-dark); --on-ink: var(--tone-dark);
+  position: fixed; inset: 0 0 auto 0;
+  z-index: var(--z-sticky);
+  color: var(--ink);
+  background: var(--glass-bg);
+  -webkit-backdrop-filter: blur(16px) saturate(140%);
+  backdrop-filter: blur(16px) saturate(140%);
+  border-bottom: var(--rule-w) solid var(--rule);
+}
+:root[data-palette="light"] .hdr { --on-ink: var(--tone-light); }
+.hdr__in { display: flex; align-items: center; gap: var(--space-sm); height: var(--hdr-h); }
+.brand { display: inline-flex; flex-direction: column; gap: var(--space-2xs); text-decoration: none; line-height: 1; min-width: 0; }
+.brand__mark {
+  font-family: var(--font-display); font-stretch: var(--font-display-stretch); font-weight: 700;
+  font-size: 0.9375rem; letter-spacing: 0.04em; white-space: nowrap;
+}
+/* 320px: в шапке три кнопки (Telegram, Instagram, меню) — знак чуть мельче, чтобы не залезал под них */
+@media (max-width: 22.49rem) { .hdr .brand__mark { font-size: 0.75rem; } .hdr__actions { gap: var(--space-2xs); } }
+.brand__sub { font-size: 0.6875rem; letter-spacing: 0.2em; color: var(--muted); white-space: nowrap; }
+.hdr__actions { margin-left: auto; display: flex; align-items: center; gap: var(--space-xs); }
+.hdr__tablet { display: none; }
+.hdr__phone { display: none; font-size: var(--text-sm); font-weight: 500; text-decoration: none; white-space: nowrap; padding-inline: var(--space-xs); }
+.hdr__phone:hover { color: var(--link); }
+.icon-btn {
+  display: inline-grid; place-items: center;
+  width: 2.75rem; height: 2.75rem;
+  border-radius: 50%;
+  border: var(--rule-w) solid var(--rule);
+  background: transparent;
+  color: var(--ink);
+  text-decoration: none;
+}
+.icon-btn:hover { color: var(--link); border-color: currentColor; }
+.burger__lines, .burger__lines::before {
+  display: block; width: 1.125rem; height: 1.5px; background: currentColor; border-radius: 1px;
+}
+.burger__lines::after { content: ""; display: block; width: 1.125rem; height: 1.5px; background: currentColor; border-radius: 1px; }
+/* три полоски, как у всех агентств (созвон 20.10) */
+.burger__lines { position: relative; }
+.burger__lines::before, .burger__lines::after { position: absolute; left: 0; }
+.burger__lines::before { content: ""; top: -6px; }
+.burger__lines::after { top: 6px; }
+@media (min-width: 48rem) {
+  .hdr__tablet { display: flex; align-items: center; gap: var(--space-xs); }
+  .brand__mark { font-size: 1.0625rem; }
+}
+@media (min-width: 75rem) { .hdr__phone { display: inline-flex; } }
+
+/* ── Меню на весь экран ──────────────────────────────── */
+.menu {
+  position: fixed; inset: 0;
+  width: 100%; height: 100%;
+  max-width: none; max-height: none;
+  margin: 0; padding: 0; border: 0;
+  background: var(--bg); color: var(--ink);
+  overflow-y: auto;
+  overscroll-behavior: contain;
+}
+.menu[open] { display: grid; grid-template-rows: auto 1fr auto; animation: menu-in var(--dur-long) var(--ease-out); }
+.menu.is-closing { animation: menu-out calc(var(--dur-short) * 0.9) var(--ease-in) forwards; }
+.menu::backdrop { background: transparent; }
+@keyframes menu-in { from { opacity: 0; transform: translateY(-1.25rem); } }
+@keyframes menu-out { to { opacity: 0; transform: translateY(-0.75rem); } }
+.menu__top { display: flex; align-items: center; justify-content: space-between; height: var(--hdr-h); border-bottom: var(--rule-w) solid var(--rule); }
+.menu__close { position: relative; }
+.menu__close::before, .menu__close::after {
+  content: ""; position: absolute; left: 50%; top: 50%;
+  width: 1.125rem; height: 1.5px; background: currentColor; border-radius: 1px;
+}
+.menu__close::before { transform: translate(-50%, -50%) rotate(45deg); }
+.menu__close::after { transform: translate(-50%, -50%) rotate(-45deg); }
+.menu__nav { display: grid; align-content: center; gap: var(--space-xl); padding-block: var(--space-xl); }
+.menu__words { display: grid; gap: var(--space-2xs); }
+.menu__big {
+  display: flex; flex-wrap: wrap; align-items: baseline; column-gap: var(--space-md);
+  text-decoration: none;
+}
+.menu__word {
+  font-family: var(--font-display); font-stretch: var(--font-display-stretch); font-weight: 800;
+  font-size: calc(clamp(3rem, 2rem + 7vw, 8rem) * var(--font-display-scale));
+  line-height: 1.02; letter-spacing: -0.01em;
+  overflow-wrap: anywhere; min-width: 0;
+}
+.menu__ru { font-size: var(--text-md); color: var(--muted); white-space: nowrap; }
+.menu__words { container-type: inline-size; }
+:root[data-deviz="scenes"] .menu__word { font-size: min(calc(clamp(3rem, 2rem + 7vw, 8rem) * var(--font-display-scale)), calc(100cqi / 7)); }
+.menu__big:hover .menu__word { color: var(--link); }
+.menu__more { display: flex; flex-wrap: wrap; gap: var(--space-xs) var(--space-xl); }
+.menu__more a {
+  font-family: var(--font-display); font-stretch: var(--font-display-stretch); font-weight: 600; font-size: var(--text-h3);
+  text-transform: uppercase; text-decoration: none; white-space: nowrap;
+}
+.menu__more a:hover { color: var(--link); }
+.menu__bottom {
+  display: flex; flex-wrap: wrap; gap: var(--space-xs);
+  padding-block: var(--space-lg) calc(var(--space-lg) + env(safe-area-inset-bottom));
+  border-top: var(--rule-w) solid var(--rule);
+}
+
+/* ── 1. Первый экран ─────────────────────────────────── */
+.hero { min-height: var(--screen-h); display: grid; align-items: end; }
+.hero .scrim {
+  background:
+    linear-gradient(to top, var(--scrim-strong), var(--scrim-clear) 72%),
+    linear-gradient(to bottom, var(--scrim-mid), var(--scrim-clear) 30%),
+    var(--scrim-soft);
+}
+.hero__in {
+  container-type: inline-size;
+  padding-top: calc(var(--hdr-h) + var(--space-sm));
+  padding-bottom: calc(var(--mbar-h) + var(--palette-h) + var(--space-2xl));
+  display: grid;
+  gap: clamp(var(--space-md), 2.2svh, var(--space-lg));
+}
+.hero__kicker { color: var(--photo-muted); }
+.hero__title { margin: 0; font-weight: inherit; }
+.sign {
+  display: block;
+  font-family: var(--font-display); font-stretch: var(--font-display-stretch);
+  font-weight: 700;
+  line-height: 1;
+  letter-spacing: 0;
+  text-transform: uppercase;
+  white-space: nowrap;
+  overflow-wrap: normal;
+}
+.sign > span { display: block; }
+.hero .sign { font-size: min(calc(100cqi / var(--k-sign-word)), 19svh); margin-left: -0.04em; }
+@media (min-width: 48rem) {
+  .sign > span { display: inline; }
+  .hero .sign { font-size: min(calc(100cqi / var(--k-sign-line)), 26svh); }
+}
+.hero__row { display: grid; gap: var(--space-lg); }
+.segments {
+  display: flex; flex-wrap: wrap; align-items: center;
+  column-gap: var(--space-sm); row-gap: var(--space-2xs);
+  font-family: var(--font-display); font-stretch: var(--font-display-stretch);
+  font-size: var(--fs-seg);
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.02em;
+}
+/* четыре вида вместо трёх (12.10) — кегль чуть меньше, чтобы на десктопе встали в одну строку */
+@media (min-width: 48rem) { .segments { font-size: calc(var(--fs-seg) * 0.84); column-gap: var(--space-xs); } }
+/* планшет и ноутбук: виды — во всю ширину, кнопки строкой ниже, иначе четыре слова ломаются в столбик */
+@media (min-width: 48rem) and (max-width: 74.99rem) { .hero__row > div:first-child { grid-column: 1 / -1; } }
+.segments a {
+  text-decoration: none; white-space: nowrap;
+  padding-block: var(--space-2xs);
+  border-bottom: var(--rule-w) solid transparent;
+}
+.segments a:hover { color: var(--link); border-color: var(--link); }
+.segments__sep { color: var(--photo-rule); }
+@media (max-width: 47.99rem) {
+  .segments { column-gap: 1.1em; }
+  .segments__sep, .hero__motto i { display: none; }
+}
+.hero__tagline { color: var(--photo-muted); max-width: 46ch; margin-top: var(--space-xs); }
+.hero__cta { display: flex; flex-wrap: wrap; gap: var(--space-xs); }
+.hero__cta .pill { flex: 1 1 auto; min-height: var(--cta-h); }
+@media (min-width: 48rem) {
+  .hero__row { grid-template-columns: minmax(0, 1fr) auto; align-items: end; column-gap: var(--space-xl); }
+  .hero__cta .pill { flex: none; padding-inline: calc(var(--space-lg) + var(--space-sm)); }
+  .hero__cta .pill--solid { min-width: 17rem; }
+}
+/* видео первого экрана поверх фото: фото — пока видео не пошло или при «меньше движения» */
+.hero__video { object-fit: cover; opacity: 0; transition: opacity 900ms var(--ease-out); }
+.hero__video.is-on { opacity: 1; }
+
+/* ── Девиз «Живи, люби, радуйся» — четыре места на выбор (прототип) ── */
+.hero__motto {
+  display: none;
+  margin-top: clamp(var(--space-xs), 1.2svh, var(--space-md));
+  font-family: var(--font-display); font-stretch: var(--font-display-stretch);
+  font-weight: 300;
+  font-size: clamp(1.375rem, 0.85rem + 2.3vw, 2.75rem);
+  line-height: 1.15; letter-spacing: 0.05em; text-transform: uppercase;
+  color: var(--photo-ink);
+}
+.hero__motto span { white-space: nowrap; }
+.hero__motto i { font-style: normal; color: var(--link); }
+:root[data-deviz="hero"] .hero__motto { display: block; }
+
+.motto { display: none; padding-block: clamp(var(--space-2xl), 7vw, var(--space-4xl)); scroll-margin-top: var(--hdr-h); }
+:root[data-deviz="block"] .motto { display: block; }
+.motto__in { container-type: inline-size; }
+/* три слова столбиком, на широком экране — лесенкой */
+.motto__line {
+  display: grid;
+  font-family: var(--font-display); font-stretch: var(--font-display-stretch); font-weight: 700;
+  font-size: min(calc(100cqi / var(--k-motto-word)), 11rem);
+  line-height: 0.98; letter-spacing: 0; text-transform: uppercase;
+  white-space: nowrap;
+}
+.motto__line i { font-style: normal; color: var(--link); }
+@media (min-width: 48rem) {
+  .motto__line > span:nth-child(2) { justify-self: center; }
+  .motto__line > span:nth-child(3) { justify-self: end; }
+}
+/* бегущая строка теперь всегда (правки Ольги 12.10) */
+
+/* ── 2. О нас + факты ────────────────────────────────── */
+.about { padding-block: var(--section-y); scroll-margin-top: var(--hdr-h); }
+.about__grid { display: grid; gap: var(--space-2xl); }
+.manifesto {
+  font-family: var(--font-display); font-stretch: var(--font-display-stretch);
+  font-weight: 700;
+  font-size: calc(clamp(1.75rem, 1.05rem + 2.9vw, 3.6rem) * var(--font-display-scale));
+  line-height: 1.12;
+  letter-spacing: -0.012em;
+  text-transform: uppercase;
+  overflow-wrap: anywhere;
+  min-width: 0;
+}
+.manifesto__line { display: block; }
+.manifesto em {
+  font-family: var(--font-accent);
+  font-style: var(--font-accent-style);
+  font-weight: var(--font-accent-weight);
+  font-stretch: var(--font-accent-stretch);
+  font-size: var(--font-accent-size);
+  line-height: 0.8;
+  letter-spacing: 0;
+  text-transform: none;
+}
+.manifesto__dot { color: var(--link); font-family: var(--font-display); font-stretch: var(--font-display-stretch); font-style: normal; font-size: 0.76em; }
+.about__lead { margin-top: var(--space-xl); font-size: var(--text-lg); line-height: 1.55; max-width: 48ch; color: var(--muted); }
+.about__lead strong { color: var(--ink); font-weight: 500; }
+.facts {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  border-top: var(--rule-w) solid var(--rule);
+  align-self: end;
+}
+.fact {
+  display: grid; align-content: start; gap: var(--space-xs);
+  padding: var(--space-lg) var(--space-md) var(--space-lg) 0;
+  border-bottom: var(--rule-w) solid var(--rule);
+  min-width: 0;
+}
+.fact:nth-child(even) { padding-left: var(--space-md); border-left: var(--rule-w) solid var(--rule); }
+.fact__num {
+  font-family: var(--font-display); font-stretch: var(--font-display-stretch); font-weight: 700;
+  font-size: calc(clamp(2.25rem, 1.6rem + 2.6vw, 4rem) * var(--font-display-scale));
+  line-height: 1; letter-spacing: -0.02em;
+  overflow-wrap: anywhere; min-width: 0;
+}
+.fact__cap { font-size: var(--text-sm); color: var(--muted); max-width: 22ch; }
+.fact--todo .fact__num { color: var(--muted); }
+/* О нас | Команда — переключатель (как у M2) */
+.about__head { display: flex; justify-content: flex-start; margin-bottom: clamp(var(--space-xl), 4vw, var(--space-2xl)); }
+.tabs { display: inline-flex; gap: var(--space-2xs); padding: var(--space-2xs); border: var(--rule-w) solid var(--rule); border-radius: var(--radius-pill); }
+.tabs__btn {
+  min-height: 2.75rem; padding: 0 var(--space-lg);
+  border: 0; border-radius: var(--radius-pill); background: transparent; color: var(--ink);
+  font-family: var(--font-display); font-stretch: var(--font-display-stretch); font-weight: 700;
+  font-size: var(--fs-pill); letter-spacing: 0.04em; text-transform: uppercase; white-space: nowrap;
+}
+.tabs__btn:hover { color: var(--link); }
+@media (max-width: 22.49rem) { .tabs__btn { padding: 0 var(--space-md); } }
+.tabs__btn[aria-selected="true"] { background: var(--ink); color: var(--on-ink); }
+.tabpanel[hidden] { display: none; }
+.tabpanel:not([hidden]) { animation: tab-in var(--dur-long) var(--ease-out); }
+@keyframes tab-in { from { opacity: 0; transform: translateY(0.5rem); } }
+.about__photo { position: relative; aspect-ratio: 4 / 5; overflow: hidden; background: var(--bg-2); }
+.about__photo img { width: 100%; height: 100%; object-fit: cover; }
+.about__text { display: grid; align-content: start; gap: var(--space-xl); min-width: 0; }
+.about__letter { margin: 0; display: grid; gap: var(--space-md); padding-left: var(--space-lg); border-left: 2px solid var(--link); }
+.about__letter p { font-size: var(--text-lg); line-height: 1.55; max-width: 48ch; }
+.about__sign { font-family: var(--font-display); font-stretch: var(--font-display-stretch); font-weight: 600; font-size: var(--text-sm); letter-spacing: 0.06em; text-transform: uppercase; color: var(--muted); }
+.about__draft { margin-top: calc(var(--space-md) * -1); font-size: var(--text-xs); color: var(--muted); }
+.team__lead { font-size: var(--text-lg); color: var(--muted); max-width: 52ch; margin-bottom: var(--space-xl); }
+.team { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: var(--space-xl) var(--space-md); }
+.member { container-type: inline-size; display: grid; gap: var(--space-2xs); align-content: start; min-width: 0; }
+.member__img { display: block; aspect-ratio: 4 / 5; overflow: hidden; margin-bottom: var(--space-sm); background: var(--bg-2); }
+.member__img img { width: 100%; height: 100%; object-fit: cover; }
+/* «ВИДЕОПРОДАКШН» широким шрифтом ≈ 12.6em — кегль не больше ширины карточки */
+.member__name { font-family: var(--font-display); font-stretch: var(--font-display-stretch); font-weight: 700; font-size: min(clamp(1.125rem, 0.95rem + 0.7vw, 1.5rem), calc(100cqi / 13)); text-transform: uppercase; line-height: 1.1; }
+.member__role { font-size: var(--text-sm); color: var(--muted); }
+.about .projects__note { padding-bottom: 0; }
+@media (min-width: 48rem) { .team { grid-template-columns: repeat(4, minmax(0, 1fr)); } }
+@media (min-width: 60rem) {
+  .about__grid { grid-template-columns: minmax(0, 5fr) minmax(0, 7fr); column-gap: var(--space-3xl); align-items: start; }
+  .about__photo { position: sticky; top: calc(var(--hdr-h) + var(--space-lg)); }
+}
+
+/* ── 3. Виды мероприятий (как у M2: номер, название, строка, переход) ── */
+.types { padding-block: var(--section-y); scroll-margin-top: var(--hdr-h); }
+.types__list { display: grid; border-top: var(--rule-w) solid var(--rule); }
+.types__list > li { min-width: 0; }
+.type {
+  container-type: inline-size;
+  display: grid; align-content: start; gap: var(--space-sm);
+  height: 100%;
+  padding-block: var(--space-lg) var(--space-xl);
+  border-bottom: var(--rule-w) solid var(--rule);
+  text-decoration: none;
+}
+.type__num { font-size: var(--text-sm); color: var(--muted); font-variant-numeric: tabular-nums; }
+.type__name {
+  margin-top: var(--space-sm);
+  font-family: var(--font-display); font-stretch: var(--font-display-stretch); font-weight: 700;
+  /* КОРПОРАТИВНЫЕ = 12.35em — кегль не больше ширины колонки */
+  font-size: min(var(--text-h3), calc(100cqi / 12.8));
+  line-height: 1.15; text-transform: uppercase; letter-spacing: 0.01em;
+}
+.type__text { color: var(--muted); max-width: 36ch; }
+.type__go {
+  justify-self: start; display: inline-flex; align-items: center; gap: 0.55em;
+  margin-top: var(--space-xs); padding-block: var(--space-2xs);
+  font-weight: 500;
+  border-bottom: var(--rule-w) solid color-mix(in oklch, var(--ink) 40%, transparent);
+}
+.type__arr { color: var(--link); }
+/* «Подробнее» — на одной нижней линии во всех колонках (Илья 20.10) */
+.type { display: flex; flex-direction: column; align-items: flex-start; }
+.type__go { margin-top: auto; }
+.type__text { margin-bottom: var(--space-xs); }
+.type:hover .type__name, .type:hover .type__go { color: var(--link); }
+.type:hover .type__go { border-color: var(--link); }
+.types .h2 { font-size: min(var(--text-h2), calc((100vw - 2 * var(--gutter)) / 10.9)); }
+.types__note { margin-top: var(--space-lg); font-size: var(--text-sm); color: var(--muted); max-width: 60ch; }
+@media (min-width: 60rem) {
+  .types__list { grid-template-columns: repeat(4, minmax(0, 1fr)); border-bottom: var(--rule-w) solid var(--rule); }
+  .type { min-height: 16rem; padding: var(--space-lg) var(--space-lg) var(--space-xl); border-bottom: 0; border-left: var(--rule-w) solid var(--rule); }
+  .types__list > li:first-child .type { padding-left: 0; border-left: 0; }
+}
+
+/* ── 4–6. Сцены LIVE / LOVE / JOY ───────────────────── */
+.scene { min-height: var(--screen-h); display: grid; align-items: end; scroll-margin-top: 0; }
+.scene__in {
+  container-type: inline-size;
+  padding-top: calc(var(--hdr-h) + var(--space-2xl));
+  padding-bottom: clamp(var(--space-xl), 7svh, var(--space-3xl));
+  display: grid; gap: var(--space-md);
+  justify-items: start;
+}
+.scene__title { display: grid; gap: var(--space-xs); }
+.scene__word {
+  font-family: var(--font-display); font-stretch: var(--font-display-stretch); font-weight: 800;
+  font-size: min(calc(100cqi / var(--k-scene)), var(--scene-cap));
+  line-height: 1; letter-spacing: -0.02em;
+  margin-left: -0.05em;
+  overflow-wrap: normal; white-space: nowrap;
+}
+.w-ru { display: none; }
+:root[data-deviz="scenes"] .w-en { display: none; }
+:root[data-deviz="scenes"] .w-ru { display: inline; }
+:root[data-deviz="scenes"] .scene__word { font-size: min(calc(100cqi / var(--k-scene-ru)), var(--scene-cap)); }
+.scene__sub {
+  font-family: var(--font-display); font-stretch: var(--font-display-stretch); font-weight: 600;
+  font-size: var(--text-h3); line-height: 1.2;
+  text-transform: uppercase; letter-spacing: 0.02em;
+}
+.scene__text { max-width: 46ch; font-size: var(--text-lg); line-height: 1.5; color: var(--muted); }
+.scene .chips { margin-top: var(--space-2xs); }
+.scene .go { margin-top: var(--space-xs); }
+
+.scene--live .scrim {
+  background:
+    linear-gradient(to top, var(--scrim-strong) 8%, var(--scrim-clear) 78%),
+    linear-gradient(to right, var(--scrim-mid), var(--scrim-clear) 70%);
+}
+.scene--joy .scrim {
+  background:
+    linear-gradient(to top, var(--scrim-strong) 6%, var(--scrim-clear) 75%),
+    linear-gradient(to left, var(--scrim-strong) 10%, var(--scrim-clear) 75%);
+}
+.scene--joy .scene__in { justify-items: end; text-align: right; }
+.scene--joy .chips { justify-content: flex-end; }
+.scene--joy .scene__word { margin-left: 0; margin-right: -0.04em; }
+
+/* LOVE — редакционный коллаж на светлой полосе */
+.love { padding-block: var(--section-y); scroll-margin-top: var(--hdr-h); }
+.love__in { container-type: inline-size; }
+.love .scene__word { color: var(--ink); }
+.love__grid { display: grid; gap: var(--space-2xl); margin-top: var(--space-lg); }
+.love__text { display: grid; gap: var(--space-md); align-content: start; justify-items: start; }
+.love .scene__text { color: var(--muted); }
+.collage { position: relative; aspect-ratio: 6 / 5; }
+.collage__item { position: absolute; overflow: hidden; background: var(--bg-2); }
+.collage__item img { width: 100%; height: 100%; object-fit: cover; }
+.collage__a { left: 0; top: 6%; width: 61%; aspect-ratio: 4 / 5; }
+.collage__b { right: 0; top: 0; width: 35%; aspect-ratio: 1 / 1; }
+.collage__c { right: 5%; bottom: 0; width: 45%; aspect-ratio: 4 / 3; z-index: var(--z-raised); outline: clamp(4px, 0.6vw, 8px) solid var(--bg); }
+.collage__cap {
+  position: absolute; left: 63.5%; top: 45.5%;
+  max-width: 14ch;
+  font-size: var(--text-xs); letter-spacing: 0.12em; text-transform: uppercase; color: var(--muted);
+}
+/* на телефоне между фото нет места под подпись — она наезжала на нижнее фото (и в версии до 12.10) */
+@media (max-width: 47.99rem) { .collage__cap { display: none; } }
+@media (min-width: 60rem) {
+  .love__grid { grid-template-columns: minmax(0, 5fr) minmax(0, 7fr); column-gap: var(--space-3xl); align-items: start; }
+}
+
+/* ── Бегущая строка с девизом (вариант) ─────────────────── */
+.marquee { padding-block: clamp(var(--space-lg), 3vw, var(--space-2xl)); overflow: hidden; border-block: var(--rule-w) solid var(--rule); scroll-margin-top: calc(var(--hdr-h) + var(--space-2xl)); }
+.marquee__track { display: flex; width: max-content; animation: marquee var(--dur-marquee) linear infinite; }
+.marquee:hover .marquee__track { animation-play-state: paused; }
+.marquee__list {
+  display: flex; align-items: center; flex: none;
+  gap: 0.42em; padding-right: 0.42em;
+  font-family: var(--font-display); font-stretch: var(--font-display-stretch); font-weight: 700;
+  font-size: clamp(2rem, 1.2rem + 3.6vw, 5rem);
+  line-height: 1.08; text-transform: uppercase; letter-spacing: -0.01em;
+  white-space: nowrap;
+}
+.marquee__star { width: 0.42em; height: 0.42em; color: var(--link); fill: currentColor; flex: none; }
+@keyframes marquee { to { transform: translateX(-50%); } }
+
+/* ── 8. Что мы делаем ───────────────────────────────── */
+.works { padding-block: var(--section-y); scroll-margin-top: var(--hdr-h); }
+.works__grid { display: grid; gap: var(--space-2xl); }
+.works__media { position: relative; aspect-ratio: 4 / 3; overflow: hidden; background: var(--bg-2); }
+.works__media img { width: 100%; height: 100%; object-fit: cover; }
+.works__note {
+  position: absolute; left: var(--space-md); bottom: var(--space-md);
+  display: inline-flex; align-items: center; gap: var(--space-xs);
+  padding: var(--space-xs) var(--space-md);
+  border-radius: var(--radius-pill);
+  background: var(--glass-bg);
+  -webkit-backdrop-filter: blur(10px); backdrop-filter: blur(10px);
+  color: var(--tone-dark-ink);
+  font-size: var(--text-xs); letter-spacing: 0.08em; text-transform: uppercase;
+}
+.works__note::before { content: ""; width: 0.5rem; height: 0.5rem; border-radius: 50%; background: var(--accent); }
+.works__lead { margin-top: var(--space-md); font-size: var(--text-lg); color: var(--muted); max-width: 46ch; }
+.step__text { grid-column: 2; margin-top: var(--space-2xs); font-size: var(--text-sm); line-height: 1.5; color: var(--muted); }
+.steps { margin-top: var(--space-xl); counter-reset: step; }
+.step {
+  display: grid; grid-template-columns: 2.75rem minmax(0, 1fr);
+  align-items: baseline;
+  padding-block: clamp(var(--space-md), 1.6vw, var(--space-lg));
+  border-top: var(--rule-w) solid var(--rule);
+}
+.step:last-child { border-bottom: var(--rule-w) solid var(--rule); }
+.step__num { font-size: var(--text-xs); letter-spacing: 0.1em; color: var(--link); font-variant-numeric: tabular-nums; }
+.step__title {
+  font-family: var(--font-display); font-stretch: var(--font-display-stretch); font-weight: 600;
+  font-size: clamp(1rem, 0.78rem + 0.95vw, 1.625rem);
+  line-height: 1.2; text-transform: uppercase;
+  overflow-wrap: anywhere; min-width: 0;
+}
+@media (min-width: 60rem) {
+  .works__grid { grid-template-columns: minmax(0, 5fr) minmax(0, 7fr); column-gap: var(--space-3xl); align-items: start; }
+  .works__media { aspect-ratio: 4 / 5; position: sticky; top: calc(var(--hdr-h) + var(--space-lg)); }
+}
+
+/* ── Фото-паузы ─────────────────────────────────────── */
+.pause { min-height: var(--screen-h); display: grid; align-items: end; }
+.pause .scrim { background: linear-gradient(to top, var(--scrim-mid), var(--scrim-clear) 45%); }
+.pause__line {
+  padding-block: clamp(var(--space-xl), 7svh, var(--space-3xl));
+  font-family: var(--font-display); font-stretch: var(--font-display-stretch); font-weight: 700;
+  font-size: clamp(1.5rem, 0.9rem + 2.6vw, 3.25rem);
+  line-height: 1.08; text-transform: uppercase; letter-spacing: -0.01em;
+  max-width: 18ch;
+  overflow-wrap: anywhere; min-width: 0;
+}
+.pause__line .label__dot { font-size: 1em; }
+
+/* ── 9. Проекты ─────────────────────────────────────── */
+.projects { padding-top: var(--section-y); scroll-margin-top: var(--hdr-h); }
+.tiles { display: grid; grid-template-columns: minmax(0, 1fr); }
+.tile {
+  position: relative; display: block; overflow: hidden;
+  aspect-ratio: 4 / 3;
+  isolation: isolate;
+  color: var(--photo-ink);
+  text-decoration: none;
+  background: var(--photo-base);
+}
+.tile img {
+  position: absolute; inset: 0; width: 100%; height: 100%; object-fit: cover; z-index: -2;
+  transition: transform var(--dur-long) var(--ease-out);
+}
+.tile::before {
+  content: ""; position: absolute; inset: 0; z-index: -1;
+  background: var(--scrim-mid);
+  transition: opacity var(--dur-long) var(--ease-out);
+}
+.tile::after {
+  content: ""; position: absolute; inset: 0; z-index: -1;
+  background: linear-gradient(to top, var(--scrim-mid), var(--scrim-clear) 55%);
+}
+.tile__body {
+  position: absolute; left: 0; right: 0; bottom: 0;
+  display: grid; gap: var(--space-xs); justify-items: start;
+  padding: clamp(var(--space-md), 2.4vw, var(--space-xl));
+}
+.tile__meta { font-size: var(--text-xs); letter-spacing: 0.14em; text-transform: uppercase; color: var(--photo-muted); }
+.tile__title {
+  font-family: var(--font-display); font-stretch: var(--font-display-stretch); font-weight: 700;
+  font-size: clamp(1.25rem, 0.95rem + 1.25vw, 2.125rem);
+  line-height: 1.06; text-transform: uppercase; letter-spacing: -0.01em;
+  max-width: 16ch; overflow-wrap: anywhere; min-width: 0;
+}
+.tile__todo {
+  display: inline-flex; align-items: center; gap: 0.5em;
+  min-height: 1.75rem; padding: 0 var(--space-sm);
+  border-radius: var(--radius-pill); border: var(--rule-w) dashed var(--photo-rule);
+  font-size: var(--text-xs); letter-spacing: 0.06em; color: var(--photo-muted); white-space: nowrap;
+}
+.tile:hover img, .tile:focus-visible img { transform: scale(1.045); }
+.tile:hover::before, .tile:focus-visible::before { opacity: 0.35; }
+.tile:focus-visible { outline-offset: -4px; }
+.projects__note { padding-block: var(--space-lg) var(--space-2xl); font-size: var(--text-sm); color: var(--muted); }
+.tile__text { font-size: var(--text-sm); line-height: 1.45; color: var(--photo-ink); opacity: 0.86; max-width: 44ch; }
+.tile__pill { margin-top: var(--space-sm); pointer-events: none; }
+.tiles__wide { grid-column: 1 / -1; }
+
+/* ── 11б. Журнал ────────────────────────────────────── */
+.journal { padding-block: var(--section-y); scroll-margin-top: var(--hdr-h); }
+.posts { display: grid; gap: var(--space-2xl); margin-top: var(--space-xl); }
+/* 20.10: на планшете три колонки узкие — «организатору» не влезало и рвалось; уже щель — шире колонка */
+@media (min-width: 48rem) and (max-width: 59.99rem) { .posts { column-gap: var(--space-lg); } }
+.post { display: flex; flex-direction: column; align-items: flex-start; gap: var(--space-xs); height: 100%; color: inherit; text-decoration: none; min-width: 0; }
+.post__img { align-self: stretch; }
+.post__img { display: block; aspect-ratio: 4 / 3; overflow: hidden; margin-bottom: var(--space-sm); background: var(--bg-2); }
+.post__img img { width: 100%; height: 100%; object-fit: cover; transition: transform var(--dur-long) var(--ease-out); }
+.post:hover .post__img img, .post:focus-visible .post__img img { transform: scale(1.04); }
+.post__meta { font-size: var(--text-xs); letter-spacing: 0.14em; text-transform: uppercase; color: var(--link); }
+.post__title {
+  font-family: var(--font-display); font-stretch: var(--font-display-stretch); font-weight: 700;
+  font-size: clamp(1.125rem, 0.95rem + 0.7vw, 1.5rem); line-height: 1.12; text-transform: uppercase;
+  text-wrap: balance; overflow-wrap: anywhere; min-width: 0;
+}
+.post__text { font-size: var(--text-sm); color: var(--muted); }
+.post .go { margin-top: auto; }                       /* «Читать» — на одной нижней линии во всех карточках (как «Подробнее» в видах) */
+.post__text { margin-bottom: var(--space-sm); }
+.journal__all { display: flex; justify-content: center; margin-top: clamp(var(--space-xl), 4vw, var(--space-2xl)); }
+@media (min-width: 48rem) {
+  .posts { grid-template-columns: repeat(3, minmax(0, 1fr)); }
+  .tiles__wide .tile { aspect-ratio: 32 / 10; }
+  .tiles { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+  .tile { aspect-ratio: 16 / 10; }
+}
+
+/* ── Нам доверяют — один в один с M2: заголовок по центру, линии во всю ширину, два ряда логотипов навстречу ── */
+.trust { padding-top: var(--section-y); scroll-margin-top: var(--hdr-h); overflow: hidden; }
+.trust__title { text-align: center; margin: 0 0 clamp(var(--space-md), 1.5vw, var(--space-lg)); }
+.trust__rows {
+  border-block: var(--rule-w) solid var(--rule);
+  padding-block: clamp(2.5rem, 6vw, 6.25rem);
+  display: grid; row-gap: clamp(2rem, 4.5vw, 4.75rem);
+}
+.trust__row { overflow: hidden; }
+.trust__track { display: flex; width: max-content; animation: marquee 60s linear infinite; }
+.trust__row--back .trust__track { animation-direction: reverse; }
+.trust__list { display: flex; align-items: center; flex: none; gap: clamp(3rem, 10vw, 10.5rem); padding-right: clamp(3rem, 10vw, 10.5rem); }
+.trust__item { flex: none; display: flex; }
+.trust__logo { height: clamp(2.5rem, 1.5rem + 2.5vw, 3.75rem); width: auto; color: var(--ink); }
+
+.socials { display: flex; flex-wrap: wrap; gap: var(--space-xs); }
+.socials .icon-btn { --rule: var(--tone-light-rule); }
+.band--dark .socials .icon-btn { --rule: var(--tone-dark-rule); }
+
+/* ── 12. Заявка ─────────────────────────────────────── */
+.contact { padding-block: var(--section-y); scroll-margin-top: 0; }
+.contact .scrim {
+  background:
+    linear-gradient(to bottom, var(--scrim-strong), var(--scrim-mid) 55%, var(--scrim-strong)),
+    var(--scrim-soft);
+}
+.contact__in { padding-top: calc(var(--hdr-h) * 0.6); }
+.contact__title {
+  font-family: var(--font-display); font-stretch: var(--font-display-stretch); font-weight: 800;
+  font-size: var(--text-shout);
+  line-height: 1.02; letter-spacing: -0.02em; text-transform: uppercase;
+  max-width: 13ch;
+  overflow-wrap: anywhere; min-width: 0;
+}
+.contact__lead { margin-top: var(--space-lg); font-size: var(--text-lg); color: var(--muted); max-width: 46ch; }
+.contact__grid { display: grid; gap: var(--space-2xl); margin-top: clamp(var(--space-xl), 5vw, var(--space-3xl)); }
+.clinks { display: grid; align-content: start; border-top: var(--rule-w) solid var(--rule); }
+.clink {
+  display: flex; align-items: center; gap: var(--space-md);
+  min-height: 3.75rem;
+  border-bottom: var(--rule-w) solid var(--rule);
+  text-decoration: none;
+  font-size: var(--text-md);
+}
+.clink__v { white-space: nowrap; }
+@media (max-width: 22.49rem) { .clink__k { display: none; } }
+.clink__k { margin-left: auto; font-size: var(--text-xs); letter-spacing: 0.12em; text-transform: uppercase; color: var(--muted); white-space: nowrap; }
+.clink:hover { color: var(--link); }
+.clinks .pill { margin-top: var(--space-xl); justify-self: start; }
+.clinks__hint { margin-top: var(--space-sm); font-size: var(--text-sm); color: var(--muted); max-width: 46ch; }
+
+.form { display: grid; gap: var(--space-lg); min-width: 0; }
+.form__row { display: grid; gap: var(--space-lg); }
+.field { display: grid; gap: var(--space-xs); min-width: 0; }
+.field__label {
+  font-size: var(--text-sm); font-weight: 600; color: var(--ink);
+}
+.input, .select select {
+  width: 100%;
+  height: 3.5rem;
+  padding: 0 var(--space-md);
+  border: var(--rule-w) solid var(--rule);
+  border-radius: var(--radius-sm);
+  background: color-mix(in oklch, var(--ink) 7%, transparent);
+  color: var(--ink);
+  font-size: var(--text-base);
+  appearance: none;
+  -webkit-appearance: none;
+}
+.input::placeholder { color: var(--muted); opacity: 0.8; }
+.input:hover, .select select:hover { border-color: var(--ink); }
+.input:focus-visible, .select select:focus-visible {
+  outline: 2px solid var(--ring, var(--focus));
+  outline-offset: 2px;
+  border-color: var(--ring, var(--focus));
+}
+.select { position: relative; }
+.select select { padding-right: 3rem; cursor: pointer; }
+.select::after {
+  content: ""; position: absolute; right: 1.25rem; top: 50%;
+  width: 0.5rem; height: 0.5rem;
+  border-right: 1.5px solid currentColor; border-bottom: 1.5px solid currentColor;
+  transform: translateY(-75%) rotate(45deg);
+  pointer-events: none;
+}
+.select option { background: var(--photo-base); color: var(--photo-ink); }
+.consent { display: grid; grid-template-columns: auto minmax(0, 1fr); gap: var(--space-sm); align-items: start; font-size: var(--text-sm); color: var(--muted); }
+.consent input {
+  appearance: none; -webkit-appearance: none;
+  width: 1.375rem; height: 1.375rem; margin: 0;
+  border: var(--rule-w) solid var(--ink); border-radius: var(--radius-sm);
+  display: grid; place-items: center; background: transparent;
+}
+.consent input::after {
+  content: ""; width: 0.375rem; height: 0.7rem;
+  border-right: 2px solid var(--on-ink); border-bottom: 2px solid var(--on-ink);
+  transform: translateY(-1px) rotate(45deg) scale(0);
+  transition: transform var(--dur-micro) var(--ease-out);
+}
+.consent input:checked { background: var(--ink); }
+.consent input:checked::after { transform: translateY(-1px) rotate(45deg) scale(1); }
+.consent a { color: var(--ink); text-underline-offset: 0.18em; }
+.consent a:hover { color: var(--link); }
+.field__err {
+  display: flex; align-items: flex-start; gap: var(--space-xs);
+  min-height: 1lh;
+  font-size: var(--text-sm); color: var(--err);
+}
+.field__err::before {
+  content: "!"; flex: none;
+  display: inline-grid; place-items: center;
+  width: 1.125rem; height: 1.125rem; margin-top: var(--space-3xs);
+  border-radius: 50%; border: 1.5px solid currentColor;
+  font-size: 0.6875rem; font-weight: 600; line-height: 1;
+}
+.field__err:empty::before { display: none; }
+.is-invalid .input, .is-invalid select, .is-invalid .consent input { border-color: var(--err); }
+.form__submit { display: flex; flex-wrap: wrap; align-items: center; gap: var(--space-md); margin-top: var(--space-xs); }
+.form__submit .pill { min-height: var(--cta-h); padding-inline: calc(var(--space-lg) + var(--space-xs)); }
+.form__note { font-size: var(--text-xs); color: var(--muted); }
+.done {
+  display: grid; align-content: start; gap: var(--space-md);
+  padding: var(--space-xl);
+  border: var(--rule-w) solid var(--rule);
+  background: var(--glass-bg);
+  -webkit-backdrop-filter: blur(12px); backdrop-filter: blur(12px);
+}
+.contact .done { background: var(--photo-fill); }
+.done__title { font-family: var(--font-display); font-stretch: var(--font-display-stretch); font-weight: 700; font-size: var(--text-h2); line-height: 1.04; text-transform: uppercase; overflow-wrap: anywhere; min-width: 0; }
+.done__title span { color: var(--link); }
+.done p { color: var(--muted); max-width: 46ch; }
+.done .pill { justify-self: start; }
+.done__btns { display: flex; flex-wrap: wrap; gap: var(--space-xs); }
+@media (min-width: 40rem) {
+  .form__row { grid-template-columns: repeat(2, minmax(0, 1fr)); column-gap: var(--space-xl); }
+}
+@media (min-width: 60rem) {
+  .contact__grid { grid-template-columns: minmax(0, 4fr) minmax(0, 7fr); column-gap: var(--space-3xl); }
+}
+
+/* ── 13. Подвал ─────────────────────────────────────── */
+/* снизу — место под плавающий переключатель палитры (только в прототипе), чтобы он не закрывал юр. строку */
+.foot { padding-top: clamp(var(--space-xl), 5vw, var(--space-3xl)); padding-bottom: calc(var(--space-xl) + var(--palette-h) + var(--space-sm)); }
+.foot__signwrap { container-type: inline-size; scroll-margin-top: calc(var(--hdr-h) + var(--space-lg)); }
+.foot__sign {
+  font-size: min(calc(100cqi / var(--k-sign-word)), 40svh);
+  color: var(--tone-dark-2);
+  background-color: var(--tone-dark-2);
+  background-size: cover;
+  background-position: center 40%;
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+  margin-left: -0.04em;
+}
+.foot__sign.is-lit { background-image: var(--foot-photo); }
+/* видео в буквах: белые буквы на фоне цвета полосы + darken — видео видно только в буквах.
+   contrast() поднимает чёрное видео выше цвета полосы, иначе тени проступят вокруг букв */
+.foot__vsign { display: none; position: relative; isolation: isolate; }
+:root[data-foot="video"] .foot__sign { display: none; }
+:root[data-foot="video"] .foot__vsign { display: block; }
+.foot__video {
+  position: absolute; inset: 0; z-index: 0;
+  width: 100%; height: 100%; object-fit: cover;
+  filter: contrast(0.72) brightness(1.08);
+}
+.foot__vtext {
+  position: relative; z-index: 1;
+  font-size: min(calc(100cqi / var(--k-sign-word)), 40svh);
+  margin-left: -0.04em;
+  background: var(--tone-dark); color: var(--knock-light);
+  mix-blend-mode: darken;
+}
+:root[data-palette="light"] .foot__video { filter: contrast(0.72); }
+:root[data-palette="light"] .foot__vtext { color: var(--knock-dark); mix-blend-mode: lighten; }
+@media (min-width: 48rem) {
+  .foot__sign, .foot__vtext { font-size: calc(100cqi / var(--k-sign-line)); }
+}
+.foot__grid {
+  display: grid; gap: var(--space-xl);
+  margin-top: clamp(var(--space-xl), 4vw, var(--space-2xl));
+  padding-top: var(--space-xl);
+  border-top: var(--rule-w) solid var(--rule);
+}
+.foot__nav { display: flex; flex-wrap: wrap; gap: var(--space-sm) var(--space-lg); }
+.foot__cols { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: var(--space-lg); }
+.foot__col { display: grid; align-content: start; justify-items: start; gap: var(--space-xs); min-width: 0; }
+.foot__h { margin-bottom: var(--space-2xs); font-size: var(--text-xs); letter-spacing: 0.14em; text-transform: uppercase; color: var(--muted); }
+.foot__col a { text-decoration: none; font-family: var(--font-display); font-stretch: var(--font-display-stretch); font-weight: 600; font-size: var(--text-sm); text-transform: uppercase; letter-spacing: 0.04em; }
+.foot__col a:hover { color: var(--link); }
+/* «КОРПОРАТИВНЫЕ» широким шрифтом не влезает в половину телефона — колонки друг под другом */
+@media (max-width: 29.99rem) { .foot__cols { grid-template-columns: minmax(0, 1fr); } }
+.foot__nav a, .foot__contacts a {
+  text-decoration: none; white-space: nowrap;
+}
+.foot__nav a { font-family: var(--font-display); font-stretch: var(--font-display-stretch); font-weight: 600; font-size: var(--text-sm); text-transform: uppercase; letter-spacing: 0.04em; }
+.foot__nav a:hover, .foot__contacts a:hover { color: var(--link); }
+.foot__contacts { display: grid; gap: var(--space-2xs); justify-items: start; }
+.foot__contacts a:first-child { font-size: var(--text-md); font-weight: 500; }
+.foot__legal {
+  display: flex; flex-wrap: wrap; gap: var(--space-xs) var(--space-lg);
+  margin-top: var(--space-xl); padding-top: var(--space-lg);
+  border-top: var(--rule-w) solid var(--rule);
+  font-size: var(--text-xs); color: var(--muted);
+}
+.foot__legal a { white-space: nowrap; }
+.foot__legal a:hover { color: var(--link); }
+@media (min-width: 60rem) {
+  .foot__grid { grid-template-columns: minmax(0, 6fr) minmax(0, 3fr) auto; align-items: start; }
+}
+
+/* ── Нижняя панель на телефоне ───────────────────────── */
+.mbar {
+  position: fixed; left: 0; right: 0; bottom: 0;
+  z-index: var(--z-sticky);
+  display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: var(--space-xs);
+  padding: var(--space-xs) var(--gutter) calc(var(--space-xs) + env(safe-area-inset-bottom));
+  background: var(--glass-bg);
+  -webkit-backdrop-filter: blur(16px) saturate(140%); backdrop-filter: blur(16px) saturate(140%);
+  border-top: var(--rule-w) solid var(--glass-rule);
+  --ink: var(--tone-dark-ink); --on-ink: var(--tone-dark); color: var(--ink);
+}
+:root[data-palette="light"] .mbar { --on-ink: var(--tone-light); }
+.mbar .pill { min-height: 3rem; padding-inline: var(--space-sm); font-size: var(--fs-pill-sm); }
+@media (min-width: 48rem) { .mbar { display: none; } }
+
+/* ── Окно «Обсудить событие» (как у M2: имя, телефон, тип) ── */
+.lead-dlg {
+  width: min(calc(100% - 2 * var(--space-sm)), 58rem);
+  max-width: none; max-height: calc(100svh - 2 * var(--space-sm));
+  margin: auto; padding: 0;
+  border: var(--rule-w) solid var(--rule); border-radius: var(--radius-sm);
+  background: var(--bg); color: var(--ink);
+  overflow-y: auto; overscroll-behavior: contain;
+}
+.lead-dlg[open] { display: grid; animation: dlg-in var(--dur-long) var(--ease-out); }
+.lead-dlg__photo { position: relative; height: 11rem; overflow: hidden; background: var(--bg-2); }
+.lead-dlg__photo img { width: 100%; height: 100%; object-fit: cover; object-position: center 40%; }
+.lead-dlg__photo::after { content: ""; position: absolute; inset: 0; background: linear-gradient(to top, var(--scrim-strong), var(--scrim-clear) 60%); }
+.lead-dlg__who { position: absolute; left: var(--space-md); bottom: var(--space-md); z-index: 1; display: grid; gap: var(--space-3xs); color: var(--photo-ink); }
+.lead-dlg__name { font-family: var(--font-display); font-stretch: var(--font-display-stretch); font-weight: 700; font-size: var(--text-h3); text-transform: uppercase; line-height: 1; }
+.lead-dlg__role { font-size: var(--text-xs); letter-spacing: 0.12em; text-transform: uppercase; color: var(--photo-muted); }
+.lead-dlg__note { left: auto; right: var(--space-md); top: var(--space-md); bottom: auto; z-index: 1; }
+@media (max-width: 47.99rem) { .lead-dlg__note { display: none; } }
+@media (min-width: 48rem) {
+  .lead-dlg[open] { grid-template-columns: minmax(0, 5fr) minmax(0, 7fr); }
+  .lead-dlg__photo { height: auto; min-height: 100%; }
+}
+@keyframes dlg-in { from { opacity: 0; transform: translateY(1rem); } }
+.lead-dlg::backdrop {
+  background: color-mix(in oklch, var(--photo-base) 72%, transparent);
+  -webkit-backdrop-filter: blur(6px); backdrop-filter: blur(6px);
+}
+.lead-dlg__in { position: relative; display: grid; gap: var(--space-lg); padding: clamp(var(--space-lg), 4vw, var(--space-xl)); }
+/* крестик — от угла окна: на телефоне ложится на фото Ольги */
+.lead-dlg__in { position: static; }
+.lead-dlg__close { position: absolute; top: var(--space-sm); right: var(--space-sm); z-index: 2; background: var(--glass-bg); -webkit-backdrop-filter: blur(10px); backdrop-filter: blur(10px); }
+.lead-dlg__title {
+  padding-right: 3rem;
+  font-family: var(--font-display); font-stretch: var(--font-display-stretch); font-weight: 700;
+  font-size: clamp(1.5rem, 1.15rem + 1.1vw, 2rem);
+  line-height: 1.05; text-transform: uppercase;
+  overflow-wrap: anywhere; min-width: 0;
+}
+.lead-dlg__lead { margin-top: calc(var(--space-sm) * -1); color: var(--muted); max-width: 40ch; }
+.lead-dlg .form, .lead-dlg .form__row { gap: var(--space-md); }
+.lead-dlg .form__row { grid-template-columns: minmax(0, 1fr); }
+.lead-dlg .done { padding: 0; border: 0; background: transparent; -webkit-backdrop-filter: none; backdrop-filter: none; }
+
+/* ── 7. Новый год + календарь поводов ───────────────── */
+.ny { min-height: var(--screen-h); display: grid; align-items: end; scroll-margin-top: 0; }
+.ny .scrim {
+  background:
+    linear-gradient(to top, var(--scrim-strong) 10%, var(--scrim-clear) 80%),
+    linear-gradient(to right, var(--scrim-strong), var(--scrim-clear) 70%);
+}
+.ny__in { container-type: inline-size; padding-top: calc(var(--hdr-h) + var(--space-2xl)); padding-bottom: clamp(var(--space-xl), 7svh, var(--space-3xl)); display: grid; gap: var(--space-md); justify-items: start; }
+.ny__title {
+  font-family: var(--font-display); font-stretch: var(--font-display-stretch); font-weight: 800;
+  font-size: min(calc(100cqi / 9.4), var(--scene-cap));
+  line-height: 1; letter-spacing: -0.02em; text-transform: uppercase; margin-left: -0.04em;
+  white-space: nowrap;
+}
+.ny__text { max-width: 46ch; font-size: var(--text-lg); line-height: 1.5; color: var(--muted); }
+.ny__cta { margin-top: var(--space-xs); min-height: var(--cta-h); padding-inline: calc(var(--space-lg) + var(--space-sm)); }
+/* 20.10: блок короче — без календаря, не на весь экран (Илья) */
+.ny { min-height: min(var(--screen-h), 72svh); }
+.ny__in { padding-top: calc(var(--hdr-h) + var(--space-lg)); padding-bottom: clamp(var(--space-lg), 5svh, var(--space-2xl)); }
+/* 20.10: текст посередине картинки по высоте, по левому краю (Илья) */
+.ny { align-items: center; }
+.ny__in { padding-top: calc(var(--hdr-h) + var(--space-md)); padding-bottom: var(--space-xl); }
+.cal { justify-self: stretch; margin-top: clamp(var(--space-lg), 4svh, var(--space-2xl)); padding-top: var(--space-md); border-top: var(--rule-w) solid var(--rule); }
+.cal__label { font-size: var(--text-xs); letter-spacing: 0.14em; text-transform: uppercase; color: var(--muted); margin-bottom: var(--space-sm); }
+.cal__list { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: var(--space-md) var(--space-lg); }
+.cal__list li { display: grid; gap: var(--space-3xs); min-width: 0; }
+.cal__date { font-family: var(--font-display); font-stretch: var(--font-display-stretch); font-weight: 700; font-size: clamp(1.25rem, 1rem + 1vw, 2rem); line-height: 1; color: var(--link); }
+.cal__name { font-size: var(--text-sm); color: var(--ink); }
+@media (min-width: 48rem) { .cal__list { grid-template-columns: repeat(4, minmax(0, 1fr)); } }
+.cal { max-width: 52rem; } /* уже: по ширине текстовой колонки, а не на весь экран */
+
+/* ── 10б. Отчётное видео ─────────────────────────────── */
+.reel { padding-block: var(--section-y); scroll-margin-top: var(--hdr-h); }
+.reel__frame { position: relative; aspect-ratio: 16 / 9; overflow: hidden; background: var(--bg-2); }
+.reel__video { position: absolute; inset: 0; width: 100%; height: 100%; object-fit: cover; }
+.reel__play {
+  position: absolute; inset: 0; z-index: 1;
+  display: grid; place-content: center; justify-items: center; gap: var(--space-md);
+  border: 0; background: linear-gradient(to top, var(--scrim-mid), var(--scrim-clear) 60%), var(--scrim-soft);
+  color: var(--photo-ink);
+}
+.reel__btn { position: relative; width: clamp(4.5rem, 3rem + 5vw, 7.5rem); aspect-ratio: 1; border-radius: 50%; background: var(--accent-fill); transition: transform var(--dur-short) var(--ease-out); }
+.reel__btn::after { content: ""; position: absolute; left: 54%; top: 50%; transform: translate(-50%, -50%); border-style: solid; border-width: 0.8em 0 0.8em 1.3em; border-color: transparent transparent transparent var(--accent-ink); font-size: clamp(0.9rem, 0.6rem + 1vw, 1.5rem); }
+.reel__play:hover .reel__btn { transform: scale(1.06); }
+.reel__cap { font-size: var(--text-xs); letter-spacing: 0.14em; text-transform: uppercase; }
+.reel__note { z-index: 2; pointer-events: none; }
+.reel.is-playing .reel__play, .reel.is-playing .reel__note { display: none; }
+@media (max-width: 47.99rem) { .reel__frame { aspect-ratio: 4 / 5; } }
+
+/* ── 11в. Соцсети ───────────────────────────────────── */
+.social { padding-block: var(--section-y); scroll-margin-top: var(--hdr-h); }
+.feed { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: var(--space-2xs); }
+.feed li { aspect-ratio: 1; overflow: hidden; background: var(--bg-2); }
+.feed img { width: 100%; height: 100%; object-fit: cover; }
+.social__btns { display: flex; flex-wrap: wrap; gap: var(--space-xs); margin-top: var(--space-xl); }
+.social__btns .pill { min-height: var(--cta-h); padding-inline: calc(var(--space-lg) + var(--space-xs)); }
+@media (min-width: 60rem) { .feed { grid-template-columns: repeat(6, minmax(0, 1fr)); } }
+
+/* ── 12б. Офис на карте ─────────────────────────────── */
+.office { padding-block: var(--section-y); scroll-margin-top: var(--hdr-h); }
+.office__grid { display: grid; gap: var(--space-xl); }
+.office__text { display: grid; gap: var(--space-md); align-content: start; justify-items: start; }
+.office__addr { font-family: var(--font-display); font-stretch: var(--font-display-stretch); font-weight: 600; font-size: var(--text-h3); text-transform: uppercase; line-height: 1.15; }
+.office__hint { color: var(--muted); max-width: 40ch; }
+.office__map { aspect-ratio: 4 / 3; overflow: hidden; background: var(--bg-2); border: var(--rule-w) solid var(--rule); }
+.office__map { display: block; }
+.office__map img { width: 100%; height: 100%; object-fit: cover; filter: grayscale(1) contrast(1.05); transition: filter var(--dur-long) var(--ease-out); }
+.office__map:hover img { filter: none; }
+@media (min-width: 60rem) {
+  .office__grid { grid-template-columns: minmax(0, 4fr) minmax(0, 8fr); column-gap: var(--space-3xl); }
+  .office__map { aspect-ratio: 16 / 9; }
+}
+
+/* ── 12в. Наши направления ──────────────────────────── */
+.dirs { padding-block: var(--section-y) 0; }
+.dirs__title { margin-bottom: var(--space-lg); }
+.dirs__list { border-top: var(--rule-w) solid var(--rule); }
+.dir {
+  container-type: inline-size;
+  display: grid; grid-template-columns: minmax(0, 1fr); align-items: baseline; column-gap: var(--space-md); row-gap: var(--space-2xs);
+  padding-block: clamp(var(--space-md), 2vw, var(--space-lg));
+  border-bottom: var(--rule-w) solid var(--rule);
+  text-decoration: none;
+}
+.dir__mark { font-family: var(--font-display); font-stretch: var(--font-display-stretch); font-weight: 800; font-size: min(clamp(1.25rem, 0.8rem + 2.2vw, 3rem), calc(100cqi / 8.4)); line-height: 1; text-transform: uppercase; white-space: nowrap; }
+.dir__sub { font-family: var(--font-display); font-stretch: var(--font-display-stretch); font-weight: 300; font-size: clamp(1.25rem, 0.8rem + 2.2vw, 3rem); line-height: 1; text-transform: lowercase; color: var(--link); white-space: nowrap; }
+.dir__arr { display: none; font-size: var(--text-h3); color: var(--muted); transition: color var(--dur-micro) var(--ease-out), transform var(--dur-micro) var(--ease-out); }
+.dir:hover .dir__mark, .dir:hover .dir__arr { color: var(--link); }
+.dir:hover .dir__arr { transform: translateX(0.25em); }
+@media (min-width: 48rem) { .dir { grid-template-columns: auto minmax(0, 1fr); } }
+@media (min-width: 60rem) {
+  .dir { grid-template-columns: auto auto minmax(0, 1fr); }
+  .dir__arr { display: block; justify-self: end; }
+}
+
+/* ── Единая шкала текста (12.10, жалоба Ольги «размер шрифтов разный») ──────────
+   Пять ступеней на токенах размера (панель «Размер текста» продолжает работать):
+   1) заголовок раздела — --text-h2: все h2, «Агентство Ольги», «Обсудим ваше событие?»;
+   2) заголовок карточки — --text-card: виды, шаги, проекты, журнал, команда, офис;
+   3) абзац — --text-lg: любой поясняющий текст под заголовком раздела;
+   4) текст карточки — --text-base: описание внутри карточки, подписи к цифрам;
+   5) метка — --text-xs: короткие надписи капсом (не мельче 14px).
+   Огромные слова-картинки (LIVE LOVE JOY, ЖИВИ, НОВЫЙ ГОД, бегущая строка) — не текст, в шкалу не входят. */
+:root { --text-card: clamp(1.125rem, 0.95rem + 0.7vw, 1.5rem); }
+.manifesto, .contact__title { font-size: var(--text-h2); }
+.contact__title { font-weight: 700; letter-spacing: -0.012em; line-height: 1.04; }
+.step__title, .post__title, .member__name, .tile__title, .office__addr, .lead-dlg__name { font-size: var(--text-card); font-weight: 700; line-height: 1.15; }
+.type__name { font-size: min(var(--text-card), calc(100cqi / 12.8)); }
+.member__name { font-size: min(var(--text-card), calc(100cqi / 13)); }
+.hero__tagline, .sec-head__note, .office__hint, .lead-dlg__lead,
+.about__letter p, .team__lead, .scene__text, .works__lead, .ny__text, .contact__lead { font-size: var(--text-lg); line-height: 1.5; }
+.type__text, .step__text, .tile__text, .post__text, .member__role, .fact__cap, .cal__name, .clinks__hint { font-size: var(--text-base); line-height: 1.5; }
+.brand__sub { font-size: 0.75rem; }
+@media (min-width: 60rem) {
+  /* четыре колонки видов: поля поуже, чтобы «КОРПОРАТИВНЫЕ» встало в кегль заголовка карточки */
+  .type { padding-inline: var(--space-md); }
+}
+
+
+/* ── Правки Ольги 16.10 ─────────────────────────────────────────
+   1) Шрифты меньше — вся шкала крупного текста ниже ~на 25–40 %, органично;
+   2) бегущая строка белая, без ромбиков; 3) блок «Об агентстве» с бейджем;
+   4) Свадьбы отдельным блоком; 5) ленты фото; 6) подвал как у M2. */
+body {
+  --text-h2:   clamp(1.5rem, 1.05rem + 1.8vw, 2.625rem);
+  --text-card: clamp(1rem, 0.9rem + 0.45vw, 1.25rem);
+}
+.hero .sign { font-size: min(calc(100cqi / var(--k-sign-word) * 0.78), 14svh); }
+@media (min-width: 48rem) { .hero .sign { font-size: min(calc(100cqi / var(--k-sign-line) * 0.72), 19svh); } }
+.scene__word, :root[data-deviz="scenes"] .scene__word { font-size: min(calc(100cqi / var(--k-scene-ru) * 0.62), calc(var(--scene-cap) * 0.5)); }
+.ny__title { font-size: min(calc(100cqi / 9.4 * 0.62), calc(var(--scene-cap) * 0.5)); }
+.menu__word, :root[data-deviz="scenes"] .menu__word { font-size: min(calc(clamp(2.25rem, 1.6rem + 4vw, 4.5rem) * var(--font-display-scale)), calc(100cqi / 7)); }
+.foot__sign, .foot__vtext { font-size: min(calc(100cqi / var(--k-sign-word) * 0.8), 28svh); }
+@media (min-width: 48rem) { .foot__sign, .foot__vtext { font-size: calc(100cqi / var(--k-sign-line) * 0.8); } }
+
+/* бегущая строка: белая, без ромбиков, меньше */
+.marquee { --bg: #fff; --ink: #141414; background: #fff; color: #141414; padding-block: clamp(var(--space-md), 2vw, var(--space-xl)); }
+.marquee__list { font-size: clamp(1.375rem, 1rem + 1.9vw, 2.75rem); gap: 1.1em; padding-right: 1.1em; }
+
+/* об агентстве */
+.about { padding-block: var(--section-y); }
+.about__grid2 { display: grid; gap: var(--space-2xl); }
+.about__brand { display: grid; gap: var(--space-md); justify-items: start; align-content: start; }
+.badge { position: relative; width: clamp(7rem, 5rem + 6vw, 10rem); aspect-ratio: 1; margin-bottom: var(--space-sm); }
+.badge__ring { width: 100%; height: 100%; animation: badge-spin 18s linear infinite; }
+.badge__ring text { font-family: var(--font-display); font-stretch: var(--font-display-stretch); font-weight: 600; font-size: 15px; letter-spacing: 0.06em; fill: currentColor; }
+.badge__core { position: absolute; inset: 0; display: grid; place-items: center; font-family: var(--font-display); font-stretch: var(--font-display-stretch); font-weight: 800; font-size: clamp(1.25rem, 1rem + 1vw, 1.75rem); color: var(--link); }
+@keyframes badge-spin { to { transform: rotate(360deg); } }
+.about__logo { font-family: var(--font-display); font-stretch: var(--font-display-stretch); font-weight: 800; font-size: var(--text-h2); line-height: 1; text-transform: uppercase; }
+.about__logo span { font-weight: 300; text-transform: lowercase; color: var(--link); }
+.about__desc { font-size: var(--text-lg); line-height: 1.5; color: var(--muted); max-width: 44ch; }
+.facts--big { grid-template-columns: repeat(2, minmax(0, 1fr)); align-content: start; }
+.about__more { display: flex; flex-wrap: wrap; gap: var(--space-md) var(--space-xl); padding-top: var(--space-lg); border-top: var(--rule-w) solid var(--rule); }
+@media (min-width: 60rem) {
+  .about__grid2 { grid-template-columns: minmax(0, 5fr) minmax(0, 7fr); column-gap: var(--space-3xl); }
+  .about__more { grid-column: 1 / -1; }
+}
+
+/* ── Созвон 20.10 ─────────────────────────────────────── */
+/* первый экран, вариант «по центру»: название того же размера, всё по центру и чуть выше */
+:root[data-hero="center"] .hero { align-items: center; }
+:root[data-hero="center"] .hero__in { padding-bottom: calc(var(--mbar-h) + var(--palette-h) + var(--space-4xl)); }
+/* «по центру, ниже» (Илья 20.10): то же по центру, но внизу экрана, как в варианте «слева» */
+:is(:root[data-hero="center"], :root[data-hero="low"]) .hero__in { justify-items: center; text-align: center; }
+:is(:root[data-hero="center"], :root[data-hero="low"]) .hero .sign { margin-left: 0; }
+:is(:root[data-hero="center"], :root[data-hero="low"]) .hero__row { grid-template-columns: minmax(0, 1fr); justify-items: center; }
+:is(:root[data-hero="center"], :root[data-hero="low"]) .hero__row > div:first-child { display: grid; justify-items: center; }
+:is(:root[data-hero="center"], :root[data-hero="low"]) :is(.segments, .hero__cta) { justify-content: center; }
+
+/* об агентстве: слоган вместо бейджа и абзаца; линия над «История бренда / О команде» убрана */
+.about__slogan { font-family: var(--font-display); font-stretch: var(--font-display-stretch); font-weight: 800; font-size: clamp(1.625rem, 1.1rem + 2vw, 2.75rem); line-height: 1.05; text-transform: uppercase; letter-spacing: -0.01em; text-wrap: balance; min-width: 0; }
+.about__line { font-size: var(--text-lg); color: var(--muted); }
+.about__more { border-top: 0; padding-top: 0; }
+/* Свадьбы (Илья 20.10): заголовок тем же шрифтом, что ЖИВИ / ЛЮБИ / РАДУЙСЯ, по ширине левой колонки;
+   подписи «live love joy wedding» нет; форматы — без обводки, полужирным, через кружок */
+.wed__text { container-type: inline-size; }
+.wed .wed__title { font-size: min(calc(100cqi / 7.2), calc(var(--scene-cap) * 0.5)); line-height: 1; margin-left: -0.05em; white-space: nowrap; }
+.wed__formats { display: flex; flex-wrap: wrap; align-items: center; gap: var(--space-2xs) 0; font-weight: 600; }
+.wed__formats li { display: inline-flex; align-items: center; }
+.wed__formats li + li::before { content: ""; width: 0.375em; height: 0.375em; margin-inline: 0.75em; border-radius: 50%; background: var(--link); flex: none; }
+/* на телефоне — столбиком, кружок перед каждым пунктом */
+@media (max-width: 47.99rem) {
+  .wed__formats { flex-direction: column; align-items: flex-start; }
+  .wed__formats li::before { content: ""; width: 0.375em; height: 0.375em; margin: 0 0.75em 0 0; border-radius: 50%; background: var(--link); flex: none; }
+  .wed__formats li + li::before { margin: 0 0.75em 0 0; }
+}
+/* поля сверху и снизу блока — меньше (Илья 20.10) */
+.about { padding-block: calc(var(--section-y) * 0.6); }
+/* левая колонка в границах сетки цифр: слоган от верхней линии, «История бренда / О команде» у нижней (Илья 20.10) */
+.about__brand { align-self: stretch; grid-template-rows: auto auto 1fr; }
+.about__brand .about__more { align-self: end; padding-top: var(--space-lg); }
+@media (min-width: 60rem) { .about__brand { padding-top: var(--space-lg); } .about__brand .about__more { grid-column: auto; padding-bottom: var(--space-lg); } }
+
+/* меню как у M2: подпись и разделы столбиком по центру; логотип слева сверху — в рамке цвета акцента */
+.menu__top { justify-content: flex-end; }
+.menu__logo { padding: 0.5rem 0.875rem; border: var(--rule-w) solid var(--link); align-items: center; margin-bottom: var(--space-2xs); }
+.menu__logo .brand__mark { font-size: clamp(1.25rem, 1rem + 1vw, 1.75rem); }
+/* меню открывается с фокусом на логотипе: вместо второй рамки фокуса — та же рамка вдвое толще */
+.menu__logo:focus-visible { outline: 0; box-shadow: 0 0 0 var(--rule-w) var(--link); }
+.menu__nav { justify-items: center; text-align: center; gap: var(--space-lg); }
+.menu__tag { font-size: var(--text-sm); letter-spacing: 0.12em; text-transform: uppercase; color: var(--muted); }
+.menu__more { flex-direction: column; flex-wrap: nowrap; align-items: center; gap: var(--space-xs); }
+.menu__more a { font-size: clamp(1.25rem, 1rem + 1vw, 1.75rem); white-space: normal; }
+@media (max-width: 47.99rem) { .menu__nav { gap: var(--space-md); padding-block: var(--space-lg); } .menu__more { gap: var(--space-2xs); } }
+
+/* надпись в подвале, вариант «белым»: сплошной цвет текста, без фото и видео */
+:root[data-foot="white"] .foot__sign { background: none; color: var(--ink); -webkit-text-fill-color: currentColor; }
+
+/* окно заявки: уже и без прокрутки внутри */
+.lead-dlg { width: min(calc(100% - 2 * var(--space-sm)), 56rem); }
+.lead-dlg .consent { font-size: var(--text-xs); line-height: 1.45; }
+.lead-dlg__in { gap: var(--space-md); padding: clamp(var(--space-md), 3vw, var(--space-lg)); }
+.lead-dlg .form, .lead-dlg .form__row { gap: var(--space-sm); }
+.lead-dlg .input, .lead-dlg .select select { min-height: 3rem; height: 3rem; }
+@media (min-width: 48rem) { .lead-dlg .form__row { grid-template-columns: repeat(2, minmax(0, 1fr)); } }
+/* в окне строка ошибки не держит место заранее — появляется только при ошибке */
+.lead-dlg .field__err:empty { min-height: 0; }
+.lead-dlg .field { gap: var(--space-2xs); }
+@media (max-width: 47.99rem) { .lead-dlg__photo { height: 7rem; } .lead-dlg__photo img { object-position: center 30%; } }
+
+/* ЛЮБИ: ровная сетка из двух фото вместо коллажа */
+.collage--even { position: static; aspect-ratio: auto; display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: var(--space-xs); }
+.collage--even .collage__item { position: relative; inset: auto; width: auto; outline: 0; aspect-ratio: 4 / 5; }
+/* ЛЮБИ: фото шире (Илья 20.10) — колонка фото 2/3 вместо 7/12 */
+@media (min-width: 60rem) { .love .love__grid { grid-template-columns: minmax(0, 5fr) minmax(0, 7fr); column-gap: var(--space-2xl); } }
+/* ЛЮБИ: фото уже (Илья 20.10, вечер) — колонка 7/12, кадры вытянуты 2:3, высота почти прежняя */
+.love .collage--even .collage__item { aspect-ratio: 2 / 3; }
+
+/* свадьбы */
+.wed { --bg: #fbf7f3; background: #fbf7f3; padding-block: var(--section-y); scroll-margin-top: var(--hdr-h); }
+.wed__grid { display: grid; gap: var(--space-2xl); align-items: center; }
+.wed__text { display: grid; gap: var(--space-md); justify-items: start; }
+.wed__title { font-family: var(--font-display); font-stretch: var(--font-display-stretch); font-weight: 800; font-size: clamp(2rem, 1.3rem + 3vw, 4rem); line-height: 1; text-transform: uppercase; letter-spacing: -0.02em; }
+.wed__lead { font-family: var(--font-display); font-stretch: var(--font-display-stretch); font-weight: 300; font-size: var(--text-card); text-transform: lowercase; color: var(--link); }
+.wed__photo { aspect-ratio: 4 / 5; overflow: hidden; background: var(--bg-2); }
+.wed__photo img { width: 100%; height: 100%; object-fit: cover; }
+@media (min-width: 60rem) { .wed__grid { grid-template-columns: minmax(0, 6fr) minmax(0, 5fr); column-gap: var(--space-3xl); } }
+
+/* направления: видео-петля вместо фото */
+.works__video { width: 100%; height: 100%; object-fit: cover; display: block; }
+
+/* Новый год: подложка ярче */
+.ny .scrim { background: linear-gradient(to top, rgb(0 0 0 / 0.55), rgb(0 0 0 / 0) 70%), linear-gradient(to right, rgb(0 0 0 / 0.35), rgb(0 0 0 / 0) 60%); }
+.ny .media img { filter: saturate(1.3) brightness(1.15); }
+
+/* «Мы там, где праздник»: фото ровной бегущей лентой */
+.feed-run { overflow: hidden; margin-inline: calc(var(--gutter) * -1); }
+.feed-run__track { display: flex; width: max-content; animation: marquee 50s linear infinite; }
+.feed-run:hover .feed-run__track { animation-play-state: paused; }
+.feed--run, .feed.feed--run { display: flex; gap: var(--space-2xs); padding-right: var(--space-2xs); grid-template-columns: none; }
+.feed--run li { width: clamp(10rem, 7rem + 12vw, 18rem); flex: none; }
+
+/* меню: контакты внизу */
+.menu__contacts { display: flex; flex-wrap: wrap; gap: var(--space-2xs) var(--space-lg); width: 100%; font-size: var(--text-sm); color: var(--muted); }
+.menu__contacts a { text-decoration: none; }
+
+/* подвал как у M2 (Ольга 16.10 п. 19: «слева как-то интересно, а не просто в столбик»):
+   слева разделы кнопками-таблетками в несколько рядов, справа контакты */
+.foot__grid--m2 { display: grid; gap: var(--space-2xl); align-items: start; }
+.foot__menu { display: flex; flex-wrap: wrap; gap: var(--space-xs); align-content: start; }
+.foot__menu a {
+  display: inline-flex; align-items: center; min-height: 2.75rem; padding: 0 var(--space-md);
+  border: var(--rule-w) solid color-mix(in oklch, var(--ink) 40%, transparent); border-radius: var(--radius-pill);
+  font-size: var(--text-sm); font-weight: 500; letter-spacing: 0.02em; text-decoration: none; white-space: nowrap;
+  transition: background-color var(--dur-micro) var(--ease-out), color var(--dur-micro) var(--ease-out), border-color var(--dur-micro) var(--ease-out);
+}
+.foot__menu a:hover { background: var(--ink); color: var(--on-ink); border-color: var(--ink); }
+.foot__info { display: grid; gap: var(--space-sm); justify-items: start; }
+.foot__info .foot__h { margin-bottom: var(--space-2xs); font-family: var(--font-display); font-stretch: var(--font-display-stretch); font-weight: 700; font-size: var(--text-h3); letter-spacing: 0.02em; color: var(--ink); }
+.foot__big { font-size: var(--text-card); font-weight: 600; text-decoration: none; }
+.foot__big:hover, .foot__addr a:hover { color: var(--link); }
+.foot__addr { font-size: var(--text-sm); color: var(--muted); }
+.foot__addr a { color: inherit; }
+/* 20.10: две колонки с 60rem — на планшете 768 правая колонка уже почты и кнопки, подвал вылезал на 9px */
+@media (min-width: 60rem) {
+  .foot__grid--m2 { grid-template-columns: minmax(0, 7fr) minmax(0, 5fr); column-gap: var(--space-3xl); }
+  .foot__menu { max-width: 40rem; }
+  .foot__info { justify-items: end; text-align: right; }
+}
+@media (prefers-reduced-motion: reduce) { .badge__ring, .feed-run__track { animation: none !important; } .feed-run { overflow-x: auto; } }
+
+/* ── Панель вариантов (прототип, на сайте не будет) ─────── */
+.vpanel {
+  position: fixed;
+  left: var(--space-sm);
+  bottom: calc(var(--mbar-h) + var(--space-sm) + env(safe-area-inset-bottom));
+  z-index: var(--z-dropdown);
+  display: flex; flex-direction: column-reverse; align-items: flex-start; gap: var(--space-xs);
+  max-width: calc(100vw - 2 * var(--space-sm));
+  font-family: var(--font-body);
+  color: var(--vp-ink);
+}
+.vpanel__toggle, .vpanel__body {
+  background: var(--vp-bg);
+  -webkit-backdrop-filter: blur(16px) saturate(140%); backdrop-filter: blur(16px) saturate(140%);
+  border: var(--rule-w) solid var(--vp-rule);
+  box-shadow: 0 0.75rem 2.5rem -0.75rem var(--vp-shadow);
+}
+.vpanel__toggle {
+  display: inline-flex; align-items: center; gap: 0.6em;
+  min-height: 2.75rem; padding: 0 1.1rem;
+  border-radius: var(--radius-pill);
+  color: inherit;
+  font-size: 0.9375rem; font-weight: 600; white-space: nowrap;
+}
+.vpanel__toggle:hover { border-color: var(--vp-ink); }
+@media (max-width: 47.99rem) { .vpanel__more { display: none; } }
+.vpanel__dot { width: 0.6rem; height: 0.6rem; border-radius: 50%; background: var(--accent); flex: none; }
+.vpanel__chev {
+  width: 0.5rem; height: 0.5rem; margin-left: 0.15rem;
+  border-right: 1.5px solid currentColor; border-bottom: 1.5px solid currentColor;
+  transform: translateY(2px) rotate(-135deg);
+  transition: transform var(--dur-short) var(--ease-out);
+}
+.vpanel__toggle[aria-expanded="true"] .vpanel__chev { transform: translateY(-2px) rotate(45deg); }
+.vpanel__body {
+  width: min(24rem, calc(100vw - 2 * var(--space-sm)));
+  max-height: min(68svh, 36rem); overflow-y: auto; overscroll-behavior: contain;
+  display: grid; gap: var(--space-md);
+  padding: var(--space-md);
+  border-radius: 14px;
+}
+.vpanel__hint { font-size: 0.875rem; line-height: 1.45; color: var(--vp-muted); }
+.vpanel__label { margin-bottom: var(--space-xs); font-size: 0.8125rem; font-weight: 600; letter-spacing: 0.08em; text-transform: uppercase; color: var(--vp-muted); }
+.vpanel__opts { display: flex; flex-wrap: wrap; gap: 0.375rem; }
+.vpanel__opts button {
+  display: inline-flex; align-items: center; gap: 0.5em;
+  min-height: 2.5rem; padding: 0 0.875rem;
+  border: var(--rule-w) solid var(--vp-rule); border-radius: var(--radius-pill);
+  background: transparent; color: var(--vp-ink);
+  font-size: 0.9375rem; font-weight: 500; line-height: 1.15; text-align: left;
+}
+.vpanel__opts button:hover { border-color: var(--vp-ink); }
+.vpanel__opts button[aria-pressed="true"] { background: var(--vp-ink); color: var(--vp-on); border-color: var(--vp-ink); }
+.vpanel__opts button:focus-visible, .vpanel__toggle:focus-visible { outline: 2px solid var(--vp-ink); outline-offset: 2px; }
+.vpanel [data-set="palette"]::before { content: ""; width: 0.6rem; height: 0.6rem; border-radius: 50%; background: var(--sw); flex: none; }
+.vpanel [data-val="red"] { --sw: var(--swatch-red); }
+.vpanel [data-val="gold"] { --sw: var(--swatch-gold); }
+.vpanel [data-val="light"] { --sw: var(--swatch-light); }
+@media (min-width: 48rem) {
+  .vpanel { left: var(--space-md); bottom: var(--space-md); }
+}
+
+/* 20.10: ссылки подвала на телефоне — зона нажатия 44px, отступы между ними убраны, чтобы подвал не вырос (ревью дизайнера). Копия до — index-do-podvala.html */
+@media (max-width: 47.99rem) {
+  .foot__big, .foot__addr a, .foot__legal a { display: inline-flex; align-items: center; min-height: 2.75rem; }
+  .foot__info { gap: 0; }
+  .foot__legal { row-gap: 0; }
+}
+
+/* ── Меньше движения ─────────────────────────────────── */
+@media (prefers-reduced-motion: reduce) {
+  html { scroll-behavior: auto; }
+  *, *::before, *::after {
+    animation-duration: 150ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 150ms !important;
+  }
+  .hero__video { display: none; }
+  .marquee__track { animation: none !important; width: auto; }
+  .marquee__list { flex-wrap: wrap; white-space: normal; padding-inline: var(--gutter); font-size: clamp(1.5rem, 1rem + 2.4vw, 3rem); row-gap: 0.2em; }
+  .marquee__list[aria-hidden="true"] { display: none; }
+  .trust__track { animation: none !important; width: auto; justify-content: center; }
+  .trust__list { flex-wrap: wrap; justify-content: center; white-space: normal; padding-inline: var(--gutter); row-gap: var(--space-sm); }
+  .trust__list[aria-hidden="true"], .trust__row--back { display: none; }
+  .menu[open], .menu.is-closing { animation-name: fade-only; }
+  @keyframes fade-only { from { opacity: 0; } }
+  .tile:hover img, .tile:focus-visible img { transform: none; }
+  .pill:active { transform: none; }
+  .consent input::after { transition: none; }
+}
+
+/* ── Окно заявки в стилистике Нового года (Ольга 20.10): открывается кнопкой «Обсудить Новый год» (data-type="Новый год").
+   Фото с бенгальским огнём, гирлянда по верху, лёгкий снег на фото, свой заголовок; вместо списка типов — «Что празднуем».
+   Палитра та же — красный акцент; при reduced motion снег и мерцание стоят ── */
+.lead-dlg .if-ny, .lead-dlg__ny-img, .lead-dlg__snow, .lead-dlg__garland, .ny-pick { display: none; }
+.lead-dlg.is-ny .if-def { display: none; }
+.lead-dlg.is-ny .if-ny { display: inline; }
+.lead-dlg.is-ny .lead-dlg__photo > img:first-child { display: none; }
+.lead-dlg.is-ny .lead-dlg__ny-img { display: block; object-position: center 45%; }
+.lead-dlg.is-ny [data-field="type"] { display: none; }
+.lead-dlg.is-ny {
+  border-color: color-mix(in oklch, var(--accent) 45%, var(--rule));
+  background:
+    radial-gradient(120% 70% at 100% 0%, color-mix(in oklch, var(--accent) 22%, transparent), transparent 60%),
+    radial-gradient(80% 60% at 0% 100%, color-mix(in oklch, var(--accent) 12%, transparent), transparent 70%),
+    var(--bg);
+}
+.lead-dlg.is-ny .lead-dlg__name { font-size: clamp(1.5rem, 1.1rem + 1.4vw, 2.25rem); }
+/* гирлянда: огоньки по верхнему краю окна, через один мерцают */
+.lead-dlg.is-ny .lead-dlg__garland {
+  display: block; position: absolute; z-index: 3; top: 0; left: 0; right: 0; height: 0.875rem; pointer-events: none;
+  background:
+    radial-gradient(circle at 50% 35%, var(--accent-on-dark) 0 0.2rem, transparent 0.24rem) 0 0 / 2.5rem 100% repeat-x,
+    radial-gradient(circle at 50% 35%, oklch(95% 0.05 85) 0 0.17rem, transparent 0.21rem) 1.25rem 0 / 2.5rem 100% repeat-x;
+  filter: drop-shadow(0 0 0.3rem color-mix(in oklch, var(--accent) 70%, transparent));
+  animation: ny-twinkle 1.6s steps(2, jump-none) infinite alternate;
+}
+@keyframes ny-twinkle { to { filter: drop-shadow(0 0 0.6rem oklch(95% 0.05 85 / 0.8)); opacity: 0.75; } }
+/* снег на фото: три слоя точек разного размера падают с разной скоростью */
+.lead-dlg.is-ny .lead-dlg__snow {
+  display: block; position: absolute; inset: 0; z-index: 1; pointer-events: none;
+  background-image:
+    radial-gradient(circle, rgb(255 255 255 / 0.9) 0 1.5px, transparent 2px),
+    radial-gradient(circle, rgb(255 255 255 / 0.7) 0 1px, transparent 1.5px),
+    radial-gradient(circle, rgb(255 255 255 / 0.5) 0 2.5px, transparent 3px);
+  background-size: 7rem 7rem, 4.5rem 4.5rem, 11rem 11rem;
+  background-position: 0 0, 2rem 1rem, 4rem 3rem;
+  animation: ny-snow 14s linear infinite;
+}
+@keyframes ny-snow { to { background-position: 0 7rem, 2rem 5.5rem, 4rem 14rem; } }   /* сдвиг кратен размеру слоя — без рывка на повторе */
+.lead-dlg.is-ny .lead-dlg__who { z-index: 2; }
+/* «Что празднуем» — фишки-переключатели, выбранная красная */
+.lead-dlg.is-ny .ny-pick { display: grid; gap: var(--space-2xs); min-width: 0; margin: 0; padding: 0; border: 0; }
+.ny-pick legend { padding: 0; margin-bottom: var(--space-2xs); }
+.ny-pick__list { display: flex; flex-wrap: wrap; gap: var(--space-xs); min-width: 0; }
+.ny-pick .chip { position: relative; min-height: 2.5rem; cursor: pointer; transition: background-color 0.15s, border-color 0.15s; }
+.ny-pick .chip input { position: absolute; opacity: 0; inset: 0; margin: 0; cursor: pointer; }
+.ny-pick .chip:hover { border-color: var(--ink); }
+.ny-pick .chip:has(input:checked) { background: var(--accent-fill); border-color: var(--accent-fill); color: var(--accent-ink); }
+.ny-pick .chip:has(input:focus-visible) { outline: 2px solid var(--accent-on-dark); outline-offset: 2px; }
+/* телефон: фишки сеткой 2×2 — окно помещается в экран без прокрутки */
+@media (max-width: 47.99rem) { .ny-pick__list { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); } .ny-pick .chip { justify-content: center; min-height: 2.75rem; padding-block: var(--space-3xs); white-space: normal; text-align: center; line-height: 1.2; } }
+@media (prefers-reduced-motion: reduce) { .lead-dlg.is-ny .lead-dlg__snow, .lead-dlg.is-ny .lead-dlg__garland { animation: none; } }
+</style>
+</head>
+<body>
+<a class="skip" href="#main">Перейти к содержимому</a>
+
+<svg width="0" height="0" style="position:absolute" aria-hidden="true" focusable="false">
+  <symbol id="i-tg" viewBox="0 0 24 24"><path d="M11.944 0A12 12 0 0 0 0 12a12 12 0 0 0 12 12 12 12 0 0 0 12-12A12 12 0 0 0 12 0a12 12 0 0 0-.056 0zm4.962 7.224c.1-.002.321.023.465.14a.506.506 0 0 1 .171.325c.016.093.036.306.02.472-.18 1.898-.962 6.502-1.36 8.627-.168.9-.499 1.201-.82 1.23-.696.065-1.225-.46-1.9-.902-1.056-.693-1.653-1.124-2.678-1.8-1.185-.78-.417-1.21.258-1.91.177-.184 3.247-2.977 3.307-3.23.007-.032.014-.15-.056-.212s-.174-.041-.249-.024c-.106.024-1.793 1.14-5.061 3.345-.48.33-.913.49-1.302.48-.428-.008-1.252-.241-1.865-.44-.752-.245-1.349-.374-1.297-.789.027-.216.325-.437.893-.663 3.498-1.524 5.83-2.529 6.998-3.014 3.332-1.386 4.025-1.627 4.476-1.635z"/></symbol>
+  <symbol id="i-wa" viewBox="0 0 24 24"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413Z"/></symbol>
+  <symbol id="i-vk" viewBox="0 0 24 24"><path d="m9.489.004.729-.003h3.564l.73.003.914.01.433.007.418.011.403.014.388.016.374.021.36.025.345.03.333.033c1.74.196 2.933.616 3.833 1.516.9.9 1.32 2.092 1.516 3.833l.034.333.029.346.025.36.02.373.025.588.012.41.013.644.009.915.004.98-.001 3.313-.003.73-.01.914-.007.433-.011.418-.014.403-.016.388-.021.374-.025.36-.03.345-.033.333c-.196 1.74-.616 2.933-1.516 3.833-.9.9-2.092 1.32-3.833 1.516l-.333.034-.346.029-.36.025-.373.02-.588.025-.41.012-.644.013-.915.009-.98.004-3.313-.001-.73-.003-.914-.01-.433-.007-.418-.011-.403-.014-.388-.016-.374-.021-.36-.025-.345-.03-.333-.033c-1.74-.196-2.933-.616-3.833-1.516-.9-.9-1.32-2.092-1.516-3.833l-.034-.333-.029-.346-.025-.36-.02-.373-.025-.588-.012-.41-.013-.644-.009-.915-.004-.98.001-3.313.003-.73.01-.914.007-.433.011-.418.014-.403.016-.388.021-.374.025-.36.03-.345.033-.333c.196-1.74.616-2.933 1.516-3.833.9-.9 2.092-1.32 3.833-1.516l.333-.034.346-.029.36-.025.373-.02.588-.025.41-.012.644-.013.915-.009ZM6.79 7.3H4.05c.13 6.24 3.25 9.99 8.72 9.99h.31v-3.57c2.01.2 3.53 1.67 4.14 3.57h2.84c-.78-2.84-2.83-4.41-4.11-5.01 1.28-.74 3.08-2.54 3.51-4.98h-2.58c-.56 1.98-2.22 3.78-3.8 3.95V7.3H10.5v6.92c-1.6-.4-3.62-2.34-3.71-6.92Z"/></symbol>
+  <symbol id="i-ig" viewBox="0 0 24 24"><path d="M7.0301.084c-1.2768.0602-2.1487.264-2.911.5634-.7888.3075-1.4575.72-2.1228 1.3877-.6652.6677-1.075 1.3368-1.3802 2.127-.2954.7638-.4956 1.6365-.552 2.914-.0564 1.2775-.0689 1.6882-.0626 4.947.0062 3.2586.0206 3.6671.0825 4.9473.061 1.2765.264 2.1482.5635 2.9107.308.7889.72 1.4573 1.388 2.1228.6679.6655 1.3365 1.0743 2.1285 1.38.7632.295 1.6361.4961 2.9134.552 1.2773.056 1.6884.069 4.9462.0627 3.2578-.0062 3.668-.0207 4.9478-.0814 1.28-.0607 2.147-.2652 2.9098-.5633.7889-.3086 1.4578-.72 2.1228-1.3881.665-.6682 1.0745-1.3378 1.3795-2.1284.2957-.7632.4966-1.636.552-2.9124.056-1.2809.0692-1.6898.063-4.948-.0063-3.2583-.021-3.6668-.0817-4.9465-.0607-1.2797-.264-2.1487-.5633-2.9117-.3084-.7889-.72-1.4568-1.3876-2.1228C21.2982 1.33 20.628.9208 19.8378.6165 19.074.321 18.2017.1197 16.9244.0645 15.6471.0093 15.236-.005 11.977.0014 8.718.0076 8.31.0215 7.0301.0839m.1402 21.6932c-1.17-.0509-1.8053-.2453-2.2287-.408-.5606-.216-.96-.4771-1.3819-.895-.422-.4178-.6811-.8186-.9-1.378-.1644-.4234-.3624-1.058-.4171-2.228-.0595-1.2645-.072-1.6442-.079-4.848-.007-3.2037.0053-3.583.0607-4.848.05-1.169.2456-1.805.408-2.2282.216-.5613.4762-.96.895-1.3816.4188-.4217.8184-.6814 1.3783-.9003.423-.1651 1.0575-.3614 2.227-.4171 1.2655-.06 1.6447-.072 4.848-.079 3.2033-.007 3.5835.005 4.8495.0608 1.169.0508 1.8053.2445 2.228.408.5608.216.96.4754 1.3816.895.4217.4194.6816.8176.9005 1.3787.1653.4217.3617 1.056.4169 2.2263.0602 1.2655.0739 1.645.0796 4.848.0058 3.203-.0055 3.5834-.061 4.848-.051 1.17-.245 1.8055-.408 2.2294-.216.5604-.4763.96-.8954 1.3814-.419.4215-.8181.6811-1.3783.9-.4224.1649-1.0577.3617-2.2262.4174-1.2656.0595-1.6448.072-4.8493.079-3.2045.007-3.5825-.006-4.848-.0608M16.953 5.5864A1.44 1.44 0 1 0 18.39 4.144a1.44 1.44 0 0 0-1.437 1.4424M5.8385 12.012c.0067 3.4032 2.7706 6.1557 6.173 6.1493 3.4026-.0065 6.157-2.7701 6.1506-6.1733-.0065-3.4032-2.771-6.1565-6.174-6.1498-3.403.0067-6.156 2.771-6.1496 6.1738M8 12.0077a4 4 0 1 1 4.008 3.9921A3.9996 3.9996 0 0 1 8 12.0077"/></symbol>
+  <symbol id="i-yt" viewBox="0 0 24 24"><path d="M23.498 6.186a3.016 3.016 0 0 0-2.122-2.136C19.505 3.545 12 3.545 12 3.545s-7.505 0-9.377.505A3.017 3.017 0 0 0 .502 6.186C0 8.07 0 12 0 12s0 3.93.502 5.814a3.016 3.016 0 0 0 2.122 2.136c1.871.505 9.376.505 9.376.505s7.505 0 9.377-.505a3.015 3.015 0 0 0 2.122-2.136C24 15.93 24 12 24 12s0-3.93-.502-5.814zM9.545 15.568V8.432L15.818 12l-6.273 3.568z"/></symbol>
+  <symbol id="i-phone" viewBox="0 0 24 24"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"/></symbol>
+  <symbol id="i-mail" viewBox="0 0 24 24"><rect width="20" height="16" x="2" y="4" rx="2"/><path d="m22 7-8.97 5.7a1.94 1.94 0 0 1-2.06 0L2 7"/></symbol>
+  <symbol id="i-contact" viewBox="0 0 24 24"><path d="M16 21v-2a4 4 0 0 0-4-4H6a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M19 8v6M22 11h-6"/></symbol>
+  <symbol id="i-star" viewBox="0 0 24 24"><path d="M12 0c.6 6.6 5.4 11.4 12 12-6.6.6-11.4 5.4-12 12-.6-6.6-5.4-11.4-12-12C6.6 11.4 11.4 6.6 12 0Z"/></symbol>
+</svg>
+
+<header class="hdr">
+  <div class="wrap hdr__in">
+    <a class="brand" href="index.html" aria-label="Live Love Joy — на главную">
+      <span class="brand__mark">LIVE LOVE JOY</span>
+      <span class="brand__sub">event agency</span>
+    </a>
+    <div class="hdr__actions">
+            <a class="icon-btn" href="https://t.me/OlgaBilyk77" aria-label="Telegram"><svg class="ic ic--fill" viewBox="0 0 24 24" aria-hidden="true"><use href="#i-tg"/></svg></a>
+      <a class="icon-btn" href="#" aria-label="Instagram — адрес уточняем"><svg class="ic ic--fill" viewBox="0 0 24 24" aria-hidden="true"><use href="#i-ig"/></svg></a>
+      <div class="hdr__tablet">
+        <a class="hdr__phone" href="tel:+79055474281">+7 905 547-42-81</a>
+        <a class="pill pill--solid pill--sm" href="#contacts" data-lead>Обсудить событие</a>
+      </div>
+      <button class="icon-btn burger" type="button" aria-expanded="false" aria-controls="menu" data-menu-open>
+        <span class="burger__lines" aria-hidden="true"></span>
+        <span class="sr-only">Открыть меню</span>
+      </button>
+    </div>
+  </div>
+</header>
+
+<dialog class="menu band--dark" id="menu" aria-label="Меню">
+  <div class="wrap menu__top">
+    <button class="icon-btn menu__close" type="button" data-menu-close><span class="sr-only">Закрыть меню</span></button>
+  </div>
+  <nav class="wrap menu__nav" aria-label="Разделы сайта">
+    <a class="brand menu__logo" href="index.html" data-menu-link>
+      <span class="brand__mark">LIVE LOVE JOY</span>
+      <span class="brand__sub">event agency</span>
+    </a>
+    <p class="menu__tag">Event-агентство полного цикла</p>
+    <ul class="menu__more">
+      <li><a href="istoriya-brenda.html" data-menu-link>История бренда</a></li>
+      <li><a href="komanda.html" data-menu-link>Команда</a></li>
+      <li><a href="index.html#vidy" data-menu-link>Виды мероприятий</a></li>
+      <li><a href="index.html#svadby" data-menu-link>Свадьбы</a></li>
+      <li><a href="proekty.html" data-menu-link>Проекты</a></li>
+      <li><a href="zhurnal.html" data-menu-link>Журнал</a></li>
+      <li><a href="#contacts" data-menu-link>Контакты</a></li>
+    </ul>
+  </nav>
+  <div class="wrap menu__bottom">
+    <a class="pill pill--line pill--sm" href="#"><svg class="ic ic--fill" viewBox="0 0 24 24" aria-hidden="true"><use href="#i-ig"/></svg>Instagram</a>
+    <a class="pill pill--line pill--sm" href="https://t.me/OlgaBilyk77"><svg class="ic ic--fill" viewBox="0 0 24 24" aria-hidden="true"><use href="#i-tg"/></svg>Telegram</a>
+    <a class="pill pill--solid pill--sm" href="data:text/vcard;charset=utf-8,BEGIN%3AVCARD%0D%0AVERSION%3A3.0%0D%0AN%3A%3BLive%20Love%20Joy%3B%3B%3B%0D%0AFN%3A%D0%9E%D0%BB%D1%8C%D0%B3%D0%B0%20%E2%80%94%20Live%20Love%20Joy%0D%0AORG%3ALive%20Love%20Joy%20%E2%80%94%20event%20agency%0D%0ATITLE%3AEvent-%D0%B0%D0%B3%D0%B5%D0%BD%D1%82%D1%81%D1%82%D0%B2%D0%BE%20%D0%BF%D0%BE%D0%BB%D0%BD%D0%BE%D0%B3%D0%BE%20%D1%86%D0%B8%D0%BA%D0%BB%D0%B0%0D%0ATEL%3BTYPE%3DCELL%3A%2B79055474281%0D%0AEMAIL%3BTYPE%3DINTERNET%3Ahello%40livelovejoy.ru%0D%0AURL%3Ahttps%3A%2F%2Flivelovejoy.ru%0D%0ANOTE%3A%D0%93%D0%BE%D1%80%D0%BE%D0%B4%D1%81%D0%BA%D0%B8%D0%B5%20%D0%BF%D1%80%D0%B0%D0%B7%D0%B4%D0%BD%D0%B8%D0%BA%D0%B8%5C%2C%20%D1%87%D0%B0%D1%81%D1%82%D0%BD%D1%8B%D0%B5%20%D1%82%D0%BE%D1%80%D0%B6%D0%B5%D1%81%D1%82%D0%B2%D0%B0%20%D0%B8%20%D0%BA%D0%BE%D1%80%D0%BF%D0%BE%D1%80%D0%B0%D1%82%D0%B8%D0%B2%D0%BD%D1%8B%D0%B5%20%D1%81%D0%BE%D0%B1%D1%8B%D1%82%D0%B8%D1%8F%20%E2%80%94%20%D0%BE%D1%82%20%D0%B8%D0%B4%D0%B5%D0%B8%20%D0%B4%D0%BE%20%D0%BF%D0%BE%D1%81%D0%BB%D0%B5%D0%B4%D0%BD%D0%B5%D0%B3%D0%BE%20%D0%B3%D0%BE%D1%81%D1%82%D1%8F%0D%0AEND%3AVCARD%0D%0A" download="live-love-joy.vcf"><svg class="ic ic--line" viewBox="0 0 24 24" aria-hidden="true"><use href="#i-contact"/></svg>Сохранить контакт</a>
+    <a class="pill pill--accent pill--sm" href="#contacts" data-lead>Получить консультацию</a>
+    <p class="menu__contacts"><a href="mailto:hello@livelovejoy.ru">hello@livelovejoy.ru</a><span>Тверская ул.,&nbsp;7</span></p>
+  </div>
+</dialog>
+
+<main id="main">
+
+<style>
+/* ── Страница кейса (Илья 20.10). Образец — m2events.ru/bday: первый экран с названием, концепция с фактами, галерея, видео, форма.
+   20.10 вечером, Илья: «слишком вычурно… сделай попроще, более стильно» — убраны контурная «18», красная крупная бегущая строка,
+   повороты и сдвиги коллажа, параллакс, иконки и цветные кружки в фактах, полоса-призыв, последний слайд в просмотре фото.
+   Копия до — pages/arhiv/kejs-elizaveta-18-vychurno.html. Шаблон: название кейса — data-case у первого экрана, тип заявки — data-case-type. ── */
+[hidden] { display: none !important; }
+
+/* 1. Первый экран: название по центру, подзаголовок, две кнопки */
+.chero { min-height: var(--screen-h); display: grid; grid-template-columns: minmax(0, 1fr); align-items: center; scroll-margin-top: 0; }
+.chero .scrim { background: radial-gradient(ellipse 70% 60% at 50% 55%, rgb(0 0 0 / 0.42), rgb(0 0 0 / 0.22)), linear-gradient(to top, rgb(0 0 0 / 0.55), rgb(0 0 0 / 0) 45%), linear-gradient(to bottom, rgb(0 0 0 / 0.45), rgb(0 0 0 / 0) 30%); }
+.chero__in { container-type: inline-size; padding-block: calc(var(--hdr-h) + var(--space-2xl)) var(--space-2xl); display: grid; grid-template-columns: minmax(0, 1fr); justify-items: center; gap: var(--space-md); text-align: center; }
+.chero__back { position: absolute; top: calc(var(--hdr-h) + var(--space-md)); left: var(--gutter); }
+.chero__title {
+  max-width: 100%;
+  font-family: var(--font-display); font-stretch: var(--font-display-stretch); font-weight: 800;
+  font-size: min(var(--scene-cap), calc(100cqi / var(--k-title, 10.2)));
+  line-height: 0.95; letter-spacing: -0.02em; text-transform: uppercase;
+  text-wrap: balance; overflow-wrap: anywhere;      /* страховка; размер подгоняет скрипт, чтобы слово не рвалось */
+}
+.chero__sub { max-width: 34ch; font-size: var(--text-lg); line-height: 1.45; color: var(--photo-ink); }
+.chero__acts { display: flex; flex-wrap: wrap; justify-content: center; align-items: center; gap: var(--space-sm); margin-top: var(--space-xs); }
+.chero__acts .pill { padding-inline: calc(var(--space-lg) + var(--space-xs)); }
+@media (max-width: 47.99rem) {
+  .chero__title { --k-title: 7.8; }
+  .chero__acts { flex-direction: column; width: 100%; }
+  .chero__acts .pill { width: 100%; }
+}
+/* нижняя панель «Обсудить / Позвонить» на телефоне прячется, пока виден первый экран — там свои кнопки */
+.mbar { transition: transform var(--dur-long) var(--ease-out); }
+.mbar.is-off { transform: translateY(110%); }
+
+/* 3. Концепция — симметрично, на одной оси с первым экраном (Илья 20.10: «неструктурированный… сделай более симметричным»):
+   по центру подпись, заголовок, текст; факты — таблица из равных ячеек с тонкими линиями; кнопка по центру */
+.cbrief { padding-block: var(--section-y); text-align: center; }
+.cbrief__head { display: grid; justify-items: center; gap: var(--space-sm); }
+.cbrief__text { display: grid; gap: var(--space-md); max-width: 56ch; margin: var(--space-lg) auto 0; font-size: var(--text-lg); line-height: 1.55; }
+.cbrief__text p + p { color: var(--muted); }
+.cfacts { display: grid; grid-template-columns: minmax(0, 1fr); gap: var(--rule-w); margin-top: var(--space-2xl); background: var(--rule); border-block: var(--rule-w) solid var(--rule); }
+.cfacts > div { display: grid; align-content: center; justify-items: center; gap: var(--space-xs); min-width: 0; padding: var(--space-lg) var(--space-xs); background: var(--bg); }
+.cfacts dt { font-size: var(--text-xs); letter-spacing: 0.14em; text-transform: uppercase; color: var(--muted); }
+.cfacts dd {
+  margin: 0; min-width: 0; overflow-wrap: anywhere; hyphens: auto;
+  font-family: var(--font-display); font-stretch: var(--font-display-stretch); font-weight: 700;
+  font-size: clamp(1rem, 0.85rem + 0.55vw, 1.375rem); line-height: 1.15; text-transform: uppercase;
+}
+.cbrief__cta { margin-top: var(--space-xl); }
+/* телефон — столбиком, планшет — 2×2, широкий экран — в ряд; все значения одного размера и в одну строку (подгоняет скрипт) */
+@media (min-width: 40rem) { .cfacts { grid-template-columns: repeat(2, minmax(0, 1fr)); } }
+@media (min-width: 75rem) { .cfacts { grid-template-columns: repeat(4, minmax(0, 1fr)); } }
+
+/* 4. Галерея: ровные ряды во всю ширину, кадры одной высоты в ряду, одинаковые отступы (как в Google Фото).
+   Скрипт делит кадры на ряды так, чтобы высоты рядов были близки; без скрипта — обычная сетка. Пропорции — по номеру кадра, подходит для любого числа фото */
+.cgal { --gal-gap: clamp(0.5rem, 1.4vw, 1.25rem); padding-bottom: var(--section-y); }
+.cgal__head { justify-items: center; gap: var(--space-2xs); text-align: center; }
+.cgal__head .sec-head__note { max-width: none; font-size: var(--text-sm); }
+.cgal__list { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); column-gap: var(--gal-gap); align-items: start; }
+.cgal__item { min-width: 0; margin-bottom: var(--gal-gap); }
+.cgal__list.is-rows { display: flex; flex-wrap: wrap; gap: var(--gal-gap); }
+.cgal__list.is-rows .cgal__item { flex: none; margin: 0; }
+.cgal__list.is-rows .cgal__btn { height: 100%; aspect-ratio: auto; }
+.cgal__btn { display: block; width: 100%; padding: 0; border: 0; background: var(--bg-2); overflow: hidden; cursor: zoom-in; aspect-ratio: var(--ar, 4 / 5); }
+.cgal__btn img { width: 100%; height: 100%; object-fit: cover; transition: transform var(--dur-long) var(--ease-out); }
+.cgal__btn:hover img, .cgal__btn:focus-visible img { transform: scale(1.03); }
+.cgal__btn:focus-visible { outline: 3px solid var(--ring, var(--link)); outline-offset: -3px; }
+.cgal__item:nth-child(7n+1) { --ar: 4 / 5; }
+.cgal__item:nth-child(7n+2) { --ar: 1 / 1; }
+.cgal__item:nth-child(7n+3) { --ar: 3 / 2; }
+.cgal__item:nth-child(7n+4) { --ar: 4 / 5; }
+.cgal__item:nth-child(7n+5) { --ar: 4 / 3; }
+.cgal__item:nth-child(7n+6) { --ar: 1 / 1; }
+.cgal__item:nth-child(7n+7) { --ar: 3 / 4; }
+@media (min-width: 48rem) { .cgal__list { grid-template-columns: repeat(3, minmax(0, 1fr)); } }
+/* кадры спокойно проявляются при прокрутке; .js ставится в <head> */
+.js .cgal__item { opacity: 0; transition: opacity 0.8s var(--ease-out); }
+.js .cgal__item.is-in { opacity: 1; }
+
+/* просмотр фото на весь экран */
+.lbox {
+  width: 100vw; height: 100svh; max-width: none; max-height: none; margin: 0; padding: 0; border: 0;
+  background: rgb(8 8 8 / 0.94); color: #fff; touch-action: pinch-zoom; overscroll-behavior: contain;
+}
+.lbox[open] { display: grid; place-items: center; }
+.lbox::backdrop { background: rgb(0 0 0 / 0.5); }
+.lbox__stage { display: grid; justify-items: center; gap: var(--space-sm); margin: 0; }
+.lbox__img { max-width: calc(100vw - 2 * var(--gutter) - 8rem); max-height: calc(100svh - 10rem); object-fit: contain; user-select: none; -webkit-user-drag: none; }
+.lbox__cap { max-width: 60ch; padding-inline: var(--gutter); font-size: var(--text-sm); color: rgb(255 255 255 / 0.8); text-align: center; }
+.lbox__btn { position: absolute; z-index: 1; display: grid; place-items: center; width: 3.25rem; height: 3.25rem; border: var(--rule-w) solid rgb(255 255 255 / 0.4); border-radius: 50%; background: rgb(0 0 0 / 0.35); color: #fff; font-size: 1.25rem; cursor: pointer; }
+.lbox__btn:hover { border-color: #fff; background: rgb(0 0 0 / 0.6); }
+.lbox__close { top: var(--space-md); right: var(--gutter); }
+.lbox__prev { left: var(--gutter); top: 50%; translate: 0 -50%; }
+.lbox__next { right: var(--gutter); top: 50%; translate: 0 -50%; }
+.lbox__count { position: absolute; top: var(--space-md); left: var(--gutter); min-height: 3.25rem; display: flex; align-items: center; font-size: 0.9375rem; letter-spacing: 0.12em; color: rgb(255 255 255 / 0.8); }
+@media (max-width: 47.99rem) {
+  .lbox__img { max-width: calc(100vw - 2 * var(--gutter)); max-height: calc(100svh - 12rem); }
+  .lbox__prev, .lbox__next { top: auto; bottom: var(--space-md); translate: none; }
+}
+::view-transition-group(cgal-pic) { animation-duration: 0.35s; animation-timing-function: cubic-bezier(0.2, 0.8, 0.2, 1); }
+
+/* 5. Видео */
+.reel__frame { outline: 1px solid rgb(255 255 255 / 0.1); outline-offset: -1px; }
+.reel__cap { padding: 0.45em 0.9em; border-radius: var(--radius-pill); background: rgb(0 0 0 / 0.4); font-size: 0.9375rem; letter-spacing: 0.12em; }
+
+/* 6. Другие проекты: рубрика сверху, название снизу, без сплошного затемнения */
+.cmore { padding-block: var(--section-y); }
+.cmore__list { display: grid; gap: var(--gal-gap, clamp(0.5rem, 1.4vw, 1.25rem)); }
+.cmore__list .tile { aspect-ratio: 4 / 3; }
+.cmore__list .tile::before { opacity: 0; }
+.cmore__list .tile--cta::before { opacity: 0.55; }
+.cmore__list .tile:hover::before { opacity: 0.25; }
+.cmore__list .tile__body { top: 0; display: flex; flex-direction: column; align-items: flex-start; }
+.cmore__list .tile__meta { margin-bottom: auto; }
+@media (min-width: 48rem) { .cmore__list { grid-template-columns: repeat(3, minmax(0, 1fr)); } .cmore__list .tile { aspect-ratio: 4 / 5; } }
+
+/* 7. Форма знает, с какого кейса пришла заявка */
+.form__from { font-size: var(--text-xs); letter-spacing: 0.06em; color: var(--muted); }
+
+/* хлопушка: холст на весь экран по CSS-размеру (иначе на телефоне и Retina он вдвое больше экрана) */
+.confetti { position: fixed; inset: 0; width: 100%; height: 100%; z-index: var(--z-toast); pointer-events: none; }
+@media (prefers-reduced-motion: reduce) { .js .cgal__item { opacity: 1; transition: none; } }
+@media print { .js .cgal__item { opacity: 1 !important; } .confetti, .lbox, .mbar { display: none !important; } }
+</style>
+<style>
+.case-videos {display:grid;gap:var(--space-xl)}
+.case-video {margin:0;min-width:0}
+.case-video video {display:block;width:100%;height:auto;max-height:80vh;background:#111}
+.case-video figcaption {margin-top:var(--space-sm);font-size:var(--text-md)}
+.chero__title {font-size:clamp(2rem,6.2vw,6rem);width:100%;min-width:0;max-width:min(100%,18ch);overflow-wrap:normal}
+.chero__in {padding-top:calc(var(--hdr-h) + 6rem)}
+.cbrief__text {max-width:65ch;margin-inline:auto}
+@media(max-width:47.99rem){.chero__title{font-size:clamp(1.65rem,7.8vw,3.5rem)}.chero__back{font-size:14px}.chero__in{padding-top:calc(var(--hdr-h) + 5rem)}}
+</style>
+<section class="chero band--photo" id="top-case" aria-labelledby="case-title" data-case="День без автомобиля" data-case-type="Городское">
+<picture class="media"><img src="media/case-den-bez-avto-frame-1.jpg" width="1280" height="720" alt="" decoding="async" fetchpriority="high"></picture><div class="scrim" aria-hidden="true"></div>
+<a class="go chero__back" href="proekty.html">← Все проекты</a>
+<div class="wrap chero__in"><h1 class="chero__title" id="case-title" data-fit data-fit-min="18">День без автомобиля</h1>
+<p class="chero__sub">Городское мероприятие</p><div class="chero__acts">
+<a class="pill pill--solid" href="#contacts" data-lead data-type="Городское">Обсудить событие</a>
+<a class="pill pill--line" href="#video">Смотреть видео</a>
+</div></div></section>
+<section class="marquee band band--light" aria-hidden="true">
+  <div class="marquee__track">
+    <ul class="marquee__list">
+      <li>Живи</li><li>Люби</li><li>Радуйся</li><li>Живи</li><li>Люби</li><li>Радуйся</li>
+    </ul>
+    <ul class="marquee__list" aria-hidden="true">
+      <li>Живи</li><li>Люби</li><li>Радуйся</li><li>Живи</li><li>Люби</li><li>Радуйся</li>
+    </ul>
+  </div>
+</section>
+<section class="cbrief band band--light" aria-labelledby="concept-title"><div class="wrap">
+<div class="cbrief__head"><h2 class="h2" data-fit data-fit-min="18" id="concept-title">День без автомобиля</h2></div>
+<div class="cbrief__text"><p>Велосипеды, уличная музыка, мастер-классы и гости на открытом воздухе. Видео события, посвящённого Всемирному дню без автомобиля.</p></div></div></section>
+<section class="reel band band--dark" id="video" aria-labelledby="reel-title"><div class="wrap"><div class="sec-head"><h2 class="h2" data-fit data-fit-min="18" id="reel-title">Как это было</h2></div><div class="case-videos"><figure class="case-video"><video controls playsinline preload="none" poster="media/case-den-bez-avto-frame-1.jpg" aria-label="День без автомобиля"><source src="media/case-den-bez-avto.mp4" type="video/mp4"><a href="media/case-den-bez-avto.mp4">Открыть видео</a></video></figure></div></div></section>
+<section class="cgal band band--light" id="gallery" aria-labelledby="gal-title"><div class="wrap"><div class="sec-head cgal__head"><h2 class="h2" data-fit data-fit-min="18" id="gal-title">Кадры события</h2><p class="sec-head__note">Нажмите на фото, чтобы рассмотреть детали.</p></div><ul class="cgal__list" data-cgal><li class="cgal__item" style="--ar:1280/720"><button class="cgal__btn" type="button" data-full="media/case-den-bez-avto-frame-0.jpg"><img src="media/case-den-bez-avto-frame-0-thumb.jpg" width="1280" height="720" alt="День без автомобиля — кадр из видео 1" decoding="async" loading="lazy"></button></li><li class="cgal__item" style="--ar:1280/720"><button class="cgal__btn" type="button" data-full="media/case-den-bez-avto-frame-2.jpg"><img src="media/case-den-bez-avto-frame-2-thumb.jpg" width="1280" height="720" alt="День без автомобиля — кадр из видео 2" decoding="async" loading="lazy"></button></li><li class="cgal__item" style="--ar:1280/720"><button class="cgal__btn" type="button" data-full="media/case-den-bez-avto-frame-4.jpg"><img src="media/case-den-bez-avto-frame-4-thumb.jpg" width="1280" height="720" alt="День без автомобиля — кадр из видео 3" decoding="async" loading="lazy"></button></li></ul></div></section>
+<dialog class="lbox" aria-label="Фото с праздника" data-lbox>
+  <figure class="lbox__stage" data-lbox-stage>
+    <img class="lbox__img" alt="" sizes="100vw" draggable="false" data-lbox-img>
+    <figcaption class="lbox__cap" data-lbox-cap></figcaption>
+  </figure>
+  <p class="lbox__count" aria-live="polite" data-lbox-count></p>
+  <button class="lbox__btn lbox__close" type="button" aria-label="Закрыть" data-lbox-close>✕</button>
+  <button class="lbox__btn lbox__prev" type="button" aria-label="Предыдущее фото" data-lbox-step="-1">←</button>
+  <button class="lbox__btn lbox__next" type="button" aria-label="Следующее фото" data-lbox-step="1">→</button>
+</dialog>
+<section class="contact band--photo" id="contacts" aria-labelledby="contact-title">
+  <picture class="media"><source media="(max-width: 47.99rem)" srcset="media/photo-1775346098928-cab0-640-327d60204a.jpg 640w, media/photo-1775346098928-cab0-900-5512970a26.jpg 900w, media/photo-1775346098928-cab0-1080-ed168f6b8a.jpg 1080w" sizes="100vw" width="1080" height="1920"><img src="media/photo-1775346098928-cab0-1920-3a81e471c2.jpg" srcset="media/photo-1775346098928-cab0-1280-668e48101f.jpg 1280w, media/photo-1775346098928-cab0-1920-3a81e471c2.jpg 1920w, media/photo-1775346098928-cab0-2560-9a8ac721bc.jpg 2560w" sizes="100vw" width="1920" height="1200" alt="" loading="lazy" decoding="async"></picture>
+  <div class="scrim" aria-hidden="true"></div>
+  <div class="wrap contact__in">
+    <h2 class="contact__title" id="contact-title">Обсудим ваше событие?</h2>
+    <p class="contact__lead">Оставьте имя и&nbsp;телефон&nbsp;— Ольга перезвонит и&nbsp;расспросит о&nbsp;задумке. Хватит повода и&nbsp;примерной даты, остальное обсудим.</p>
+    <div class="contact__grid">
+            <div class="clinks">
+        <a class="clink" href="https://t.me/OlgaBilyk77"><svg class="ic ic--fill" viewBox="0 0 24 24" aria-hidden="true"><use href="#i-tg"/></svg><span class="clink__v">Telegram</span><span class="clink__k">написать</span></a>
+        <a class="clink" href="https://wa.me/79055474281"><svg class="ic ic--fill" viewBox="0 0 24 24" aria-hidden="true"><use href="#i-wa"/></svg><span class="clink__v">WhatsApp</span><span class="clink__k">написать</span></a>
+        <a class="clink" href="tel:+79055474281"><svg class="ic ic--line" viewBox="0 0 24 24" aria-hidden="true"><use href="#i-phone"/></svg><span class="clink__v">+7 905 547-42-81</span><span class="clink__k">позвонить</span></a>
+        <a class="clink" href="mailto:hello@livelovejoy.ru"><svg class="ic ic--line" viewBox="0 0 24 24" aria-hidden="true"><use href="#i-mail"/></svg><span class="clink__v">hello@livelovejoy.ru</span><span class="clink__k">почта</span></a>
+        <a class="clink" href="#" aria-label="Instagram — адрес уточняем"><svg class="ic ic--fill" viewBox="0 0 24 24" aria-hidden="true"><use href="#i-ig"/></svg><span class="clink__v">Instagram*</span><span class="clink__k">подписаться</span></a>
+        <a class="pill pill--line" href="data:text/vcard;charset=utf-8,BEGIN%3AVCARD%0D%0AVERSION%3A3.0%0D%0AN%3A%3BLive%20Love%20Joy%3B%3B%3B%0D%0AFN%3A%D0%9E%D0%BB%D1%8C%D0%B3%D0%B0%20%E2%80%94%20Live%20Love%20Joy%0D%0AORG%3ALive%20Love%20Joy%20%E2%80%94%20event%20agency%0D%0ATITLE%3AEvent-%D0%B0%D0%B3%D0%B5%D0%BD%D1%82%D1%81%D1%82%D0%B2%D0%BE%20%D0%BF%D0%BE%D0%BB%D0%BD%D0%BE%D0%B3%D0%BE%20%D1%86%D0%B8%D0%BA%D0%BB%D0%B0%0D%0ATEL%3BTYPE%3DCELL%3A%2B79055474281%0D%0AEMAIL%3BTYPE%3DINTERNET%3Ahello%40livelovejoy.ru%0D%0AURL%3Ahttps%3A%2F%2Flivelovejoy.ru%0D%0ANOTE%3A%D0%93%D0%BE%D1%80%D0%BE%D0%B4%D1%81%D0%BA%D0%B8%D0%B5%20%D0%BF%D1%80%D0%B0%D0%B7%D0%B4%D0%BD%D0%B8%D0%BA%D0%B8%5C%2C%20%D1%87%D0%B0%D1%81%D1%82%D0%BD%D1%8B%D0%B5%20%D1%82%D0%BE%D1%80%D0%B6%D0%B5%D1%81%D1%82%D0%B2%D0%B0%20%D0%B8%20%D0%BA%D0%BE%D1%80%D0%BF%D0%BE%D1%80%D0%B0%D1%82%D0%B8%D0%B2%D0%BD%D1%8B%D0%B5%20%D1%81%D0%BE%D0%B1%D1%8B%D1%82%D0%B8%D1%8F%20%E2%80%94%20%D0%BE%D1%82%20%D0%B8%D0%B4%D0%B5%D0%B8%20%D0%B4%D0%BE%20%D0%BF%D0%BE%D1%81%D0%BB%D0%B5%D0%B4%D0%BD%D0%B5%D0%B3%D0%BE%20%D0%B3%D0%BE%D1%81%D1%82%D1%8F%0D%0AEND%3AVCARD%0D%0A" download="live-love-joy.vcf"><svg class="ic ic--line" viewBox="0 0 24 24" aria-hidden="true"><use href="#i-contact"/></svg>Сохранить контакт</a>
+        <p class="clinks__hint">Карточка .vcf сразу добавится в&nbsp;контакты телефона.</p>
+      </div>
+
+      <form class="form" id="lead-form" novalidate data-form>
+        <div class="form__row">
+          <div class="field" data-field="name">
+            <label class="field__label" for="f-name">Ваше имя</label>
+            <input class="input" id="f-name" name="name" type="text" autocomplete="name" required aria-describedby="f-name-err">
+            <p class="field__err" id="f-name-err" data-msg="Напишите имя&nbsp;— хотя&nbsp;бы две буквы."></p>
+          </div>
+          <div class="field" data-field="phone">
+            <label class="field__label" for="f-phone">Ваш телефон</label>
+            <input class="input" id="f-phone" name="phone" type="tel" inputmode="tel" autocomplete="tel" placeholder="+7" required aria-describedby="f-phone-err">
+            <p class="field__err" id="f-phone-err" data-msg="Телефон целиком, например +7&nbsp;905&nbsp;000-00-00"></p>
+          </div>
+        </div>
+        <div class="field" data-field="type">
+          <label class="field__label" for="f-type">Какое событие</label>
+          <div class="select">
+            <select id="f-type" name="type" required aria-describedby="f-type-err">
+              <option value="">Выберите</option>
+              <option>Частное</option>
+              <option>Свадьба</option>
+              <option>Корпоративное</option>
+              <option>Деловое: конференция, форум</option>
+              <option>Городское</option>
+              <option>Новый год</option>
+              <option>Другое</option>
+            </select>
+          </div>
+          <p class="field__err" id="f-type-err" data-msg="Выберите, какое событие планируете"></p>
+        </div>
+        <div class="field" data-field="consent">
+          <label class="consent">
+            <input type="checkbox" name="consent" required aria-describedby="f-consent-err">
+            <span>Даю согласие на&nbsp;обработку персональных данных и&nbsp;принимаю <a href="index.html#politika">политику конфиденциальности</a></span>
+          </label>
+          <p class="field__err" id="f-consent-err" data-msg="Нужно согласие на&nbsp;обработку данных"></p>
+        </div>
+        <div class="form__submit">
+          <button class="pill pill--accent" type="submit">Отправить заявку</button>
+        </div>
+      </form>
+
+      <div class="done" data-done hidden tabindex="-1" aria-live="polite">
+        <p class="done__title">Заявка отправлена<span>.</span></p>
+        <p>Спасибо! Ольга свяжется с&nbsp;вами, чтобы обсудить задумку.</p>
+        <button class="pill pill--line pill--sm" type="button" data-again>Заполнить ещё раз</button>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="cmore band band--light" aria-labelledby="more-title"><div class="wrap"><div class="sec-head sec-head--row"><h2 class="h2" data-fit data-fit-min="18" id="more-title">Другие проекты</h2><a class="go" href="proekty.html">Все проекты →</a></div><ul class="cmore__list"><li data-cat="city"><a class="tile" href="kejs-zaryadye.html"><img src="media/case-zaryadye-7-frame-1-thumb.jpg" width="1280" height="720" alt="" decoding="async" loading="lazy"><span class="tile__body"><span class="tile__meta">Городские мероприятия</span><span class="tile__title">Праздники в Зарядье</span></span></a></li><li data-cat="city"><a class="tile" href="kejs-maskarad.html"><img src="media/case-maskarad-frame-2-thumb.jpg" width="1280" height="720" alt="" decoding="async" loading="lazy"><span class="tile__body"><span class="tile__meta">Городские мероприятия</span><span class="tile__title">Маскарад</span></span></a></li><li data-cat="city"><a class="tile" href="kejs-yudashkin.html"><img src="media/case-yudashkin-frame-3-thumb.jpg" width="1280" height="720" alt="" decoding="async" loading="lazy"><span class="tile__body"><span class="tile__meta">Городские мероприятия</span><span class="tile__title">Показ Валентина Юдашкина</span></span></a></li></ul></div></section>
+<script>
+/* Кейс: подгонка названия, бегущая строка, проявление кадров, просмотр фото, хлопушка, заявка с пометкой кейса */
+(() => {
+  const reduce = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+  const root = document.documentElement;
+  root.classList.add('js');
+  const hero = document.querySelector('[data-case]');
+  const caseName = hero ? hero.dataset.case : '';
+  const caseType = hero ? hero.dataset.caseType : '';
+
+  /* название и крупные заголовки: если самое длинное слово не влезает в ширину — уменьшаем шрифт, слово не рвём */
+  const fit = (el) => {
+    el.style.fontSize = '';
+    const avail = el.clientWidth;
+    if (!avail) return;
+    const probe = document.createElement('span');
+    probe.style.cssText = 'position:absolute;visibility:hidden;white-space:nowrap;left:0;top:0';
+    let widest = 0;
+    const measure = (host, text) => text.split(/\s+/).filter(Boolean).forEach((w) => {
+      probe.textContent = w; host.append(probe);
+      widest = Math.max(widest, probe.getBoundingClientRect().width); probe.remove();
+    });
+    el.childNodes.forEach((n) => (n.nodeType === 3 ? measure(el, n.textContent) : measure(n, n.textContent)));
+    if (widest > avail) el.style.fontSize = Math.max(Number(el.dataset.fitMin) || 40, parseFloat(getComputedStyle(el).fontSize) * avail / widest * 0.97) + 'px';
+  };
+  /* факты: если какое-то значение не влезает в ячейку одной строкой — уменьшаем все значения одинаково (не меньше 14px) */
+  const facts = [...document.querySelectorAll('.cfacts dd')];
+  const fitFacts = () => {
+    if (!facts.length) return;
+    facts.forEach((d) => { d.style.fontSize = ''; });
+    const fs = parseFloat(getComputedStyle(facts[0]).fontSize);
+    const probe = document.createElement('span');
+    probe.style.cssText = 'position:absolute;visibility:hidden;white-space:nowrap;left:0;top:0';
+    let k = 1;
+    facts.forEach((d) => {
+      probe.textContent = d.textContent; d.append(probe);
+      const w = probe.getBoundingClientRect().width; probe.remove();
+      const cell = d.parentElement, cs = getComputedStyle(cell);
+      const avail = cell.clientWidth - parseFloat(cs.paddingLeft) - parseFloat(cs.paddingRight);
+      if (w > avail) k = Math.min(k, avail / w);
+    });
+    if (k < 1) facts.forEach((d) => { d.style.fontSize = Math.max(14, fs * k * 0.9) + 'px'; });
+  };
+  if (facts.length) {
+    fitFacts();
+    if (document.fonts && document.fonts.ready) document.fonts.ready.then(fitFacts);
+    if ('ResizeObserver' in window) { let fw = 0; new ResizeObserver(([e]) => { if (Math.abs(e.contentRect.width - fw) > 1) { fw = e.contentRect.width; fitFacts(); } }).observe(facts[0].closest('.cfacts')); }
+  }
+
+  const fits = [...document.querySelectorAll('[data-fit]')];
+  fits.forEach((el) => {
+    fit(el);
+    if ('ResizeObserver' in window) { let w = 0; new ResizeObserver(([e]) => { if (Math.abs(e.contentRect.width - w) > 1) { w = e.contentRect.width; fit(el); } }).observe(el.parentElement); }
+  });
+  /* шрифт может догрузиться после fonts.ready (если загрузка ещё не началась) — подгоняем и по окончании загрузки */
+  if (document.fonts) {
+    if (document.fonts.ready) document.fonts.ready.then(() => fits.forEach(fit));
+    document.fonts.addEventListener('loadingdone', () => { fits.forEach(fit); fitFacts(); });
+  }
+
+  /* окно заявки и нижняя панель стоят в разметке после этого скрипта — ждём всю страницу */
+  const late = () => {
+    /* нижняя панель на телефоне прячется, пока виден первый экран */
+    const mbar = document.querySelector('.mbar');
+    if (mbar && hero && 'IntersectionObserver' in window) {
+      new IntersectionObserver(([e]) => mbar.classList.toggle('is-off', e.isIntersecting), { threshold: 0.35 }).observe(hero);
+    }
+
+    /* заявка: тип события и пометка, с какого кейса пришла */
+    if (caseName) document.querySelectorAll('[data-form]').forEach((f) => {
+      const h = document.createElement('input'); h.type = 'hidden'; h.name = 'source'; h.value = 'Проект: ' + caseName;
+      const note = document.createElement('p'); note.className = 'form__from'; note.textContent = 'Заявка со страницы проекта «' + caseName + '»';
+      f.prepend(h, note);
+      const sel = f.elements.type;
+      if (sel && caseType) [...sel.options].forEach((o) => { if (o.text === caseType) { o.defaultSelected = true; o.selected = true; } });
+    });
+  };
+  if (document.readyState === 'loading') document.addEventListener('DOMContentLoaded', late); else late();
+
+  /* видео: на телефоне рамка 4:5 — во время просмотра подстраиваем её под пропорции ролика, чтобы не резать кадр */
+  const reelV = document.querySelector('.reel__video');
+  if (reelV) reelV.addEventListener('loadedmetadata', () => { if (reelV.videoWidth) reelV.parentElement.style.aspectRatio = reelV.videoWidth + ' / ' + reelV.videoHeight; });
+
+  /* галерея: подписи кнопок, число фото, проявление при прокрутке */
+  const btns = [...document.querySelectorAll('.cgal__btn')];
+  const N = btns.length;
+  const cnt = document.querySelector('[data-cgal-count]'); if (cnt) cnt.textContent = N;
+  btns.forEach((b, n) => { const alt = b.querySelector('img').alt; b.setAttribute('aria-label', 'Открыть фото ' + (n + 1) + ' из ' + N + (alt ? ': ' + alt : '')); });
+  const items = btns.map((b) => b.closest('.cgal__item'));
+  if ('IntersectionObserver' in window && !reduce) {
+    const io = new IntersectionObserver((es) => es.forEach((e) => { if (e.isIntersecting) { e.target.classList.add('is-in'); io.unobserve(e.target); } }), { rootMargin: '0px 0px -8% 0px' });
+    items.forEach((li, n) => { li.style.transitionDelay = (n % 3) * 90 + 'ms'; io.observe(li); });
+  } else items.forEach((li) => li.classList.add('is-in'));
+  /* галерея рядами: число рядов — по желаемой высоте ряда, кадры делятся на ряды так, чтобы суммы пропорций были равными;
+     каждый ряд растягивается ровно на ширину блока */
+  const list = document.querySelector('[data-cgal]');
+  const layout = () => {
+    list.classList.add('is-rows');
+    const W = list.clientWidth, gap = parseFloat(getComputedStyle(list).columnGap) || 0;
+    if (!W) return;
+    const ar = items.map((li) => { const [w, h] = getComputedStyle(li).getPropertyValue('--ar').split('/').map(Number); return w / h || 1; });
+    const n = ar.length, pre = [0];
+    ar.forEach((a) => pre.push(pre[pre.length - 1] + a));
+    const target = innerWidth < 768 ? 170 : Math.min(380, innerWidth * 0.26);
+    const k = Math.min(n, Math.max(1, Math.round(pre[n] * target / W)));
+    const ideal = pre[n] / k;
+    const D = Array.from({ length: k + 1 }, () => Array(n + 1).fill(Infinity));
+    const P = Array.from({ length: k + 1 }, () => Array(n + 1).fill(0));
+    D[0][0] = 0;
+    for (let r = 1; r <= k; r++) for (let j = r; j <= n; j++) for (let i = r - 1; i < j; i++) {
+      const c = D[r - 1][i] + (pre[j] - pre[i] - ideal) ** 2;
+      if (c < D[r][j]) { D[r][j] = c; P[r][j] = i; }
+    }
+    for (let r = k, j = n; r > 0; r--) {
+      const i = P[r][j], free = W - gap * (j - i - 1) - 0.5, h = Math.round(free / (pre[j] - pre[i]));
+      let used = 0;
+      for (let t = i; t < j; t++) {
+        const w = t === j - 1 ? free - used : Math.floor(ar[t] * h);
+        used += w; items[t].style.width = w + 'px'; items[t].style.height = h + 'px';
+      }
+      j = i;
+    }
+  };
+  if (list && items.length) {
+    layout();
+    if ('ResizeObserver' in window) { let lw = 0; new ResizeObserver(([e]) => { if (Math.abs(e.contentRect.width - lw) > 1) { lw = e.contentRect.width; layout(); } }).observe(list); }
+  }
+
+  /* просмотр фото на весь экран: стрелки, клавиши ← →, свайп, клик по половине кадра */
+  const box = document.querySelector('[data-lbox]');
+  if (box && N) {
+    const pic = box.querySelector('[data-lbox-img]');
+    const cap = box.querySelector('[data-lbox-cap]');
+    const stage = box.querySelector('[data-lbox-stage]');
+    const end = box.querySelector('[data-lbox-end]');
+    const count = box.querySelector('[data-lbox-count]');
+    const total = end ? N + 1 : N;
+    const vt = typeof document.startViewTransition === 'function' && !reduce;
+    let cur = 0, locked = false;
+    const setSrc = (img, b) => { if (b.dataset.fullSrcset) { img.sizes = '100vw'; img.srcset = b.dataset.fullSrcset; } img.src = b.dataset.full; };
+    const loaded = new Set();
+    const preload = (n) => { const i = ((n % N) + N) % N; if (loaded.has(i)) return; loaded.add(i); setSrc(new Image(), btns[i]); };
+    const show = (n) => {
+      cur = ((n % total) + total) % total;
+      const isEnd = cur === N;
+      stage.hidden = isEnd; if (end) end.hidden = !isEnd;
+      if (isEnd) { count.textContent = ''; return; }
+      const b = btns[cur], alt = b.querySelector('img').alt;
+      pic.removeAttribute('srcset'); setSrc(pic, b); pic.alt = alt; cap.textContent = alt;
+      count.textContent = (cur + 1) + ' / ' + N;
+      preload(cur + 1); preload(cur - 1);
+    };
+    const lock = () => { locked = true; root.style.overflow = 'hidden'; };
+    const unlock = () => {
+      if (!locked) return;
+      locked = false; root.style.overflow = '';
+      const b = btns[Math.min(cur, N - 1)];
+      b.closest('.cgal__item').classList.add('is-in');
+      b.scrollIntoView({ block: 'nearest' });
+      if (!document.querySelector('dialog[open]')) b.focus({ preventScroll: true });
+    };
+    const thumb = (n) => btns[Math.min(n, N - 1)].querySelector('img');
+    const open = (n) => {
+      const go = () => { show(n); box.showModal(); lock(); };
+      if (!vt) return go();
+      const t = thumb(n); t.style.viewTransitionName = 'cgal-pic';
+      const tr = document.startViewTransition(async () => {
+        t.style.viewTransitionName = ''; go(); pic.style.viewTransitionName = 'cgal-pic';
+        await Promise.race([pic.decode().catch(() => {}), new Promise((r) => setTimeout(r, 250))]);
+      });
+      tr.finished.finally(() => { pic.style.viewTransitionName = ''; });
+    };
+    const shut = () => {
+      if (!box.open) return;
+      const fin = () => { box.close(); unlock(); };
+      if (!vt || cur === N) return fin();
+      const t = thumb(cur); pic.style.viewTransitionName = 'cgal-pic';
+      const tr = document.startViewTransition(() => { pic.style.viewTransitionName = ''; fin(); t.style.viewTransitionName = 'cgal-pic'; });
+      tr.finished.finally(() => { t.style.viewTransitionName = ''; });
+    };
+    btns.forEach((b, n) => b.addEventListener('click', () => open(n)));
+    box.querySelectorAll('[data-lbox-step]').forEach((b) => b.addEventListener('click', () => show(cur + Number(b.dataset.lboxStep))));
+    box.querySelector('[data-lbox-close]').addEventListener('click', shut);
+    box.addEventListener('cancel', (e) => { e.preventDefault(); shut(); });
+    box.addEventListener('close', unlock);   /* на случай, если окно закрыл браузер */
+    box.addEventListener('keydown', (e) => { if (e.key === 'ArrowRight') show(cur + 1); if (e.key === 'ArrowLeft') show(cur - 1); });
+    /* свайп: палец или мышь; после свайпа клик не закрывает окно */
+    let x0 = null, swiped = false;
+    box.addEventListener('pointerdown', (e) => { x0 = e.clientX; swiped = false; });
+    box.addEventListener('pointerup', (e) => { if (x0 !== null && Math.abs(e.clientX - x0) > 50) { swiped = true; show(cur + (e.clientX < x0 ? 1 : -1)); } x0 = null; });
+    box.addEventListener('pointercancel', () => { x0 = null; });
+    box.addEventListener('click', (e) => {
+      if (swiped) { swiped = false; e.stopPropagation(); return; }
+      if (e.target === pic) { const r = pic.getBoundingClientRect(); show(cur + (e.clientX < r.left + r.width / 2 ? -1 : 1)); return; }
+      if (e.target === box || e.target === stage) shut();
+    }, true);
+    pic.addEventListener('mousemove', (e) => { const r = pic.getBoundingClientRect(); pic.style.cursor = e.clientX < r.left + r.width / 2 ? 'w-resize' : 'e-resize'; });
+  }
+
+  /* хлопушка: один залп из кнопки; один холст на все нажатия. Цвета — data-confetti="#…,#…" */
+  const DEFAULT = ['#e8432f', '#f4a7b9', '#ffd1dc', '#7cc58a', '#2f8f5b', '#ffffff'];
+  const live = document.querySelector('[data-confetti-live]');
+  let cvs = null, ctx = null, parts = [], raf = 0;
+  const fitCanvas = () => { const dpr = Math.min(window.devicePixelRatio || 1, 2); cvs.width = innerWidth * dpr; cvs.height = innerHeight * dpr; ctx = cvs.getContext('2d'); ctx.setTransform(dpr, 0, 0, dpr, 0, 0); };
+  const spawn = (x, y, n, angle, spread, reach, colors) => {
+    for (let i = 0; i < n; i++) {
+      const a = (angle + (Math.random() - 0.5) * spread) * Math.PI / 180;
+      const v = Math.sqrt(2 * 0.3 * reach) * (0.7 + Math.random() * 0.5) * 1.15;
+      parts.push({ x, y, vx: Math.cos(a) * v, vy: Math.sin(a) * v, s: 5 + Math.random() * 7, r: Math.random() * 6, vr: (Math.random() - 0.5) * 0.35, k: i % 2, c: colors[i % colors.length], t: 0, life: 200 + Math.random() * 70 });
+    }
+  };
+  const tick = () => {
+    ctx.clearRect(0, 0, innerWidth, innerHeight);
+    parts = parts.filter((p) => p.t < p.life && p.y < innerHeight + 40);
+    parts.forEach((p) => {
+      p.t++; p.vy += 0.3; p.vx *= 0.986; p.vy *= 0.986; p.x += p.vx + Math.sin(p.t / 9 + p.r) * 0.6; p.y += p.vy; p.r += p.vr;
+      ctx.save(); ctx.translate(p.x, p.y); ctx.rotate(p.r); ctx.globalAlpha = Math.max(0, 1 - (p.t / p.life) ** 3); ctx.fillStyle = p.c;
+      if (p.k === 0) ctx.fillRect(-p.s / 2, -p.s * 0.7, p.s, p.s * 1.4 * Math.abs(Math.cos(p.r * 2)));
+      else { ctx.beginPath(); ctx.arc(0, 0, p.s * 0.45, 0, Math.PI * 2); ctx.fill(); }
+      ctx.restore();
+    });
+    if (parts.length) raf = requestAnimationFrame(tick); else { raf = 0; cvs.remove(); }
+  };
+  /* отклик: диктору — всегда, подпись «Ура!» на кнопке — только когда анимация отключена */
+  const cheer = (btn) => {
+    if (live) { live.textContent = ''; setTimeout(() => { live.textContent = 'Ура! С праздником!'; }, 50); }
+    if (!reduce || btn.dataset.busy) return;
+    btn.dataset.busy = '1'; btn.style.minWidth = btn.offsetWidth + 'px';
+    const label = btn.textContent; btn.textContent = 'Ура!';
+    setTimeout(() => { btn.textContent = label; btn.style.minWidth = ''; delete btn.dataset.busy; }, 2000);
+  };
+  const burst = (btn) => {
+    cheer(btn);
+    if (reduce) return;
+    const colors = (btn.dataset.confetti || '').split(',').map((s) => s.trim()).filter(Boolean);
+    const cs = colors.length ? colors : DEFAULT;
+    if (!cvs) { cvs = document.createElement('canvas'); cvs.className = 'confetti'; cvs.setAttribute('aria-hidden', 'true'); }
+    (btn.closest('dialog[open]') || document.body).append(cvs);
+    fitCanvas();
+    const r = btn.getBoundingClientRect(), cx = r.left + r.width / 2, cy = r.top + r.height / 2;
+    const mob = innerWidth < 768;
+    spawn(cx, cy, mob ? 70 : 110, -90, 70, cy + 40, cs);
+    if (!raf) raf = requestAnimationFrame(tick);
+  };
+  window.addEventListener('resize', () => { if (cvs && cvs.isConnected) fitCanvas(); });
+  document.querySelectorAll('[data-confetti]').forEach((b) => b.addEventListener('click', () => burst(b)));
+})();
+</script>
+
+</main>
+
+<footer class="foot band band--dark">
+  <div class="wrap">
+    <div class="foot__signwrap">
+      <p class="sign foot__sign" aria-hidden="true" style="--foot-photo: url('media/photo-1470229722913-7c0e-1600-1bd9196b19.jpg')"><span>LIVE</span> <span>LOVE</span> <span>JOY</span></p>
+      <div class="foot__vsign" aria-hidden="true">
+        <video class="foot__video" muted loop playsinline preload="none" poster="media/olga-reel-poster.jpg" data-src="media/olga-reel-720.mp4"></video>
+        <p class="sign foot__vtext"><span>LIVE</span> <span>LOVE</span> <span>JOY</span></p>
+      </div>
+    </div>
+    <div class="foot__grid foot__grid--m2">
+      <nav class="foot__menu" aria-label="Разделы">
+        <a href="index.html">Главная</a><a href="istoriya-brenda.html">История бренда</a><a href="komanda.html">О команде</a><a href="index.html#vidy">Виды мероприятий</a><a href="index.html#svadby">Свадьбы</a><a href="index.html#novyj-god">Новый год</a><a href="proekty.html">Проекты</a><a href="zhurnal.html">Журнал</a>
+      </nav>
+      <div class="foot__info">
+        <p class="foot__h">Контакты</p>
+        <a class="foot__big" href="tel:+79055474281">+7 905 547-42-81</a>
+        <a class="foot__big" href="mailto:hello@livelovejoy.ru">hello@livelovejoy.ru</a>
+                <p class="foot__addr">Тверская ул.,&nbsp;7 · <a href="https://yandex.ru/maps/?pt=37.611711,55.757939&amp;z=17&amp;l=map" target="_blank" rel="noopener">На Яндекс Картах</a></p>
+        <ul class="socials">
+          <li><a class="icon-btn" href="https://t.me/OlgaBilyk77" aria-label="Telegram"><svg class="ic ic--fill" viewBox="0 0 24 24" aria-hidden="true"><use href="#i-tg"/></svg></a></li>
+          <li><a class="icon-btn" href="#" aria-label="Instagram — адрес уточняем"><svg class="ic ic--fill" viewBox="0 0 24 24" aria-hidden="true"><use href="#i-ig"/></svg></a></li>
+        </ul>
+        <a class="pill pill--solid" href="#contacts" data-lead>Получить консультацию</a>
+      </div>
+    </div>
+    <div class="foot__legal">
+      <a href="index.html#politika">Политика конфиденциальности</a>
+      <span>© 2026 Live Love Joy</span>
+      <span>*Instagram принадлежит Meta, деятельность которой запрещена в&nbsp;РФ</span>
+    </div>
+  </div>
+</footer>
+
+<nav class="mbar" aria-label="Быстрая связь">
+  <a class="pill pill--solid" href="#contacts" data-lead>Обсудить</a>
+  <a class="pill pill--line" href="tel:+79055474281"><svg class="ic ic--line" viewBox="0 0 24 24" aria-hidden="true"><use href="#i-phone"/></svg>Позвонить</a>
+</nav>
+
+<dialog class="lead-dlg band--dark" id="lead-dlg" aria-labelledby="lead-title">
+    <figure class="lead-dlg__photo">
+    <img src="media/photo-1782061932407-d046-640-e9bfbf2c7a.jpg" alt="" width="640" height="860" loading="lazy" decoding="async">
+        <img class="lead-dlg__ny-img" src="media/photo-1514845505178-849c-640-b8b65201aa.jpg" alt="" width="640" height="860" loading="lazy" decoding="async">
+    <span class="lead-dlg__snow" aria-hidden="true"></span>
+    <figcaption class="lead-dlg__who"><span class="lead-dlg__name"><span class="if-def">Ольга</span><span class="if-ny">Новый год</span></span><span class="lead-dlg__role"><span class="if-def">Ответит лично</span><span class="if-ny">Сезон 2026/27</span></span></figcaption>
+  </figure>
+  <span class="lead-dlg__garland" aria-hidden="true"></span>
+  <div class="lead-dlg__in">
+    <button class="icon-btn menu__close lead-dlg__close" type="button" data-lead-close><span class="sr-only">Закрыть</span></button>
+    <h2 class="lead-dlg__title" id="lead-title"><span class="if-def">Обсудим ваше событие?</span><span class="if-ny">Обсудим ваш Новый год?</span></h2>
+    <p class="lead-dlg__lead"><span class="if-def">Оставьте имя и&nbsp;телефон&nbsp;— Ольга перезвонит и&nbsp;расспросит о&nbsp;задумке.</span><span class="if-ny">Даты и&nbsp;площадки на&nbsp;декабрь разбирают заранее. Оставьте телефон&nbsp;— Ольга перезвонит.</span></p>
+    <form class="form" novalidate data-form>
+        <div class="form__row">
+          <div class="field" data-field="name">
+            <label class="field__label" for="m-name">Ваше имя</label>
+            <input class="input" id="m-name" name="name" type="text" autocomplete="name" required aria-describedby="m-name-err">
+            <p class="field__err" id="m-name-err" data-msg="Напишите имя&nbsp;— хотя&nbsp;бы две буквы."></p>
+          </div>
+          <div class="field" data-field="phone">
+            <label class="field__label" for="m-phone">Ваш телефон</label>
+            <input class="input" id="m-phone" name="phone" type="tel" inputmode="tel" autocomplete="tel" placeholder="+7" required aria-describedby="m-phone-err">
+            <p class="field__err" id="m-phone-err" data-msg="Телефон целиком, например +7&nbsp;905&nbsp;000-00-00"></p>
+          </div>
+        </div>
+        <div class="field" data-field="type">
+          <label class="field__label" for="m-type">Какое событие</label>
+          <div class="select">
+            <select id="m-type" name="type" required aria-describedby="m-type-err">
+              <option value="">Выберите</option>
+              <option>Частное</option>
+              <option>Свадьба</option>
+              <option>Корпоративное</option>
+              <option>Деловое: конференция, форум</option>
+              <option>Городское</option>
+              <option>Новый год</option>
+              <option>Другое</option>
+            </select>
+          </div>
+          <p class="field__err" id="m-type-err" data-msg="Выберите, какое событие планируете"></p>
+        </div>
+        <fieldset class="ny-pick">
+          <legend class="field__label">Что празднуем</legend>
+          <div class="ny-pick__list">
+            <label class="chip"><input type="radio" name="ny_format" value="Корпоратив"><span>Корпоратив</span></label>
+            <label class="chip"><input type="radio" name="ny_format" value="Детская ёлка"><span>Детская ёлка</span></label>
+            <label class="chip"><input type="radio" name="ny_format" value="Семейный праздник"><span>Семейный праздник</span></label>
+            <label class="chip"><input type="radio" name="ny_format" value="Городские гуляния"><span>Городские гуляния</span></label>
+          </div>
+        </fieldset>
+        <div class="field" data-field="consent">
+          <label class="consent">
+            <input type="checkbox" name="consent" required aria-describedby="m-consent-err">
+            <span>Даю согласие на&nbsp;обработку персональных данных и&nbsp;принимаю <a href="index.html#politika">политику конфиденциальности</a></span>
+          </label>
+          <p class="field__err" id="m-consent-err" data-msg="Нужно согласие на&nbsp;обработку данных"></p>
+        </div>
+        <div class="form__submit">
+          <button class="pill pill--accent" type="submit">Отправить</button>
+        </div>
+    </form>
+    <div class="done" data-done hidden tabindex="-1" aria-live="polite">
+      <p class="done__title">Заявка отправлена<span>.</span></p>
+      <p><span class="if-def">Спасибо! Ольга свяжется с&nbsp;вами, чтобы обсудить задумку.</span><span class="if-ny">Спасибо! Ольга перезвонит, чтобы обсудить ваш Новый год.</span></p>
+      <div class="done__btns">
+        <button class="pill pill--solid pill--sm" type="button" data-lead-close>Закрыть</button>
+        <button class="pill pill--line pill--sm" type="button" data-again>Заполнить ещё раз</button>
+      </div>
+    </div>
+  </div>
+</dialog>
+
+<aside class="vpanel" aria-label="Варианты дизайна">
+  <button class="vpanel__toggle" type="button" aria-expanded="false" aria-controls="vpanel-body" data-vpanel-toggle><span class="vpanel__dot" aria-hidden="true"></span><span>Варианты<span class="vpanel__more"> дизайна</span></span><span class="vpanel__chev" aria-hidden="true"></span></button>
+  <div class="vpanel__body" id="vpanel-body" hidden>
+    <p class="vpanel__hint">Нажимайте&nbsp;— страница меняется сразу и&nbsp;сама прокручивается к&nbsp;изменению.</p>
+    <div class="vpanel__grp" role="group" aria-labelledby="vp-foot">
+      <p class="vpanel__label" id="vp-foot">Надпись в&nbsp;подвале</p>
+      <div class="vpanel__opts">
+        <button type="button" data-set="foot" data-val="photo">Фото в&nbsp;буквах</button>
+        <button type="button" data-set="foot" data-val="video">Видео в&nbsp;буквах</button>
+        <button type="button" data-set="foot" data-val="white">Белым</button>
+      </div>
+    </div>
+  </div>
+</aside>
+
+<script>
+(() => {
+  const root = document.documentElement;
+  const reduce = window.matchMedia('(prefers-reduced-motion: reduce)');
+  const store = {
+    get(k) { try { return localStorage.getItem(k); } catch (e) { return null; } },
+    set(k, v) { try { localStorage.setItem(k, v); } catch (e) { /* приватный режим — не страшно */ } },
+  };
+  const play = (v) => { v.muted = true; const p = v.play(); if (p && p.catch) p.catch(() => {}); };
+  const saveData = !!(navigator.connection && navigator.connection.saveData);
+
+  /* Видео в буквах подвала: грузим и крутим, только когда выбран этот вариант и подвал рядом */
+  const footVideo = (() => {
+    const v = document.querySelector('.foot__video');
+    let near = false;
+    const sync = () => {
+      if (!v) return;
+      const want = root.getAttribute('data-foot') === 'video' && near && !reduce.matches;
+      if (want) {
+        if (!v.getAttribute('src')) v.src = v.dataset.src;
+        play(v);
+      } else if (!v.paused) {
+        v.pause();
+      }
+    };
+    if (v && 'IntersectionObserver' in window) {
+      new IntersectionObserver((entries) => { near = entries.some((en) => en.isIntersecting); sync(); }, { rootMargin: '400px 0px' }).observe(v.parentElement);
+    } else {
+      near = true;
+    }
+    return { sync };
+  })();
+
+  /* Панель вариантов: атрибуты на <html>; выбор хранится в localStorage и в адресе — ссылку можно переслать */
+  const VARIANTS = {
+    hero:    { attr: 'data-hero',    key: 'llj-hero',    param: 'hero' },
+    foot:    { attr: 'data-foot',    key: 'llj-foot',    param: 'foot' },
+  };
+  /* куда прокрутить, чтобы изменение было видно */
+  const TARGETS = {
+    hero:  { left: '#top', center: '#top', low: '#top' },
+    foot:  { photo: '.foot__signwrap', video: '.foot__signwrap', white: '.foot__signwrap' },
+  };
+  const optBtns = document.querySelectorAll('[data-set]');
+  const syncButtons = () => optBtns.forEach((b) => {
+    b.setAttribute('aria-pressed', String(root.getAttribute(VARIANTS[b.dataset.set].attr) === b.dataset.val));
+  });
+  const reveal = (sel) => {
+    const el = document.querySelector(sel);
+    if (!el) return;
+    const r = el.getBoundingClientRect();
+    if (r.top >= 0 && r.bottom <= window.innerHeight) return;            // и так на экране
+    if (r.top >= 0 && r.top < window.innerHeight * 0.6) return;          // верх уже виден
+    el.scrollIntoView({ behavior: reduce.matches ? 'auto' : 'smooth', block: 'start' });
+  };
+  const setVariant = (name, val) => {
+    const v = VARIANTS[name];
+    root.setAttribute(v.attr, val);
+    store.set(v.key, val);
+    syncButtons();
+    try {
+      const u = new URL(window.location.href);
+      u.searchParams.set(v.param, val);
+      history.replaceState(null, '', u);
+    } catch (e) { /* открыто файлом — адрес не меняем */ }
+    if (name === 'foot') footVideo.sync();
+    if (TARGETS[name] && TARGETS[name][val]) window.requestAnimationFrame(() => reveal(TARGETS[name][val]));
+  };
+  syncButtons();
+  optBtns.forEach((b) => b.addEventListener('click', () => setVariant(b.dataset.set, b.dataset.val)));
+
+  const vpToggle = document.querySelector('[data-vpanel-toggle]');
+  const vpBody = document.getElementById('vpanel-body');
+  const setPanel = (open, save) => {
+    vpToggle.setAttribute('aria-expanded', String(open));
+    vpBody.hidden = !open;
+    if (save) store.set('llj-vpanel', open ? '1' : '0');
+  };
+  setPanel(store.get('llj-vpanel') === '1', false);
+  vpToggle.addEventListener('click', () => setPanel(vpToggle.getAttribute('aria-expanded') !== 'true', true));
+  vpBody.addEventListener('keydown', (e) => {
+    if (e.key === 'Escape') { setPanel(false, true); vpToggle.focus(); }
+  });
+
+  /* Видео первого экрана: фото под ним остаётся, пока видео не пошло; при «меньше движения» и экономии трафика — только фото */
+  const heroVideo = document.querySelector('.hero__video');
+  /* ролик грузим не сразу: сначала страница целиком (заставка — кадр из ролика), потом, когда браузер свободен, видео */
+  const startHeroVideo = () => {
+    heroVideo.src = window.matchMedia('(max-width: 47.99rem)').matches ? heroVideo.dataset.srcSm : heroVideo.dataset.src;
+    heroVideo.addEventListener('playing', () => heroVideo.classList.add('is-on'), { once: true });
+    play(heroVideo);
+    if ('IntersectionObserver' in window) {
+      new IntersectionObserver((entries) => {
+        entries.forEach((en) => { if (en.isIntersecting) play(heroVideo); else heroVideo.pause(); });
+      }).observe(heroVideo);
+    }
+  };
+  if (heroVideo && !reduce.matches && !saveData) {
+    const later = () => ('requestIdleCallback' in window ? requestIdleCallback(startHeroVideo, { timeout: 2500 }) : setTimeout(startHeroVideo, 1200));
+    if (document.readyState === 'complete') later(); else window.addEventListener('load', later, { once: true });
+  }
+
+  /* Ссылки-заглушки «#» не прыгают наверх */
+  document.addEventListener('click', (e) => {
+    const a = e.target.closest('a[href="#"]');
+    if (a) e.preventDefault();
+  });
+
+  /* Меню на весь экран: <dialog>, Esc закрывает, фокус возвращается на бургер */
+  const menu = document.getElementById('menu');
+  const burger = document.querySelector('[data-menu-open]');
+  let restoreFocus = true;
+  /* снимаем блокировку прокрутки сразу, не дожидаясь события close (оно асинхронное),
+     иначе прокрутка к разделу стартует при overflow:hidden и обрывается */
+  const unlockPage = () => {
+    burger.setAttribute('aria-expanded', 'false');
+    root.style.overflow = '';
+  };
+  const closeMenu = (afterClose) => {
+    if (!menu.open) { if (afterClose) afterClose(); return; }
+    const finish = () => {
+      menu.classList.remove('is-closing');
+      menu.close();
+      unlockPage();
+      if (afterClose) afterClose();
+    };
+    if (reduce.matches) { finish(); return; }
+    menu.classList.add('is-closing');
+    window.setTimeout(finish, 190);
+  };
+  burger.addEventListener('click', () => {
+    if (menu.open) return;
+    restoreFocus = true;
+    menu.showModal();
+    burger.setAttribute('aria-expanded', 'true');
+    root.style.overflow = 'hidden';
+  });
+  menu.addEventListener('close', () => {
+    unlockPage();
+    if (restoreFocus) burger.focus({ preventScroll: true });
+  });
+  menu.addEventListener('cancel', (e) => { e.preventDefault(); closeMenu(); });
+  menu.querySelector('[data-menu-close]').addEventListener('click', () => closeMenu());
+  menu.addEventListener('click', (e) => { if (e.target === menu) closeMenu(); });
+  menu.querySelectorAll('[data-menu-link]').forEach((a) => {
+    a.addEventListener('click', (e) => {
+      /* ссылка на другую страницу (внутренние страницы: index.html#…, proekty.html, zhurnal.html) — обычный переход */
+      const href = a.getAttribute('href');
+      if (!href.startsWith('#')) return;
+      const id = href.slice(1);
+      const target = document.getElementById(id);
+      e.preventDefault();
+      if (!target) { closeMenu(); return; }
+      restoreFocus = false;
+      closeMenu(() => {
+        target.scrollIntoView({ behavior: reduce.matches ? 'auto' : 'smooth', block: 'start' });
+        history.pushState(null, '', '#' + id);
+        if (!target.hasAttribute('tabindex')) target.setAttribute('tabindex', '-1');
+        target.focus({ preventScroll: true });
+      });
+    });
+  });
+
+  /* Формы заявки (окно и блок «Контакты»): проверка полей, состояние «Заявка отправлена» */
+  const initForm = (form) => {
+    const done = form.parentElement.querySelector('[data-done]');
+    const fieldEl = (key) => form.querySelector('[data-field="' + key + '"]');
+    const setError = (key, on) => {
+      const f = fieldEl(key);
+      if (!f) return;
+      f.classList.toggle('is-invalid', on);
+      const err = f.querySelector('.field__err');
+      if (err) err.textContent = on ? err.dataset.msg : '';
+      f.querySelectorAll('input, select').forEach((i) => {
+        if (on) i.setAttribute('aria-invalid', 'true'); else i.removeAttribute('aria-invalid');
+      });
+    };
+    const rules = {
+      name: () => form.elements.name.value.trim().length >= 2,
+      phone: () => {
+        const v = form.elements.phone.value.trim();
+        const digits = v.replace(/\D/g, '');
+        return digits.length >= 10 && digits.length <= 15 && /^[+\d\s()\-]+$/.test(v);
+      },
+      type: () => !!form.elements.type.value,
+      consent: () => form.elements.consent.checked,
+    };
+    const touched = new Set();
+    const dirty = new Set();   // поле, в которое что-то вводили: пустое нетронутое не ругаем до «Отправить»
+    Object.keys(rules).forEach((key) => {
+      const f = fieldEl(key);
+      f.addEventListener('focusout', () => {
+        if (key === 'consent') return;
+        if (!touched.has(key) && !dirty.has(key)) return;
+        touched.add(key);
+        setError(key, !rules[key]());
+      });
+      f.addEventListener('input', () => { dirty.add(key); if (touched.has(key) || f.classList.contains('is-invalid')) setError(key, !rules[key]()); });
+      f.addEventListener('change', () => { if (f.classList.contains('is-invalid')) setError(key, !rules[key]()); });
+    });
+    form.addEventListener('submit', (e) => {
+      e.preventDefault();
+      let first = null;
+      Object.keys(rules).forEach((key) => {
+        touched.add(key);
+        const ok = rules[key]();
+        setError(key, !ok);
+        if (!ok && !first) first = fieldEl(key).querySelector('input, select');
+      });
+      if (first) { first.focus(); return; }
+      form.hidden = true;
+      done.hidden = false;
+      done.focus({ preventScroll: true });
+    });
+    done.querySelector('[data-again]').addEventListener('click', () => {
+      form.reset();
+      touched.clear();
+      dirty.clear();
+      Object.keys(rules).forEach((key) => setError(key, false));
+      done.hidden = true;
+      form.hidden = false;
+      form.elements.name.focus();
+    });
+    return { form, done, clear: (key) => setError(key, false) };
+  };
+  const forms = [...document.querySelectorAll('[data-form]')].map(initForm);
+
+  /* «Обсудить событие» открывает окно с короткой формой, как у M2; без поддержки <dialog> — переход к блоку «Контакты» */
+  const dlg = document.getElementById('lead-dlg');
+  const dlgForm = forms.find((f) => dlg.contains(f.form));
+  let leadOpener = null;
+  const closeLead = () => { if (dlg.open) dlg.close(); };
+  document.addEventListener('click', (e) => {
+    const a = e.target.closest('[data-lead]');
+    if (!a || typeof dlg.showModal !== 'function') return;
+    e.preventDefault();
+    if (menu.open) closeMenu();
+    if (a.dataset.type && !dlgForm.form.hidden) {
+      dlgForm.form.elements.type.value = a.dataset.type;
+      dlgForm.clear('type');
+    }
+    /* «Обсудить Новый год» — окно в новогодней стилистике; остальные кнопки — обычное окно, тип «Новый год» не остаётся */
+    const ny = a.dataset.type === 'Новый год';
+    if (!ny && dlg.classList.contains('is-ny') && !a.dataset.type && !dlgForm.form.hidden) dlgForm.form.elements.type.value = '';
+    dlg.classList.toggle('is-ny', ny);
+    leadOpener = a;
+    dlg.showModal();
+    root.style.overflow = 'hidden';
+    (dlgForm.form.hidden ? dlgForm.done : dlgForm.form.elements.name).focus({ preventScroll: true });
+  });
+  dlg.querySelectorAll('[data-lead-close]').forEach((b) => b.addEventListener('click', closeLead));
+  /* «Заполнить ещё раз» сбрасывает форму — в новогоднем окне тип возвращаем (список типов там скрыт) */
+  dlgForm.form.addEventListener('reset', () => { if (dlg.classList.contains('is-ny')) setTimeout(() => { dlgForm.form.elements.type.value = 'Новый год'; }); });
+  dlg.addEventListener('click', (e) => { if (e.target === dlg) closeLead(); });
+  dlg.addEventListener('close', () => {
+    root.style.overflow = '';
+    if (leadOpener) leadOpener.focus({ preventScroll: true });
+  });
+
+  /* О нас | Команда: вкладки (стрелки переключают), ссылки «Команда» в меню и подвале открывают нужную вкладку */
+  const tabBtns = [...document.querySelectorAll('[data-tab]')];
+  const setTab = (name, focus) => {
+    tabBtns.forEach((b) => {
+      const on = b.dataset.tab === name;
+      b.setAttribute('aria-selected', String(on));
+      b.tabIndex = on ? 0 : -1;
+      if (on && focus) b.focus();
+      document.querySelector('[data-panel="' + b.dataset.tab + '"]').hidden = !on;
+    });
+  };
+  tabBtns.forEach((b, i) => {
+    b.addEventListener('click', () => setTab(b.dataset.tab));
+    b.addEventListener('keydown', (e) => {
+      if (e.key !== 'ArrowRight' && e.key !== 'ArrowLeft') return;
+      const next = tabBtns[(i + (e.key === 'ArrowRight' ? 1 : -1) + tabBtns.length) % tabBtns.length];
+      setTab(next.dataset.tab, true);
+    });
+  });
+  document.addEventListener('click', (e) => {
+    const a = e.target.closest('[data-tab-to]');
+    if (a) setTab(a.dataset.tabTo);
+  }, true);
+
+  /* Отчётное видео: грузим по нажатию, дальше — штатные кнопки плеера */
+  const reel = document.querySelector('.reel');
+  const reelPlay = reel && reel.querySelector('[data-reel-play]');
+  if (reelPlay) {
+    reelPlay.addEventListener('click', () => {
+      const v = reel.querySelector('.reel__video');
+      if (!v.getAttribute('src')) v.src = v.dataset.src;
+      v.controls = true;
+      reel.classList.add('is-playing');
+      const p = v.play(); if (p && p.catch) p.catch(() => {});
+      v.focus({ preventScroll: true });
+    });
+  }
+
+  /* Фото в буквах подвала грузим, когда подвал близко */
+  const fsign = document.querySelector('.foot__sign');
+  if ('IntersectionObserver' in window) {
+    const io = new IntersectionObserver((entries) => {
+      if (entries.some((en) => en.isIntersecting)) { fsign.classList.add('is-lit'); io.disconnect(); }
+    }, { rootMargin: '800px 0px' });
+    io.observe(fsign);
+  } else {
+    fsign.classList.add('is-lit');
+  }
+})();
+</script>
+</body>
+</html>
