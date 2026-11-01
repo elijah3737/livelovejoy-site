@@ -1254,8 +1254,9 @@ body {
 .works__video { width: 100%; height: 100%; object-fit: cover; display: block; }
 
 /* Новый год: подложка ярче */
-.ny .scrim { background: linear-gradient(to top, rgb(0 0 0 / 0.55), rgb(0 0 0 / 0) 70%), linear-gradient(to right, rgb(0 0 0 / 0.35), rgb(0 0 0 / 0) 60%); }
-.ny .media img { filter: saturate(1.3) brightness(1.15); }
+.ny .scrim { background: linear-gradient(to top, rgb(0 0 0 / 0.8), rgb(0 0 0 / 0.35) 80%), linear-gradient(to right, rgb(0 0 0 / 0.5), rgb(0 0 0 / 0) 70%); } /* 01.11: яркое фото героев — текст держим на плотной подложке */
+.ny .media img { filter: none; } /* 01.11: реальное фото героев уже яркое — без усиления стока */
+.ny__acts { display: flex; flex-wrap: wrap; gap: var(--space-sm); }
 
 /* «Мы там, где праздник»: фото ровной бегущей лентой */
 .feed-run { overflow: hidden; margin-inline: calc(var(--gutter) * -1); }
@@ -1543,6 +1544,9 @@ body {
   .pgrid > .is-wide .tile { aspect-ratio: 32 / 10; }
 }
 .pgrid [hidden] { display: none !important; }
+/* «Все» — группами с подзаголовком (Ольга 31.10); в рубрике подзаголовки скрыты */
+.pgroup { grid-column: 1 / -1; padding: var(--space-2xl) var(--gutter) var(--space-md); }
+.pgroup:first-child { padding-top: var(--space-md); }
 .pempty { padding-block: var(--space-2xl); text-align: center; color: var(--muted); }
 </style>
 
@@ -1564,25 +1568,30 @@ body {
 
 <section class="band band--dark" aria-label="Список проектов">
   <ul class="pgrid" data-pgrid>
-<li data-cat="private"><a class="tile" href="kejs-elizaveta-18.html"><img src="media/case-elizaveta-18-04-thumb.jpg" width="1280" height="1174" alt="" decoding="async" loading="lazy"><span class="tile__body"><span class="tile__meta">Частные мероприятия</span><span class="tile__title">Елизавета — 18 лет</span></span></a></li>
-<li data-cat="private"><a class="tile" href="kejs-alisa-polina.html"><img src="media/case-alisa-polina-23-thumb.jpg" width="1280" height="805" alt="" decoding="async" loading="lazy"><span class="tile__body"><span class="tile__meta">Частные мероприятия</span><span class="tile__title">Алиса и Полина — 16 лет</span></span></a></li>
-<li data-cat="private kids"><a class="tile" href="kejs-alexandra.html"><img src="media/case-alexandra-01-thumb.jpg" width="1280" height="855" alt="" decoding="async" loading="lazy"><span class="tile__body"><span class="tile__meta">Детские праздники</span><span class="tile__title">Маленькая принцесса Александра</span></span></a></li>
-<li data-cat="private kids"><a class="tile" href="kejs-fort-boyard.html"><img src="media/case-fort-boyard-frame-2-thumb.jpg" width="1280" height="720" alt="" decoding="async" loading="lazy"><span class="tile__body"><span class="tile__meta">Детские праздники</span><span class="tile__title">Форт Боярд</span></span></a></li>
-<li data-cat="city"><a class="tile" href="kejs-zaryadye.html"><img src="media/case-zaryadye-7-frame-1-thumb.jpg" width="1280" height="720" alt="" decoding="async" loading="lazy"><span class="tile__body"><span class="tile__meta">Городские мероприятия</span><span class="tile__title">Праздники в Зарядье</span></span></a></li>
-<li data-cat="city"><a class="tile" href="kejs-maskarad.html"><img src="media/case-maskarad-frame-2-thumb.jpg" width="1280" height="720" alt="" decoding="async" loading="lazy"><span class="tile__body"><span class="tile__meta">Городские мероприятия</span><span class="tile__title">Маскарад</span></span></a></li>
-<li data-cat="city"><a class="tile" href="kejs-yudashkin.html"><img src="media/case-yudashkin-frame-3-thumb.jpg" width="1280" height="720" alt="" decoding="async" loading="lazy"><span class="tile__body"><span class="tile__meta">Городские мероприятия</span><span class="tile__title">Показ Валентина Юдашкина</span></span></a></li>
-<li data-cat="city"><a class="tile" href="kejs-den-zemli.html"><img src="media/case-den-zemli-frame-3-thumb.jpg" width="1280" height="720" alt="" decoding="async" loading="lazy"><span class="tile__body"><span class="tile__meta">Городские мероприятия</span><span class="tile__title">День Земли</span></span></a></li>
-<li data-cat="city"><a class="tile" href="kejs-pchelovodstvo.html"><img src="media/case-pchelovodstvo-frame-0-thumb.jpg" width="1280" height="720" alt="" decoding="async" loading="lazy"><span class="tile__body"><span class="tile__meta">Городские мероприятия</span><span class="tile__title">Павильон «Пчеловодство»</span></span></a></li>
-<li data-cat="city"><a class="tile" href="kejs-flower-show.html"><img src="media/case-flower-show-frame-2-thumb.jpg" width="854" height="480" alt="" decoding="async" loading="lazy"><span class="tile__body"><span class="tile__meta">Городские мероприятия</span><span class="tile__title">Moscow Flower Show — 2018</span></span></a></li>
-<li data-cat="city"><a class="tile" href="kejs-9-maya.html"><img src="media/case-9-maya-frame-2-thumb.jpg" width="1280" height="720" alt="" decoding="async" loading="lazy"><span class="tile__body"><span class="tile__meta">Городские мероприятия</span><span class="tile__title">9 мая в парке «Ветеран»</span></span></a></li>
-<li data-cat="city"><a class="tile" href="kejs-belgorod.html"><img src="media/case-belgorod-frame-0-thumb.jpg" width="1280" height="720" alt="" decoding="async" loading="lazy"><span class="tile__body"><span class="tile__meta">Городские мероприятия</span><span class="tile__title">Белгород в цвету</span></span></a></li>
-<li data-cat="city"><a class="tile" href="kejs-den-bez-avto.html"><img src="media/case-den-bez-avto-frame-1-thumb.jpg" width="1280" height="720" alt="" decoding="async" loading="lazy"><span class="tile__body"><span class="tile__meta">Городские мероприятия</span><span class="tile__title">День без автомобиля</span></span></a></li>
-<li data-cat="city newyear"><a class="tile" href="kejs-zaryadye-new-year.html"><img src="media/case-zaryadye-new-year-frame-1-thumb.jpg" width="1280" height="720" alt="" decoding="async" loading="lazy"><span class="tile__body"><span class="tile__meta">Городские мероприятия</span><span class="tile__title">Новый год в Зарядье</span></span></a></li>
-<li data-cat="city"><a class="tile" href="kejs-klimat.html"><img src="media/case-klimat-frame-0-thumb.jpg" width="1280" height="720" alt="" decoding="async" loading="lazy"><span class="tile__body"><span class="tile__meta">Городские мероприятия</span><span class="tile__title">Климатический форум</span></span></a></li>
-<li data-cat="private kids"><a class="tile" href="kejs-kids-program.html"><img src="media/case-kids-program-01-thumb.jpg" width="1280" height="1013" alt="" decoding="async" loading="lazy"><span class="tile__body"><span class="tile__meta">Детские праздники</span><span class="tile__title">Пой, рисуй, твори, танцуй со мной</span></span></a></li>
-<li data-cat="private"><a class="tile" href="kejs-oformlenie.html"><img src="media/case-oformlenie-01-thumb.jpg" width="968" height="1280" alt="" decoding="async" loading="lazy"><span class="tile__body"><span class="tile__meta">Оформление · подборка</span><span class="tile__title">Оформление частных мероприятий</span></span></a></li>
-<li data-cat="newyear kids private"><a class="tile" href="kejs-novogodnie-programmy.html"><img src="media/case-ded-moroz-photo-00-thumb.jpg" width="1280" height="854" alt="" decoding="async" loading="lazy"><span class="tile__body"><span class="tile__meta">Новый год · подборка</span><span class="tile__title">Новогодние истории</span></span></a></li>
-<li data-cat="private"><a class="tile" href="kejs-dmitry.html"><img src="media/case-dmitry-frame-3-thumb.jpg" width="1280" height="720" alt="" decoding="async" loading="lazy"><span class="tile__body"><span class="tile__meta">Частные мероприятия · видеопоздравление</span><span class="tile__title">День рождения Дмитрия</span></span></a></li>
+<li class="pgroup" data-group-head="private"><h2 class="h2">Частные мероприятия</h2></li>
+<li data-group="private" data-cat="private"><a class="tile" href="kejs-elizaveta-18.html"><img src="media/case-elizaveta-18-04-thumb.jpg" width="1280" height="1174" alt="" decoding="async" loading="lazy"><span class="tile__body"><span class="tile__meta">Частные мероприятия</span><span class="tile__title">Елизавета — 18 лет</span></span></a></li>
+<li data-group="private" data-cat="private"><a class="tile" href="kejs-dr-modus.html"><img src="media/case-dr-modus-06-thumb.jpg" width="1280" height="853" alt="" decoding="async" loading="lazy"><span class="tile__body"><span class="tile__meta">Частные мероприятия</span><span class="tile__title">Lada&#x27;s Birthday Party</span></span></a></li>
+<li data-group="private" data-cat="private"><a class="tile" href="kejs-alisa-polina.html"><img src="media/case-alisa-polina-23-thumb.jpg" width="1280" height="805" alt="" decoding="async" loading="lazy"><span class="tile__body"><span class="tile__meta">Частные мероприятия</span><span class="tile__title">Алиса и Полина — 16 лет</span></span></a></li>
+<li data-group="private" data-cat="private"><a class="tile" href="kejs-oformlenie.html"><img src="media/case-oformlenie-01-thumb.jpg" width="968" height="1280" alt="" decoding="async" loading="lazy"><span class="tile__body"><span class="tile__meta">Оформление · подборка</span><span class="tile__title">Оформление частных мероприятий</span></span></a></li>
+<li data-group="private" data-cat="private"><a class="tile" href="kejs-dmitry.html"><img src="media/case-dmitry-frame-3-thumb.jpg" width="1280" height="720" alt="" decoding="async" loading="lazy"><span class="tile__body"><span class="tile__meta">Частные мероприятия · видеопоздравление</span><span class="tile__title">День рождения Дмитрия</span></span></a></li>
+<li class="pgroup" data-group-head="kids"><h2 class="h2">Детские праздники</h2></li>
+<li data-group="kids" data-cat="private kids"><a class="tile" href="kejs-alexandra.html"><img src="media/case-alexandra-01-thumb.jpg" width="1280" height="855" alt="" decoding="async" loading="lazy"><span class="tile__body"><span class="tile__meta">Детские праздники</span><span class="tile__title">Маленькая принцесса Александра</span></span></a></li>
+<li data-group="kids" data-cat="private kids"><a class="tile" href="kejs-fort-boyard.html"><img src="media/case-fort-boyard-frame-2-thumb.jpg" width="1280" height="720" alt="" decoding="async" loading="lazy"><span class="tile__body"><span class="tile__meta">Детские праздники</span><span class="tile__title">Форт Боярд</span></span></a></li>
+<li data-group="kids" data-cat="private kids"><a class="tile" href="kejs-kids-program.html"><img src="media/case-kids-program-01-thumb.jpg" width="1280" height="1013" alt="" decoding="async" loading="lazy"><span class="tile__body"><span class="tile__meta">Детские праздники</span><span class="tile__title">Пой, рисуй, твори, танцуй со мной</span></span></a></li>
+<li class="pgroup" data-group-head="city"><h2 class="h2">Городские проекты</h2></li>
+<li data-group="city" data-cat="city"><a class="tile" href="kejs-zaryadye.html"><img src="media/case-zaryadye-7-frame-1-thumb.jpg" width="1280" height="720" alt="" decoding="async" loading="lazy"><span class="tile__body"><span class="tile__meta">Городские мероприятия</span><span class="tile__title">Праздники в Зарядье</span></span></a></li>
+<li data-group="city" data-cat="city"><a class="tile" href="kejs-maskarad.html"><img src="media/case-maskarad-frame-2-thumb.jpg" width="1280" height="720" alt="" decoding="async" loading="lazy"><span class="tile__body"><span class="tile__meta">Городские мероприятия</span><span class="tile__title">Маскарад</span></span></a></li>
+<li data-group="city" data-cat="city"><a class="tile" href="kejs-yudashkin.html"><img src="media/case-yudashkin-frame-3-thumb.jpg" width="1280" height="720" alt="" decoding="async" loading="lazy"><span class="tile__body"><span class="tile__meta">Городские мероприятия</span><span class="tile__title">Показ Валентина Юдашкина</span></span></a></li>
+<li data-group="city" data-cat="city"><a class="tile" href="kejs-den-zemli.html"><img src="media/case-den-zemli-frame-3-thumb.jpg" width="1280" height="720" alt="" decoding="async" loading="lazy"><span class="tile__body"><span class="tile__meta">Городские мероприятия</span><span class="tile__title">День Земли</span></span></a></li>
+<li data-group="city" data-cat="city"><a class="tile" href="kejs-pchelovodstvo.html"><img src="media/case-pchelovodstvo-frame-0-thumb.jpg" width="1280" height="720" alt="" decoding="async" loading="lazy"><span class="tile__body"><span class="tile__meta">Городские мероприятия</span><span class="tile__title">Павильон «Пчеловодство»</span></span></a></li>
+<li data-group="city" data-cat="city"><a class="tile" href="kejs-flower-show.html"><img src="media/case-flower-show-frame-2-thumb.jpg" width="854" height="480" alt="" decoding="async" loading="lazy"><span class="tile__body"><span class="tile__meta">Городские мероприятия</span><span class="tile__title">Moscow Flower Show — 2018</span></span></a></li>
+<li data-group="city" data-cat="city"><a class="tile" href="kejs-9-maya.html"><img src="media/case-9-maya-frame-2-thumb.jpg" width="1280" height="720" alt="" decoding="async" loading="lazy"><span class="tile__body"><span class="tile__meta">Городские мероприятия</span><span class="tile__title">9 мая в парке «Ветеран»</span></span></a></li>
+<li data-group="city" data-cat="city"><a class="tile" href="kejs-belgorod.html"><img src="media/case-belgorod-frame-0-thumb.jpg" width="1280" height="720" alt="" decoding="async" loading="lazy"><span class="tile__body"><span class="tile__meta">Городские мероприятия</span><span class="tile__title">Белгород в цвету</span></span></a></li>
+<li data-group="city" data-cat="city"><a class="tile" href="kejs-den-bez-avto.html"><img src="media/case-den-bez-avto-frame-1-thumb.jpg" width="1280" height="720" alt="" decoding="async" loading="lazy"><span class="tile__body"><span class="tile__meta">Городские мероприятия</span><span class="tile__title">День без автомобиля</span></span></a></li>
+<li data-group="city" data-cat="city"><a class="tile" href="kejs-klimat.html"><img src="media/case-klimat-frame-0-thumb.jpg" width="1280" height="720" alt="" decoding="async" loading="lazy"><span class="tile__body"><span class="tile__meta">Городские мероприятия</span><span class="tile__title">Климатический форум</span></span></a></li>
+<li class="pgroup" data-group-head="newyear"><h2 class="h2">Новый год</h2></li>
+<li data-group="newyear" data-cat="city newyear"><a class="tile" href="kejs-zaryadye-new-year.html"><img src="media/case-zaryadye-new-year-frame-1-thumb.jpg" width="1280" height="720" alt="" decoding="async" loading="lazy"><span class="tile__body"><span class="tile__meta">Городские мероприятия</span><span class="tile__title">Новый год в Зарядье</span></span></a></li>
+<li data-group="newyear" data-cat="newyear kids private"><a class="tile" href="kejs-novogodnie-programmy.html"><img src="media/case-ded-moroz-photo-00-thumb.jpg" width="1280" height="854" alt="" decoding="async" loading="lazy"><span class="tile__body"><span class="tile__meta">Новый год · подборка</span><span class="tile__title">Новогодние истории</span></span></a></li>
 <li data-only data-cat="corp"><a class="tile tile--cta" href="#contacts" data-lead data-type="Корпоративное"><img src="media/photo-1768508950719-4d76-1280-5f9a71719a.jpg" srcset="media/photo-1768508950719-4d76-800-6cc5534701.jpg 800w, media/photo-1768508950719-4d76-1280-5f9a71719a.jpg 1280w" sizes="(min-width: 48rem) 50vw, 100vw" width="1280" height="800" alt="" loading="lazy" decoding="async"><span class="tile__body"><span class="tile__meta">Корпоративные</span><span class="tile__title">Ваш корпоратив</span><span class="tile__text">Пришлите повод, дату и&nbsp;число гостей&nbsp;— предложим идею и&nbsp;посчитаем смету.</span><span class="pill pill--solid pill--sm tile__pill">Обсудить задачу</span></span></a></li>
 <li data-cat="wedding" data-only><a class="tile tile--cta" href="#contacts" data-lead data-type="Свадьба"><img src="media/photo-1756331490734-8b8c-1280-b425362d98.jpg" srcset="media/photo-1756331490734-8b8c-800-44b0e4d218.jpg 800w, media/photo-1756331490734-8b8c-1280-b425362d98.jpg 1280w" sizes="(min-width: 48rem) 50vw, 100vw" width="1280" height="800" alt="" loading="lazy" decoding="async"><span class="tile__body"><span class="tile__meta">Свадьбы</span><span class="tile__title">Ваша свадьба</span><span class="tile__text">Расскажите о&nbsp;паре и&nbsp;дате&nbsp;— предложим концепцию и&nbsp;площадку.</span><span class="pill pill--solid pill--sm tile__pill">Обсудить свадьбу</span></span></a></li>
 </ul>
@@ -1670,12 +1679,15 @@ body {
     if (!btns.some((b) => b.dataset.cat === cat)) cat = 'all';
     btns.forEach((b) => b.setAttribute('aria-pressed', String(b.dataset.cat === cat)));
     const shown = items.filter((li) => {
-      const on = cat === 'all' ? !li.hasAttribute('data-only') : li.dataset.cat.split(' ').includes(cat);
+      const head = li.hasAttribute('data-group-head');
+      const on = cat === 'all' ? !li.hasAttribute('data-only') : !head && li.dataset.cat.split(' ').includes(cat);
       li.hidden = !on; li.classList.remove('is-wide');
-      return on;
+      return on && !head;
     });
     document.querySelector('[data-empty-projects]').hidden = shown.length > 0;
-    if (shown.length % 2 === 1) shown[shown.length - 1].classList.add('is-wide');
+    /* нечётная последняя карточка — на всю ширину: во «Все» в каждой группе, в рубрике — в общем списке */
+    const runs = cat === 'all' ? Object.values(shown.reduce((acc, li) => { (acc[li.dataset.group || ''] ||= []).push(li); return acc; }, {})) : [shown];
+    runs.forEach((run) => { if (run.length % 2 === 1) run[run.length - 1].classList.add('is-wide'); });
     /* на телефоне фильтр листается вбок — выбранную рубрику показываем в поле зрения */
     const on = btns.find((b) => b.dataset.cat === cat);
     if (bar.scrollWidth > bar.clientWidth) bar.scrollLeft = on.offsetLeft - (bar.clientWidth - on.offsetWidth) / 2;

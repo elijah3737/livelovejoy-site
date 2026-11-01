@@ -1250,8 +1250,9 @@ body {
 .works__video { width: 100%; height: 100%; object-fit: cover; display: block; }
 
 /* Новый год: подложка ярче */
-.ny .scrim { background: linear-gradient(to top, rgb(0 0 0 / 0.55), rgb(0 0 0 / 0) 70%), linear-gradient(to right, rgb(0 0 0 / 0.35), rgb(0 0 0 / 0) 60%); }
-.ny .media img { filter: saturate(1.3) brightness(1.15); }
+.ny .scrim { background: linear-gradient(to top, rgb(0 0 0 / 0.8), rgb(0 0 0 / 0.35) 80%), linear-gradient(to right, rgb(0 0 0 / 0.5), rgb(0 0 0 / 0) 70%); } /* 01.11: яркое фото героев — текст держим на плотной подложке */
+.ny .media img { filter: none; } /* 01.11: реальное фото героев уже яркое — без усиления стока */
+.ny__acts { display: flex; flex-wrap: wrap; gap: var(--space-sm); }
 
 /* «Мы там, где праздник»: фото ровной бегущей лентой */
 .feed-run { overflow: hidden; margin-inline: calc(var(--gutter) * -1); }
@@ -1663,7 +1664,7 @@ body {
 </section>
 
 <section class="ny band--photo" id="novyj-god" aria-labelledby="ny-title">
-  <picture class="media"><img src="media/photo-1482517967863-00e1-1920-175d4760a2.jpg" srcset="media/photo-1482517967863-00e1-900-96c0916008.jpg 900w, media/photo-1482517967863-00e1-1920-175d4760a2.jpg 1920w" sizes="100vw" width="1920" height="1200" alt="" loading="lazy" decoding="async"></picture>
+    <picture class="media"><img src="media/case-novogodnie-geroi-17.jpg" width="1280" height="853" alt="Новогодние герои Live Love Joy" loading="lazy" decoding="async"></picture>
   <div class="scrim" aria-hidden="true"></div>
   <div class="wrap ny__in">
     <p class="label"><span class="label__dot">●</span>&nbsp;Сезон&nbsp;2026/27</p>
@@ -1675,7 +1676,10 @@ body {
       <li class="chip">Семейный праздник</li>
       <li class="chip">Городские гуляния</li>
     </ul>
-    <a class="pill pill--solid ny__cta" href="#contacts" data-lead data-type="Новый год">Обсудить Новый год</a>
+    <div class="ny__acts">
+      <a class="pill pill--solid ny__cta" href="#contacts" data-lead data-type="Новый год">Обсудить Новый год</a>
+      <a class="pill pill--line ny__cta" href="proekty.html?cat=newyear">Новогодние проекты</a>
+    </div>
             <div class="cal" hidden>
       <p class="cal__label">Дальше по&nbsp;календарю</p>
       <ol class="cal__list">
@@ -1728,7 +1732,7 @@ body {
       <p class="sec-head__note">Отчётное видео с&nbsp;нашего события&nbsp;— лучше любых слов о&nbsp;том, как мы&nbsp;работаем.</p>
     </div>
     <div class="reel__frame">
-      <video class="reel__video" playsinline preload="none" poster="media/olga-reel-preview.jpg" data-src="media/olga-reel-zvuk-720.mp4"></video>
+      <video class="reel__video" playsinline preload="none" poster="media/olga-promo-preview.jpg" data-src="media/olga-promo-720.mp4"></video>
       <button class="reel__play" type="button" data-reel-play><span class="reel__btn" aria-hidden="true"></span><span class="reel__cap">Смотреть отчётное видео</span></button>
     </div>
   </div>
