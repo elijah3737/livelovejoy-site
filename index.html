@@ -664,7 +664,7 @@ ul, ol { padding: 0; list-style: none; }
 
 /* ── 9. Проекты ─────────────────────────────────────── */
 .projects { padding-top: var(--section-y); scroll-margin-top: var(--hdr-h); }
-.tiles { display: grid; grid-template-columns: minmax(0, 1fr); }
+.tiles { display: grid; grid-template-columns: minmax(0, 1fr); gap: clamp(0.75rem, 1.5vw, 1.25rem); }
 .tile {
   position: relative; display: block; overflow: hidden;
   aspect-ratio: 4 / 3;
@@ -1042,7 +1042,9 @@ ul, ol { padding: 0; list-style: none; }
 /* ── 10б. Отчётное видео ─────────────────────────────── */
 .reel { padding-block: var(--section-y); scroll-margin-top: var(--hdr-h); }
 .reel__frame { position: relative; aspect-ratio: 16 / 9; overflow: hidden; background: var(--bg-2); }
-.reel__video { position: absolute; inset: 0; width: 100%; height: 100%; object-fit: cover; }
+.reel__video, .reel__loop { position: absolute; inset: 0; width: 100%; height: 100%; object-fit: cover; }
+.reel.is-playing .reel__loop { display: none; }
+@media (min-width: 48rem) { .reel__frame { max-width: 60rem; margin-inline: auto; } }   /* 02.11: «чуть-чуть поуже» */
 .reel__play {
   position: absolute; inset: 0; z-index: 1;
   display: grid; place-content: center; justify-items: center; gap: var(--space-md);
@@ -1664,7 +1666,7 @@ body {
 </section>
 
 <section class="ny band--photo" id="novyj-god" aria-labelledby="ny-title">
-    <picture class="media"><img src="media/case-novogodnie-geroi-17.jpg" width="1280" height="853" alt="Новогодние герои Live Love Joy" loading="lazy" decoding="async"></picture>
+    <picture class="media"><img src="media/photo-1482517967863-00e1-1920-175d4760a2.jpg" srcset="media/photo-1482517967863-00e1-900-96c0916008.jpg 900w, media/photo-1482517967863-00e1-1920-175d4760a2.jpg 1920w" sizes="100vw" width="1920" height="1200" alt="" loading="lazy" decoding="async"></picture>
   <div class="scrim" aria-hidden="true"></div>
   <div class="wrap ny__in">
     <p class="label"><span class="label__dot">●</span>&nbsp;Сезон&nbsp;2026/27</p>
@@ -1700,9 +1702,9 @@ body {
   </div>
     <ul class="tiles">
 <li data-cat="city"><a class="tile" href="kejs-zaryadye.html"><img src="media/case-zaryadye-7-frame-1-thumb.jpg" width="1280" height="720" alt="" decoding="async" loading="lazy"><span class="tile__body"><span class="tile__meta">Городские мероприятия</span><span class="tile__title">Праздники в Зарядье</span></span></a></li>
-<li data-cat="private"><a class="tile" href="kejs-elizaveta-18.html"><img src="media/case-elizaveta-18-04-thumb.jpg" width="1280" height="1174" alt="" decoding="async" loading="lazy"><span class="tile__body"><span class="tile__meta">Частные мероприятия</span><span class="tile__title">Елизавета — 18 лет</span></span></a></li>
+<li data-cat="private"><a class="tile" href="kejs-elizaveta-18.html"><img src="media/case-elizaveta-18-00-thumb.jpg" width="1280" height="1147" alt="" decoding="async" loading="lazy"><span class="tile__body"><span class="tile__meta">Частные мероприятия</span><span class="tile__title">Елизавета — 18 лет</span></span></a></li>
 <li data-cat="private"><a class="tile" href="kejs-alisa-polina.html"><img src="media/case-alisa-polina-23-thumb.jpg" width="1280" height="805" alt="" decoding="async" loading="lazy"><span class="tile__body"><span class="tile__meta">Частные мероприятия</span><span class="tile__title">Алиса и Полина — 16 лет</span></span></a></li>
-<li data-cat="private kids"><a class="tile" href="kejs-fort-boyard.html"><img src="media/case-fort-boyard-frame-2-thumb.jpg" width="1280" height="720" alt="" decoding="async" loading="lazy"><span class="tile__body"><span class="tile__meta">Детские праздники</span><span class="tile__title">Форт Боярд</span></span></a></li>
+<li data-cat="private kids"><a class="tile" href="kejs-fort-boyard.html"><img src="media/case-fort-boyard-cover-thumb.jpg" width="1280" height="720" alt="" decoding="async" loading="lazy"><span class="tile__body"><span class="tile__meta">Детские праздники</span><span class="tile__title">Форт Боярд</span></span></a></li>
 </ul>
 </section>
 
@@ -1732,7 +1734,8 @@ body {
       <p class="sec-head__note">Отчётное видео с&nbsp;нашего события&nbsp;— лучше любых слов о&nbsp;том, как мы&nbsp;работаем.</p>
     </div>
     <div class="reel__frame">
-      <video class="reel__video" playsinline preload="none" poster="media/olga-promo-preview.jpg" data-src="media/olga-promo-720.mp4"></video>
+            <video class="reel__video" playsinline preload="none" poster="media/olga-promo-poster-cello.jpg" data-src="media/olga-promo-720.mp4"></video>
+      <video class="reel__loop" muted playsinline loop preload="none" poster="media/olga-promo-poster-cello.jpg" data-loop-src="media/olga-promo-loop.mp4" aria-hidden="true"></video>
       <button class="reel__play" type="button" data-reel-play><span class="reel__btn" aria-hidden="true"></span><span class="reel__cap">Смотреть отчётное видео</span></button>
     </div>
   </div>
@@ -2282,7 +2285,19 @@ body {
   const reel = document.querySelector('.reel');
   const reelPlay = reel && reel.querySelector('[data-reel-play]');
   if (reelPlay) {
+    /* беззвучный цикл-заставка: грузим, когда блок рядом; при «уменьшить движение» остаётся кадр */
+    const loop = reel.querySelector('.reel__loop');
+    if (loop && 'IntersectionObserver' in window && !matchMedia('(prefers-reduced-motion: reduce)').matches) {
+      const lio = new IntersectionObserver((entries) => {
+        if (!entries.some((en) => en.isIntersecting)) return;
+        loop.src = loop.dataset.loopSrc;
+        const lp = loop.play(); if (lp && lp.catch) lp.catch(() => {});
+        lio.disconnect();
+      }, { rootMargin: '300px 0px' });
+      lio.observe(loop);
+    }
     reelPlay.addEventListener('click', () => {
+      if (loop) loop.pause();
       const v = reel.querySelector('.reel__video');
       if (!v.getAttribute('src')) v.src = v.dataset.src;
       v.controls = true;

@@ -670,7 +670,7 @@ ul, ol { padding: 0; list-style: none; }
 
 /* ── 9. Проекты ─────────────────────────────────────── */
 .projects { padding-top: var(--section-y); scroll-margin-top: var(--hdr-h); }
-.tiles { display: grid; grid-template-columns: minmax(0, 1fr); }
+.tiles { display: grid; grid-template-columns: minmax(0, 1fr); gap: clamp(0.75rem, 1.5vw, 1.25rem); }
 .tile {
   position: relative; display: block; overflow: hidden;
   aspect-ratio: 4 / 3;
@@ -1048,7 +1048,9 @@ ul, ol { padding: 0; list-style: none; }
 /* ── 10б. Отчётное видео ─────────────────────────────── */
 .reel { padding-block: var(--section-y); scroll-margin-top: var(--hdr-h); }
 .reel__frame { position: relative; aspect-ratio: 16 / 9; overflow: hidden; background: var(--bg-2); }
-.reel__video { position: absolute; inset: 0; width: 100%; height: 100%; object-fit: cover; }
+.reel__video, .reel__loop { position: absolute; inset: 0; width: 100%; height: 100%; object-fit: cover; }
+.reel.is-playing .reel__loop { display: none; }
+@media (min-width: 48rem) { .reel__frame { max-width: 60rem; margin-inline: auto; } }   /* 02.11: «чуть-чуть поуже» */
 .reel__play {
   position: absolute; inset: 0; z-index: 1;
   display: grid; place-content: center; justify-items: center; gap: var(--space-md);
@@ -1560,7 +1562,7 @@ body {
 
 /* 4. Галерея: ровные ряды во всю ширину, кадры одной высоты в ряду, одинаковые отступы (как в Google Фото).
    Скрипт делит кадры на ряды так, чтобы высоты рядов были близки; без скрипта — обычная сетка. Пропорции — по номеру кадра, подходит для любого числа фото */
-.cgal { --gal-gap: clamp(0.5rem, 1.4vw, 1.25rem); padding-bottom: var(--section-y); }
+.cgal { --gal-gap: clamp(0.875rem, 2.2vw, 2rem);   /* Ольга 02.11: побольше расстояние между фото */ padding-bottom: var(--section-y); }
 .cgal__head { justify-items: center; gap: var(--space-2xs); text-align: center; }
 .cgal__head .sec-head__note { max-width: none; font-size: var(--text-sm); }
 .cgal__list { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); column-gap: var(--gal-gap); align-items: start; }
@@ -2403,7 +2405,19 @@ body {
   const reel = document.querySelector('.reel');
   const reelPlay = reel && reel.querySelector('[data-reel-play]');
   if (reelPlay) {
+    /* беззвучный цикл-заставка: грузим, когда блок рядом; при «уменьшить движение» остаётся кадр */
+    const loop = reel.querySelector('.reel__loop');
+    if (loop && 'IntersectionObserver' in window && !matchMedia('(prefers-reduced-motion: reduce)').matches) {
+      const lio = new IntersectionObserver((entries) => {
+        if (!entries.some((en) => en.isIntersecting)) return;
+        loop.src = loop.dataset.loopSrc;
+        const lp = loop.play(); if (lp && lp.catch) lp.catch(() => {});
+        lio.disconnect();
+      }, { rootMargin: '300px 0px' });
+      lio.observe(loop);
+    }
     reelPlay.addEventListener('click', () => {
+      if (loop) loop.pause();
       const v = reel.querySelector('.reel__video');
       if (!v.getAttribute('src')) v.src = v.dataset.src;
       v.controls = true;

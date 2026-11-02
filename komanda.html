@@ -670,7 +670,7 @@ ul, ol { padding: 0; list-style: none; }
 
 /* ── 9. Проекты ─────────────────────────────────────── */
 .projects { padding-top: var(--section-y); scroll-margin-top: var(--hdr-h); }
-.tiles { display: grid; grid-template-columns: minmax(0, 1fr); }
+.tiles { display: grid; grid-template-columns: minmax(0, 1fr); gap: clamp(0.75rem, 1.5vw, 1.25rem); }
 .tile {
   position: relative; display: block; overflow: hidden;
   aspect-ratio: 4 / 3;
@@ -1048,7 +1048,9 @@ ul, ol { padding: 0; list-style: none; }
 /* ── 10б. Отчётное видео ─────────────────────────────── */
 .reel { padding-block: var(--section-y); scroll-margin-top: var(--hdr-h); }
 .reel__frame { position: relative; aspect-ratio: 16 / 9; overflow: hidden; background: var(--bg-2); }
-.reel__video { position: absolute; inset: 0; width: 100%; height: 100%; object-fit: cover; }
+.reel__video, .reel__loop { position: absolute; inset: 0; width: 100%; height: 100%; object-fit: cover; }
+.reel.is-playing .reel__loop { display: none; }
+@media (min-width: 48rem) { .reel__frame { max-width: 60rem; margin-inline: auto; } }   /* 02.11: «чуть-чуть поуже» */
 .reel__play {
   position: absolute; inset: 0; z-index: 1;
   display: grid; place-content: center; justify-items: center; gap: var(--space-md);
@@ -1575,7 +1577,7 @@ body {
 
 /* 3. Проекты этого вида: плитки с главной; пока кейс один — рядом приглашение «Ваш праздник» */
 .vproj { padding-block: var(--section-y); }
-.vproj__list { display: grid; gap: 4px; }
+.vproj__list { display: grid; gap: clamp(0.75rem, 1.5vw, 1.25rem); }
 .vproj__list .tile { aspect-ratio: 4 / 3; }
 .vproj__list .tile::before { opacity: 0.15; }            /* кадр кейса не темним — подпись держит градиент снизу */
 .vproj__list .tile--cta::before { opacity: 0.55; }
@@ -2332,7 +2334,19 @@ body {
   const reel = document.querySelector('.reel');
   const reelPlay = reel && reel.querySelector('[data-reel-play]');
   if (reelPlay) {
+    /* беззвучный цикл-заставка: грузим, когда блок рядом; при «уменьшить движение» остаётся кадр */
+    const loop = reel.querySelector('.reel__loop');
+    if (loop && 'IntersectionObserver' in window && !matchMedia('(prefers-reduced-motion: reduce)').matches) {
+      const lio = new IntersectionObserver((entries) => {
+        if (!entries.some((en) => en.isIntersecting)) return;
+        loop.src = loop.dataset.loopSrc;
+        const lp = loop.play(); if (lp && lp.catch) lp.catch(() => {});
+        lio.disconnect();
+      }, { rootMargin: '300px 0px' });
+      lio.observe(loop);
+    }
     reelPlay.addEventListener('click', () => {
+      if (loop) loop.pause();
       const v = reel.querySelector('.reel__video');
       if (!v.getAttribute('src')) v.src = v.dataset.src;
       v.controls = true;

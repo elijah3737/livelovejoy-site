@@ -668,7 +668,7 @@ ul, ol { padding: 0; list-style: none; }
 
 /* ── 9. Проекты ─────────────────────────────────────── */
 .projects { padding-top: var(--section-y); scroll-margin-top: var(--hdr-h); }
-.tiles { display: grid; grid-template-columns: minmax(0, 1fr); }
+.tiles { display: grid; grid-template-columns: minmax(0, 1fr); gap: clamp(0.75rem, 1.5vw, 1.25rem); }
 .tile {
   position: relative; display: block; overflow: hidden;
   aspect-ratio: 4 / 3;
@@ -1046,7 +1046,9 @@ ul, ol { padding: 0; list-style: none; }
 /* ── 10б. Отчётное видео ─────────────────────────────── */
 .reel { padding-block: var(--section-y); scroll-margin-top: var(--hdr-h); }
 .reel__frame { position: relative; aspect-ratio: 16 / 9; overflow: hidden; background: var(--bg-2); }
-.reel__video { position: absolute; inset: 0; width: 100%; height: 100%; object-fit: cover; }
+.reel__video, .reel__loop { position: absolute; inset: 0; width: 100%; height: 100%; object-fit: cover; }
+.reel.is-playing .reel__loop { display: none; }
+@media (min-width: 48rem) { .reel__frame { max-width: 60rem; margin-inline: auto; } }   /* 02.11: «чуть-чуть поуже» */
 .reel__play {
   position: absolute; inset: 0; z-index: 1;
   display: grid; place-content: center; justify-items: center; gap: var(--space-md);
@@ -1534,7 +1536,7 @@ body {
 <style>
 /* ── Страница «Все проекты» — по образцу m2events.ru/projects (Илья 20.10) ── */
 /* плитки во всю ширину экрана, две в ряд, щель 4px — как у M2; нечётная последняя — на всю ширину */
-.pgrid { display: grid; grid-template-columns: minmax(0, 1fr); gap: 4px; }
+.pgrid { display: grid; grid-template-columns: minmax(0, 1fr); gap: clamp(0.75rem, 1.5vw, 1.25rem); }   /* Ольга 02.11: зазор как у кейсов artlebedev.ru */
 .pgrid .tile { aspect-ratio: 4 / 3; }
 .pgrid .tile__title { max-width: 22ch; }
 @media (min-width: 48rem) {
@@ -1569,14 +1571,13 @@ body {
 <section class="band band--dark" aria-label="Список проектов">
   <ul class="pgrid" data-pgrid>
 <li class="pgroup" data-group-head="private"><h2 class="h2">Частные мероприятия</h2></li>
-<li data-group="private" data-cat="private"><a class="tile" href="kejs-elizaveta-18.html"><img src="media/case-elizaveta-18-04-thumb.jpg" width="1280" height="1174" alt="" decoding="async" loading="lazy"><span class="tile__body"><span class="tile__meta">Частные мероприятия</span><span class="tile__title">Елизавета — 18 лет</span></span></a></li>
+<li data-group="private" data-cat="private"><a class="tile" href="kejs-elizaveta-18.html"><img src="media/case-elizaveta-18-00-thumb.jpg" width="1280" height="1147" alt="" decoding="async" loading="lazy"><span class="tile__body"><span class="tile__meta">Частные мероприятия</span><span class="tile__title">Елизавета — 18 лет</span></span></a></li>
 <li data-group="private" data-cat="private"><a class="tile" href="kejs-dr-modus.html"><img src="media/case-dr-modus-06-thumb.jpg" width="1280" height="853" alt="" decoding="async" loading="lazy"><span class="tile__body"><span class="tile__meta">Частные мероприятия</span><span class="tile__title">Lada&#x27;s Birthday Party</span></span></a></li>
 <li data-group="private" data-cat="private"><a class="tile" href="kejs-alisa-polina.html"><img src="media/case-alisa-polina-23-thumb.jpg" width="1280" height="805" alt="" decoding="async" loading="lazy"><span class="tile__body"><span class="tile__meta">Частные мероприятия</span><span class="tile__title">Алиса и Полина — 16 лет</span></span></a></li>
 <li data-group="private" data-cat="private"><a class="tile" href="kejs-oformlenie.html"><img src="media/case-oformlenie-01-thumb.jpg" width="968" height="1280" alt="" decoding="async" loading="lazy"><span class="tile__body"><span class="tile__meta">Оформление · подборка</span><span class="tile__title">Оформление частных мероприятий</span></span></a></li>
-<li data-group="private" data-cat="private"><a class="tile" href="kejs-dmitry.html"><img src="media/case-dmitry-frame-3-thumb.jpg" width="1280" height="720" alt="" decoding="async" loading="lazy"><span class="tile__body"><span class="tile__meta">Частные мероприятия · видеопоздравление</span><span class="tile__title">День рождения Дмитрия</span></span></a></li>
 <li class="pgroup" data-group-head="kids"><h2 class="h2">Детские праздники</h2></li>
 <li data-group="kids" data-cat="private kids"><a class="tile" href="kejs-alexandra.html"><img src="media/case-alexandra-01-thumb.jpg" width="1280" height="855" alt="" decoding="async" loading="lazy"><span class="tile__body"><span class="tile__meta">Детские праздники</span><span class="tile__title">Маленькая принцесса Александра</span></span></a></li>
-<li data-group="kids" data-cat="private kids"><a class="tile" href="kejs-fort-boyard.html"><img src="media/case-fort-boyard-frame-2-thumb.jpg" width="1280" height="720" alt="" decoding="async" loading="lazy"><span class="tile__body"><span class="tile__meta">Детские праздники</span><span class="tile__title">Форт Боярд</span></span></a></li>
+<li data-group="kids" data-cat="private kids"><a class="tile" href="kejs-fort-boyard.html"><img src="media/case-fort-boyard-cover-thumb.jpg" width="1280" height="720" alt="" decoding="async" loading="lazy"><span class="tile__body"><span class="tile__meta">Детские праздники</span><span class="tile__title">Форт Боярд</span></span></a></li>
 <li data-group="kids" data-cat="private kids"><a class="tile" href="kejs-kids-program.html"><img src="media/case-kids-program-01-thumb.jpg" width="1280" height="1013" alt="" decoding="async" loading="lazy"><span class="tile__body"><span class="tile__meta">Детские праздники</span><span class="tile__title">Пой, рисуй, твори, танцуй со мной</span></span></a></li>
 <li class="pgroup" data-group-head="city"><h2 class="h2">Городские проекты</h2></li>
 <li data-group="city" data-cat="city"><a class="tile" href="kejs-zaryadye.html"><img src="media/case-zaryadye-7-frame-1-thumb.jpg" width="1280" height="720" alt="" decoding="async" loading="lazy"><span class="tile__body"><span class="tile__meta">Городские мероприятия</span><span class="tile__title">Праздники в Зарядье</span></span></a></li>
@@ -1591,7 +1592,7 @@ body {
 <li data-group="city" data-cat="city"><a class="tile" href="kejs-klimat.html"><img src="media/case-klimat-frame-0-thumb.jpg" width="1280" height="720" alt="" decoding="async" loading="lazy"><span class="tile__body"><span class="tile__meta">Городские мероприятия</span><span class="tile__title">Климатический форум</span></span></a></li>
 <li class="pgroup" data-group-head="newyear"><h2 class="h2">Новый год</h2></li>
 <li data-group="newyear" data-cat="city newyear"><a class="tile" href="kejs-zaryadye-new-year.html"><img src="media/case-zaryadye-new-year-frame-1-thumb.jpg" width="1280" height="720" alt="" decoding="async" loading="lazy"><span class="tile__body"><span class="tile__meta">Городские мероприятия</span><span class="tile__title">Новый год в Зарядье</span></span></a></li>
-<li data-group="newyear" data-cat="newyear kids private"><a class="tile" href="kejs-novogodnie-programmy.html"><img src="media/case-ded-moroz-photo-00-thumb.jpg" width="1280" height="854" alt="" decoding="async" loading="lazy"><span class="tile__body"><span class="tile__meta">Новый год · подборка</span><span class="tile__title">Новогодние истории</span></span></a></li>
+<li data-group="newyear" data-cat="newyear kids private"><a class="tile" href="kejs-novogodnie-programmy.html"><img src="media/case-ded-moroz-photo-03-thumb.jpg" width="1280" height="856" alt="" decoding="async" loading="lazy"><span class="tile__body"><span class="tile__meta">Новый год · подборка</span><span class="tile__title">Новогодние истории</span></span></a></li>
 <li data-only data-cat="corp"><a class="tile tile--cta" href="#contacts" data-lead data-type="Корпоративное"><img src="media/photo-1768508950719-4d76-1280-5f9a71719a.jpg" srcset="media/photo-1768508950719-4d76-800-6cc5534701.jpg 800w, media/photo-1768508950719-4d76-1280-5f9a71719a.jpg 1280w" sizes="(min-width: 48rem) 50vw, 100vw" width="1280" height="800" alt="" loading="lazy" decoding="async"><span class="tile__body"><span class="tile__meta">Корпоративные</span><span class="tile__title">Ваш корпоратив</span><span class="tile__text">Пришлите повод, дату и&nbsp;число гостей&nbsp;— предложим идею и&nbsp;посчитаем смету.</span><span class="pill pill--solid pill--sm tile__pill">Обсудить задачу</span></span></a></li>
 <li data-cat="wedding" data-only><a class="tile tile--cta" href="#contacts" data-lead data-type="Свадьба"><img src="media/photo-1756331490734-8b8c-1280-b425362d98.jpg" srcset="media/photo-1756331490734-8b8c-800-44b0e4d218.jpg 800w, media/photo-1756331490734-8b8c-1280-b425362d98.jpg 1280w" sizes="(min-width: 48rem) 50vw, 100vw" width="1280" height="800" alt="" loading="lazy" decoding="async"><span class="tile__body"><span class="tile__meta">Свадьбы</span><span class="tile__title">Ваша свадьба</span><span class="tile__text">Расскажите о&nbsp;паре и&nbsp;дате&nbsp;— предложим концепцию и&nbsp;площадку.</span><span class="pill pill--solid pill--sm tile__pill">Обсудить свадьбу</span></span></a></li>
 </ul>
@@ -2114,7 +2115,19 @@ body {
   const reel = document.querySelector('.reel');
   const reelPlay = reel && reel.querySelector('[data-reel-play]');
   if (reelPlay) {
+    /* беззвучный цикл-заставка: грузим, когда блок рядом; при «уменьшить движение» остаётся кадр */
+    const loop = reel.querySelector('.reel__loop');
+    if (loop && 'IntersectionObserver' in window && !matchMedia('(prefers-reduced-motion: reduce)').matches) {
+      const lio = new IntersectionObserver((entries) => {
+        if (!entries.some((en) => en.isIntersecting)) return;
+        loop.src = loop.dataset.loopSrc;
+        const lp = loop.play(); if (lp && lp.catch) lp.catch(() => {});
+        lio.disconnect();
+      }, { rootMargin: '300px 0px' });
+      lio.observe(loop);
+    }
     reelPlay.addEventListener('click', () => {
+      if (loop) loop.pause();
       const v = reel.querySelector('.reel__video');
       if (!v.getAttribute('src')) v.src = v.dataset.src;
       v.controls = true;

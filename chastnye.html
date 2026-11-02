@@ -670,7 +670,7 @@ ul, ol { padding: 0; list-style: none; }
 
 /* ── 9. Проекты ─────────────────────────────────────── */
 .projects { padding-top: var(--section-y); scroll-margin-top: var(--hdr-h); }
-.tiles { display: grid; grid-template-columns: minmax(0, 1fr); }
+.tiles { display: grid; grid-template-columns: minmax(0, 1fr); gap: clamp(0.75rem, 1.5vw, 1.25rem); }
 .tile {
   position: relative; display: block; overflow: hidden;
   aspect-ratio: 4 / 3;
@@ -1048,7 +1048,9 @@ ul, ol { padding: 0; list-style: none; }
 /* ── 10б. Отчётное видео ─────────────────────────────── */
 .reel { padding-block: var(--section-y); scroll-margin-top: var(--hdr-h); }
 .reel__frame { position: relative; aspect-ratio: 16 / 9; overflow: hidden; background: var(--bg-2); }
-.reel__video { position: absolute; inset: 0; width: 100%; height: 100%; object-fit: cover; }
+.reel__video, .reel__loop { position: absolute; inset: 0; width: 100%; height: 100%; object-fit: cover; }
+.reel.is-playing .reel__loop { display: none; }
+@media (min-width: 48rem) { .reel__frame { max-width: 60rem; margin-inline: auto; } }   /* 02.11: «чуть-чуть поуже» */
 .reel__play {
   position: absolute; inset: 0; z-index: 1;
   display: grid; place-content: center; justify-items: center; gap: var(--space-md);
@@ -1575,7 +1577,7 @@ body {
 
 /* 3. Проекты этого вида: плитки с главной; пока кейс один — рядом приглашение «Ваш праздник» */
 .vproj { padding-block: var(--section-y); }
-.vproj__list { display: grid; gap: 4px; }
+.vproj__list { display: grid; gap: clamp(0.75rem, 1.5vw, 1.25rem); }
 .vproj__list .tile { aspect-ratio: 4 / 3; }
 .vproj__list .tile::before { opacity: 0.15; }            /* кадр кейса не темним — подпись держит градиент снизу */
 .vproj__list .tile--cta::before { opacity: 0.55; }
@@ -1788,15 +1790,14 @@ body {
       <p class="sec-head__note"><a class="go" href="proekty.html?cat=private">Все частные проекты <span class="go__arr" aria-hidden="true">→</span></a></p>
     </div>
     <ul class="vproj__list">
-<li data-cat="private"><a class="tile" href="kejs-elizaveta-18.html"><img src="media/case-elizaveta-18-04-thumb.jpg" width="1280" height="1174" alt="" decoding="async" loading="lazy"><span class="tile__body"><span class="tile__meta">Частные мероприятия</span><span class="tile__title">Елизавета — 18 лет</span></span></a></li>
+<li data-cat="private"><a class="tile" href="kejs-elizaveta-18.html"><img src="media/case-elizaveta-18-00-thumb.jpg" width="1280" height="1147" alt="" decoding="async" loading="lazy"><span class="tile__body"><span class="tile__meta">Частные мероприятия</span><span class="tile__title">Елизавета — 18 лет</span></span></a></li>
 <li data-cat="private"><a class="tile" href="kejs-dr-modus.html"><img src="media/case-dr-modus-06-thumb.jpg" width="1280" height="853" alt="" decoding="async" loading="lazy"><span class="tile__body"><span class="tile__meta">Частные мероприятия</span><span class="tile__title">Lada&#x27;s Birthday Party</span></span></a></li>
 <li data-cat="private"><a class="tile" href="kejs-alisa-polina.html"><img src="media/case-alisa-polina-23-thumb.jpg" width="1280" height="805" alt="" decoding="async" loading="lazy"><span class="tile__body"><span class="tile__meta">Частные мероприятия</span><span class="tile__title">Алиса и Полина — 16 лет</span></span></a></li>
 <li data-cat="private kids"><a class="tile" href="kejs-alexandra.html"><img src="media/case-alexandra-01-thumb.jpg" width="1280" height="855" alt="" decoding="async" loading="lazy"><span class="tile__body"><span class="tile__meta">Детские праздники</span><span class="tile__title">Маленькая принцесса Александра</span></span></a></li>
-<li data-cat="private kids"><a class="tile" href="kejs-fort-boyard.html"><img src="media/case-fort-boyard-frame-2-thumb.jpg" width="1280" height="720" alt="" decoding="async" loading="lazy"><span class="tile__body"><span class="tile__meta">Детские праздники</span><span class="tile__title">Форт Боярд</span></span></a></li>
+<li data-cat="private kids"><a class="tile" href="kejs-fort-boyard.html"><img src="media/case-fort-boyard-cover-thumb.jpg" width="1280" height="720" alt="" decoding="async" loading="lazy"><span class="tile__body"><span class="tile__meta">Детские праздники</span><span class="tile__title">Форт Боярд</span></span></a></li>
 <li data-cat="private kids"><a class="tile" href="kejs-kids-program.html"><img src="media/case-kids-program-01-thumb.jpg" width="1280" height="1013" alt="" decoding="async" loading="lazy"><span class="tile__body"><span class="tile__meta">Детские праздники</span><span class="tile__title">Пой, рисуй, твори, танцуй со мной</span></span></a></li>
 <li data-cat="private"><a class="tile" href="kejs-oformlenie.html"><img src="media/case-oformlenie-01-thumb.jpg" width="968" height="1280" alt="" decoding="async" loading="lazy"><span class="tile__body"><span class="tile__meta">Оформление · подборка</span><span class="tile__title">Оформление частных мероприятий</span></span></a></li>
-<li data-cat="newyear kids private"><a class="tile" href="kejs-novogodnie-programmy.html"><img src="media/case-ded-moroz-photo-00-thumb.jpg" width="1280" height="854" alt="" decoding="async" loading="lazy"><span class="tile__body"><span class="tile__meta">Новый год · подборка</span><span class="tile__title">Новогодние истории</span></span></a></li>
-<li data-cat="private"><a class="tile" href="kejs-dmitry.html"><img src="media/case-dmitry-frame-3-thumb.jpg" width="1280" height="720" alt="" decoding="async" loading="lazy"><span class="tile__body"><span class="tile__meta">Частные мероприятия · видеопоздравление</span><span class="tile__title">День рождения Дмитрия</span></span></a></li>
+<li data-cat="newyear kids private"><a class="tile" href="kejs-novogodnie-programmy.html"><img src="media/case-ded-moroz-photo-03-thumb.jpg" width="1280" height="856" alt="" decoding="async" loading="lazy"><span class="tile__body"><span class="tile__meta">Новый год · подборка</span><span class="tile__title">Новогодние истории</span></span></a></li>
 </ul>
   </div>
 </section>
@@ -2470,7 +2471,19 @@ body {
   const reel = document.querySelector('.reel');
   const reelPlay = reel && reel.querySelector('[data-reel-play]');
   if (reelPlay) {
+    /* беззвучный цикл-заставка: грузим, когда блок рядом; при «уменьшить движение» остаётся кадр */
+    const loop = reel.querySelector('.reel__loop');
+    if (loop && 'IntersectionObserver' in window && !matchMedia('(prefers-reduced-motion: reduce)').matches) {
+      const lio = new IntersectionObserver((entries) => {
+        if (!entries.some((en) => en.isIntersecting)) return;
+        loop.src = loop.dataset.loopSrc;
+        const lp = loop.play(); if (lp && lp.catch) lp.catch(() => {});
+        lio.disconnect();
+      }, { rootMargin: '300px 0px' });
+      lio.observe(loop);
+    }
     reelPlay.addEventListener('click', () => {
+      if (loop) loop.pause();
       const v = reel.querySelector('.reel__video');
       if (!v.getAttribute('src')) v.src = v.dataset.src;
       v.controls = true;
