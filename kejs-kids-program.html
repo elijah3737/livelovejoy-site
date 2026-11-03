@@ -8,11 +8,14 @@
 <meta property="og:type" content="article">
 <meta property="og:title" content="Пой, рисуй, твори, танцуй со мной — Live Love Joy">
 <meta property="og:description" content="Живопись, портреты, кулинарные мастер-классы, музыка и танцы. Розовая фотозона, выступления на сцене и праздничный торт — в фотоистории детского дня рождения.">
-<meta property="og:image" content="https://elijah3737.github.io/livelovejoy-site/media/case-kids-program-01.jpg">
+<meta property="og:image" content="https://livelovejoy.ru/media/case-kids-program-01.jpg">
 <meta name="twitter:card" content="summary_large_image">
 <script>document.documentElement.classList.add('js')</script>
 <meta name="robots" content="noindex">
 <meta name="theme-color" content="#1c1c1c">
+<script>(function(){if(!/(^|\.)livelovejoy\.ru$/.test(location.hostname))return;var c=false;try{c=localStorage.getItem('llj-cookie')==='all'}catch(e){}
+(function(m,e,t,r,i,k,a){m[i]=m[i]||function(){(m[i].a=m[i].a||[]).push(arguments)};m[i].l=1*new Date();for(var j=0;j<document.scripts.length;j++){if(document.scripts[j].src===r){return;}}k=e.createElement(t),a=e.getElementsByTagName(t)[0],k.async=1,k.src=r,a.parentNode.insertBefore(k,a)})(window,document,'script','https://mc.yandex.ru/metrika/tag.js?id=114058805','ym');
+ym(114058805,'init',{ssr:true,webvisor:c,clickmap:c,referrer:document.referrer,url:location.href,accurateTrackBounce:true,trackLinks:true});})();</script>
 <script>try{var d=document.documentElement,q=new URLSearchParams(location.search);[["data-hero","llj-hero","hero",["left","center","low"]],["data-foot","llj-foot","foot",["photo","video","white"]]].forEach(function(v){var x=q.get(v[2]);if(v[3].indexOf(x)<0){try{x=localStorage.getItem(v[1])}catch(e){x=null}}if(v[3].indexOf(x)>=0)d.setAttribute(v[0],x)})}catch(e){}</script>
 <link rel="stylesheet" href="fonts/fonts.css">
 <link rel="stylesheet" href="tokens.css">
@@ -865,6 +868,26 @@ ul, ol { padding: 0; list-style: none; }
 .form__submit { display: flex; flex-wrap: wrap; align-items: center; gap: var(--space-md); margin-top: var(--space-xs); }
 .form__submit .pill { min-height: var(--cta-h); padding-inline: calc(var(--space-lg) + var(--space-xs)); }
 .form__note { font-size: var(--text-xs); color: var(--muted); }
+.form__fail { font-size: var(--text-sm); line-height: 1.5; color: var(--err); }
+.form__fail a { color: inherit; text-underline-offset: 0.18em; }
+.form.is-sending .pill--accent { opacity: 0.6; pointer-events: none; }
+
+/* ── Баннер cookie (152-ФЗ): Метрика без согласия — обезличенно, «Принять» включает Вебвизор и карты ── */
+.ckb {
+  position: fixed; left: var(--space-sm); right: var(--space-sm); bottom: var(--space-sm);
+  z-index: calc(var(--z-sticky) + 1);
+  display: grid; gap: var(--space-sm); max-width: 34rem;
+  padding: var(--space-md) var(--space-lg);
+  background: var(--glass-bg);
+  -webkit-backdrop-filter: blur(16px) saturate(140%); backdrop-filter: blur(16px) saturate(140%);
+  border: var(--rule-w) solid var(--glass-rule);
+  --ink: var(--tone-dark-ink); --on-ink: var(--tone-dark); color: var(--ink);
+  font-size: var(--text-sm); line-height: 1.5;
+}
+:root[data-palette="light"] .ckb { --on-ink: var(--tone-light); }
+.ckb a { color: inherit; text-underline-offset: 0.18em; }
+.ckb__btns { display: flex; flex-wrap: wrap; gap: var(--space-xs); }
+@media (max-width: 47.99rem) { .ckb { bottom: calc(4.25rem + env(safe-area-inset-bottom)); } }
 .done {
   display: grid; align-content: start; gap: var(--space-md);
   padding: var(--space-xl);
@@ -1722,13 +1745,14 @@ body {
         <div class="field" data-field="consent">
           <label class="consent">
             <input type="checkbox" name="consent" required aria-describedby="f-consent-err">
-            <span>Даю согласие на&nbsp;обработку персональных данных и&nbsp;принимаю <a href="index.html#politika">политику конфиденциальности</a></span>
+            <span>Даю <a href="politika.html#soglasie">согласие на&nbsp;обработку персональных данных</a>, с&nbsp;<a href="politika.html">политикой конфиденциальности</a> ознакомлен(а)</span>
           </label>
           <p class="field__err" id="f-consent-err" data-msg="Нужно согласие на&nbsp;обработку данных"></p>
         </div>
         <div class="form__submit">
           <button class="pill pill--accent" type="submit">Отправить заявку</button>
         </div>
+        <p class="form__fail" role="alert" data-fail hidden>Заявка не&nbsp;ушла&nbsp;— проверьте интернет и&nbsp;попробуйте ещё раз или напишите Ольге в&nbsp;<a href="https://t.me/OlgaBilyk77">Telegram</a>, телефон <a href="tel:+79055474281">+7&nbsp;905&nbsp;547-42-81</a>.</p>
       </form>
 
       <div class="done" data-done hidden tabindex="-1" aria-live="polite">
@@ -2018,7 +2042,7 @@ body {
       </div>
     </div>
     <div class="foot__legal">
-      <a href="index.html#politika">Политика конфиденциальности</a>
+      <a href="politika.html">Политика конфиденциальности</a>
       <span>© 2026 Live Love Joy</span>
       <span>*Instagram принадлежит Meta, деятельность которой запрещена в&nbsp;РФ</span>
     </div>
@@ -2029,6 +2053,14 @@ body {
   <a class="pill pill--solid" href="#contacts" data-lead>Обсудить</a>
   <a class="pill pill--line" href="tel:+79055474281"><svg class="ic ic--line" viewBox="0 0 24 24" aria-hidden="true"><use href="#i-phone"/></svg>Позвонить</a>
 </nav>
+
+<div class="ckb" role="region" aria-label="Файлы cookie" data-ckb hidden>
+  <p>Сайт использует cookie и&nbsp;Яндекс Метрику, чтобы понимать, что посетителям интересно. Подробнее&nbsp;— в&nbsp;<a href="politika.html#cookie">политике конфиденциальности</a>.</p>
+  <div class="ckb__btns">
+    <button class="pill pill--solid pill--sm" type="button" data-ckb-set="all">Принять</button>
+    <button class="pill pill--line pill--sm" type="button" data-ckb-set="min">Только необходимые</button>
+  </div>
+</div>
 
 <dialog class="lead-dlg band--dark" id="lead-dlg" aria-labelledby="lead-title">
     <figure class="lead-dlg__photo">
@@ -2083,13 +2115,14 @@ body {
         <div class="field" data-field="consent">
           <label class="consent">
             <input type="checkbox" name="consent" required aria-describedby="m-consent-err">
-            <span>Даю согласие на&nbsp;обработку персональных данных и&nbsp;принимаю <a href="index.html#politika">политику конфиденциальности</a></span>
+            <span>Даю <a href="politika.html#soglasie">согласие на&nbsp;обработку персональных данных</a>, с&nbsp;<a href="politika.html">политикой конфиденциальности</a> ознакомлен(а)</span>
           </label>
           <p class="field__err" id="m-consent-err" data-msg="Нужно согласие на&nbsp;обработку данных"></p>
         </div>
         <div class="form__submit">
           <button class="pill pill--accent" type="submit">Отправить</button>
         </div>
+        <p class="form__fail" role="alert" data-fail hidden>Заявка не&nbsp;ушла&nbsp;— проверьте интернет и&nbsp;попробуйте ещё раз или напишите Ольге в&nbsp;<a href="https://t.me/OlgaBilyk77">Telegram</a>, телефон <a href="tel:+79055474281">+7&nbsp;905&nbsp;547-42-81</a>.</p>
     </form>
     <div class="done" data-done hidden tabindex="-1" aria-live="polite">
       <p class="done__title">Заявка отправлена<span>.</span></p>
@@ -2280,7 +2313,9 @@ body {
     });
   });
 
-  /* Формы заявки (окно и блок «Контакты»): проверка полей, состояние «Заявка отправлена» */
+  /* Формы заявки (окно и блок «Контакты»): проверка полей, отправка письмом через FormSubmit на почту Ольги
+     (решение Ильи 03.11.2026, до WordPress), состояние «Заявка отправлена» */
+  const LEAD_URL = 'https://formsubmit.co/ajax/livelovejoy@yandex.ru';
   const initForm = (form) => {
     const done = form.parentElement.querySelector('[data-done]');
     const fieldEl = (key) => form.querySelector('[data-field="' + key + '"]');
@@ -2327,9 +2362,33 @@ body {
         if (!ok && !first) first = fieldEl(key).querySelector('input, select');
       });
       if (first) { first.focus(); return; }
-      form.hidden = true;
-      done.hidden = false;
-      done.focus({ preventScroll: true });
+      if (form.classList.contains('is-sending')) return;
+      const fail = form.querySelector('[data-fail]');
+      fail.hidden = true;
+      form.classList.add('is-sending');
+      const el = form.elements;
+      fetch(LEAD_URL, {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json', Accept: 'application/json' },
+        body: JSON.stringify({
+          _subject: 'Заявка с сайта Live Love Joy: ' + el.type.value,
+          _template: 'table',
+          _captcha: 'false',
+          'Имя': el.name.value.trim(),
+          'Телефон': el.phone.value.trim(),
+          'Событие': el.type.value,
+          'Страница': document.title + ' — ' + location.href,
+        }),
+      })
+        .then((r) => r.json().catch(() => ({})).then((j) => { if (!r.ok || String(j.success) === 'false') throw new Error(j.message || r.status); }))
+        .then(() => {
+          if (window.ym) window.ym(114058805, 'reachGoal', 'lead');
+          form.hidden = true;
+          done.hidden = false;
+          done.focus({ preventScroll: true });
+        })
+        .catch(() => { fail.hidden = false; })
+        .finally(() => form.classList.remove('is-sending'));
     });
     done.querySelector('[data-again]').addEventListener('click', () => {
       form.reset();
@@ -2425,6 +2484,18 @@ body {
       v.focus({ preventScroll: true });
     });
   }
+
+  /* Баннер cookie: выбор хранится в браузере, Вебвизор включается со следующей страницы */
+  const ckb = document.querySelector('[data-ckb]');
+  let ckChoice = null;
+  try { ckChoice = localStorage.getItem('llj-cookie'); } catch (e) {}
+  if (!ckChoice) ckb.hidden = false;
+  ckb.addEventListener('click', (e) => {
+    const b = e.target.closest('[data-ckb-set]');
+    if (!b) return;
+    try { localStorage.setItem('llj-cookie', b.dataset.ckbSet); } catch (e2) {}
+    ckb.hidden = true;
+  });
 
   /* Фото в буквах подвала грузим, когда подвал близко */
   const fsign = document.querySelector('.foot__sign');
