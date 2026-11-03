@@ -1821,20 +1821,6 @@ body {
   </div>
 </dialog>
 
-<aside class="vpanel" aria-label="Варианты дизайна">
-  <button class="vpanel__toggle" type="button" aria-expanded="false" aria-controls="vpanel-body" data-vpanel-toggle><span class="vpanel__dot" aria-hidden="true"></span><span>Варианты<span class="vpanel__more"> дизайна</span></span><span class="vpanel__chev" aria-hidden="true"></span></button>
-  <div class="vpanel__body" id="vpanel-body" hidden>
-    <p class="vpanel__hint">Нажимайте&nbsp;— страница меняется сразу и&nbsp;сама прокручивается к&nbsp;изменению.</p>
-    <div class="vpanel__grp" role="group" aria-labelledby="vp-foot">
-      <p class="vpanel__label" id="vp-foot">Надпись в&nbsp;подвале</p>
-      <div class="vpanel__opts">
-        <button type="button" data-set="foot" data-val="photo">Фото в&nbsp;буквах</button>
-        <button type="button" data-set="foot" data-val="video">Видео в&nbsp;буквах</button>
-        <button type="button" data-set="foot" data-val="white">Белым</button>
-      </div>
-    </div>
-  </div>
-</aside>
 
 <script>
 (() => {
@@ -1907,18 +1893,21 @@ body {
   syncButtons();
   optBtns.forEach((b) => b.addEventListener('click', () => setVariant(b.dataset.set, b.dataset.val)));
 
+  /* на рабочем сайте панели нет — localize.py её вырезает */
   const vpToggle = document.querySelector('[data-vpanel-toggle]');
   const vpBody = document.getElementById('vpanel-body');
-  const setPanel = (open, save) => {
-    vpToggle.setAttribute('aria-expanded', String(open));
-    vpBody.hidden = !open;
-    if (save) store.set('llj-vpanel', open ? '1' : '0');
-  };
-  setPanel(store.get('llj-vpanel') === '1', false);
-  vpToggle.addEventListener('click', () => setPanel(vpToggle.getAttribute('aria-expanded') !== 'true', true));
-  vpBody.addEventListener('keydown', (e) => {
-    if (e.key === 'Escape') { setPanel(false, true); vpToggle.focus(); }
-  });
+  if (vpToggle && vpBody) {
+    const setPanel = (open, save) => {
+      vpToggle.setAttribute('aria-expanded', String(open));
+      vpBody.hidden = !open;
+      if (save) store.set('llj-vpanel', open ? '1' : '0');
+    };
+    setPanel(store.get('llj-vpanel') === '1', false);
+    vpToggle.addEventListener('click', () => setPanel(vpToggle.getAttribute('aria-expanded') !== 'true', true));
+    vpBody.addEventListener('keydown', (e) => {
+      if (e.key === 'Escape') { setPanel(false, true); vpToggle.focus(); }
+    });
+  }
 
   /* Видео первого экрана: фото под ним остаётся, пока видео не пошло; при «меньше движения» и экономии трафика — только фото */
   const heroVideo = document.querySelector('.hero__video');
